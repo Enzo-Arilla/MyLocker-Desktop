@@ -1,0 +1,11 @@
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\bin\Debug\MyLocker.exe.config
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\bin\Debug\MyLocker.exe
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\bin\Debug\MyLocker.pdb
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\obj\Debug\MyLocker.csproj.AssemblyReference.cache
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\obj\Debug\MyLocker.Form1.resources
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\obj\Debug\MyLocker.Properties.Resources.resources
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\obj\Debug\MyLocker.csproj.GenerateResource.cache
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\obj\Debug\MyLocker.csproj.CoreCompileInputs.cache
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\obj\Debug\MyLocker.exe
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\obj\Debug\MyLocker.pdb
+D:\Users\Acer\Desktop\EnzoA\Estudo C#\MyLocker\MyLocker\obj\Debug\MyLocker.Form2.resources
