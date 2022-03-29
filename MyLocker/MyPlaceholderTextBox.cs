@@ -13,7 +13,6 @@ namespace MyLocker
 
         bool isPlaceHolder = true;
         string _placeHolderText;
-        string currentSize = "50";
 
         public string PlaceHolderText
         {
@@ -39,7 +38,7 @@ namespace MyLocker
             {
                 base.Text = PlaceHolderText;
                 this.ForeColor = Color.Black;
-                this.Font = new Font(this.Font, FontStyle.Regular);
+                this.Font = new Font(FontFamily.GenericSansSerif, 50F, FontStyle.Bold);
                 isPlaceHolder = true;
             }
         }
