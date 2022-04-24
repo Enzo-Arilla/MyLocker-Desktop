@@ -21,7 +21,7 @@ namespace MyLocker
             InitializeComponent();
             try
             {
-                connection = new MySqlConnection("server=143.106.241.3; port=3306; User ID=cl200146; database=cl200146; password=cl*07092004; SslMode=none");
+                connection = new MySqlConnection(global_variables.bdConnnection);
             }
             catch
             {
@@ -46,7 +46,7 @@ namespace MyLocker
                 }
                 else
                 {
-                    MySqlCommand register = new MySqlCommand("insert into functionary (Email, Name, CPF, Password) values ('" + rjTextBox1.Text + "', '" + rjTextBox5.Text + "','" + rjTextBox2.Text + "','" + rjTextBox3.Text + "')", connection);
+                    MySqlCommand register = new MySqlCommand("insert into functionary (email, first_name, last_name, cpf, password) values ('" + rjTextBox1.Text + "', '" + rjTextBox5.Text + "','" + rjTextBox6.Text + "','" + rjTextBox2.Text + "','" + rjTextBox3.Text + "')", connection);
                     register.ExecuteNonQuery();
                     MyMessageBox.ShowBox("Você se cadastrou com sucesso!", "Sucesso - Você cadastrou sua conta");
                     connection.Close();
@@ -240,6 +240,19 @@ namespace MyLocker
             {
                 rjTextBox6.PlaceholderText = "Último Nome";
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var form2 = new Form2();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void rjTextBox5_Enter(object sender, EventArgs e)

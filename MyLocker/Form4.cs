@@ -79,5 +79,50 @@ namespace MyLocker
                 panel7.Visible = false;
             }
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
+            this.Hide();
+        }
+
+
+        private void label3_MouseHover(object sender, EventArgs e)
+        {
+           //label3.ForeColor = Color.Gray;
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            //label3.ForeColor = Color.White;
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,19 +10,23 @@ namespace MyLocker
     {
 
         private static string name;
+        private static string lastName;
         private static string cpf;
         private static string email;
+        private static int status;
 
-        public Usuario(string rname, string rcpf, string remail)
+        public Usuario(string rname, string rlastname, string rcpf, string remail, int rstatus)
         {
             name = rname;
+            lastName = rlastname;
             cpf = rcpf;
             email = remail;
+            status = rstatus;
         }
 
         public static string getName()
         {
-            return name;
+            return name + " " + lastName;
         }
 
         public string CPF
@@ -46,6 +50,18 @@ namespace MyLocker
             set
             {
                 email = value;
+            }
+        }
+
+        public int Status
+        {
+            get
+            {
+                return status;
+            }
+            set
+            {
+                status = value;
             }
         }
 
