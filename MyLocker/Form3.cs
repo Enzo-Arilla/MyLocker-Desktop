@@ -8,33 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Refit;
 
 namespace MyLocker
 {
     public partial class Form3 : Form
     {
         MySqlConnection connection;
-        string email, cpf, senha, cSenha;
+        string primeiroNome, ultimoNome, email, cpf, senha, cSenha;
+        int status;
 
         public Form3()
         {
             InitializeComponent();
-            try
-            {
-                connection = new MySqlConnection(global_variables.bdConnnection);
-            }
-            catch
-            {
-                MessageBox.Show("Falha na Conexão");
-            }
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private async void pictureBox7_Click(object sender, EventArgs e)
         {
             try
             {
-                connection.Open();
-
+                primeiroNome = rjTextBox5.Text;
+                ultimoNome = rjTextBox6.Text;
                 email = rjTextBox1.Text;
                 cpf = rjTextBox2.Text;
                 senha = rjTextBox3.Text;
@@ -46,10 +40,14 @@ namespace MyLocker
                 }
                 else
                 {
-                    MySqlCommand register = new MySqlCommand("insert into functionary (email, first_name, last_name, cpf, password) values ('" + rjTextBox1.Text + "', '" + rjTextBox5.Text + "','" + rjTextBox6.Text + "','" + rjTextBox2.Text + "','" + rjTextBox3.Text + "')", connection);
-                    register.ExecuteNonQuery();
-                    MyMessageBox.ShowBox("Você se cadastrou com sucesso!", "Sucesso - Você cadastrou sua conta");
-                    connection.Close();
+                    Funcionario funcionario = new Funcionario(cpf, primeiroNome, ultimoNome, email, senha, status);
+                    await PostFuncionario(funcionario);
+
+                    //MySqlCommand register = new MySqlCommand("insert into functionary (email, first_name, last_name, cpf, password) values ('" + rjTextBox1.Text + "', '" + rjTextBox5.Text + "','" + rjTextBox6.Text + "','" + rjTextBox2.Text + "','" + rjTextBox3.Text + "')", connection);
+                    //register.ExecuteNonQuery();
+                    //MyMessageBox.ShowBox("Você se cadastrou com sucesso!", "Sucesso - Você cadastrou sua conta");
+                    //connection.Close();
+
                     this.Hide();
                     var form2 = new Form2();
                     form2.Closed += (s, args) => this.Close();
@@ -58,13 +56,10 @@ namespace MyLocker
 
                 }
             }
-            catch (Exception erro)
+            catch (ApiException erro)
             {
-                MessageBox.Show(erro.Message);
-            }
-            finally
-            {
-                connection.Close();
+                string[] mensagemErro = erro.Content.Split('"');
+                MyMessageBox.ShowBox(mensagemErro[3], "Erro");
             }
         }
 
@@ -329,6 +324,14 @@ namespace MyLocker
 
         }
 
-        
+        static async Task PostFuncionario(Funcionario funcionario)
+        {
+            var apiClient = RestService.For<IRepositorioFuncionarios>("http://mylocker-backend.herokuapp.com");
+
+            Funcionario response = await apiClient.CreateFuncionario(funcionario);
+
+            return;
+        }
+
     }
 }

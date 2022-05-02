@@ -9,6 +9,20 @@ namespace MyLocker
 {
     public class Funcionario
     {
+        [JsonConstructor]
+        public Funcionario(string cpf, string firstName, string lastName, string email, string password, int status) {
+            Cpf = cpf;
+            First_name = firstName;
+            Last_name = lastName;
+            Email = email;
+            Password = password;
+            Status = status;
+        }
+
+        public Funcionario()
+        {
+        }
+
         [JsonProperty("cpf")]
         public string Cpf { get; set; }
         [JsonProperty("first_name")]

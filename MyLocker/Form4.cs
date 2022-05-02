@@ -19,14 +19,6 @@ namespace MyLocker
         public Form4()
         {
             InitializeComponent();
-            try
-            {
-                connection = new MySqlConnection(global_variables.bdConnnection);
-            }
-            catch
-            {
-                MessageBox.Show("Falha na Conexão");
-            }
         }
 
         private void Form4_Load(object sender, EventArgs e)

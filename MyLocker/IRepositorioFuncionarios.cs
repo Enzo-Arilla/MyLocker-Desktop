@@ -11,5 +11,8 @@ namespace MyLocker
     {
         [Get("/functionaries/{cpf}")]
         Task<Funcionario> ReturnFuncionario(string cpf);
+
+        [Post("/functionaries")]
+        Task<Funcionario> CreateFuncionario([Body]Funcionario funcionario);
     }
 }
