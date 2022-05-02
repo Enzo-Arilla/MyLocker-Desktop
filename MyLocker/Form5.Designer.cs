@@ -88,7 +88,7 @@ namespace MyLocker
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(619, 26);
+            this.label5.Location = new System.Drawing.Point(668, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(141, 61);
             this.label5.TabIndex = 2;
@@ -100,7 +100,7 @@ namespace MyLocker
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(346, 26);
+            this.label4.Location = new System.Drawing.Point(395, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 61);
             this.label4.TabIndex = 1;
@@ -113,7 +113,7 @@ namespace MyLocker
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(24, 26);
+            this.label3.Location = new System.Drawing.Point(73, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(240, 61);
             this.label3.TabIndex = 0;
@@ -270,11 +270,11 @@ namespace MyLocker
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Roboto", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.label13.Location = new System.Drawing.Point(1317, 353);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(140, 57);
+            this.label13.Size = new System.Drawing.Size(141, 54);
             this.label13.TabIndex = 43;
             this.label13.Text = "Teste";
             this.label13.Visible = false;
@@ -282,11 +282,11 @@ namespace MyLocker
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Roboto", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.label14.Location = new System.Drawing.Point(1266, 429);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(225, 57);
+            this.label14.Size = new System.Drawing.Size(223, 54);
             this.label14.TabIndex = 44;
             this.label14.Text = "Vermelho";
             this.label14.Visible = false;
@@ -294,11 +294,11 @@ namespace MyLocker
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Roboto", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.label15.Location = new System.Drawing.Point(1487, 495);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 57);
+            this.label15.Size = new System.Drawing.Size(141, 54);
             this.label15.TabIndex = 45;
             this.label15.Text = "Teste";
             this.label15.Visible = false;
@@ -306,11 +306,11 @@ namespace MyLocker
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Roboto", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.label16.Location = new System.Drawing.Point(1443, 565);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(140, 57);
+            this.label16.Size = new System.Drawing.Size(141, 54);
             this.label16.TabIndex = 46;
             this.label16.Text = "Teste";
             this.label16.Visible = false;
@@ -318,11 +318,11 @@ namespace MyLocker
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Roboto", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.label17.Location = new System.Drawing.Point(1380, 639);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 57);
+            this.label17.Size = new System.Drawing.Size(141, 54);
             this.label17.TabIndex = 47;
             this.label17.Text = "Teste";
             this.label17.Visible = false;
@@ -356,7 +356,6 @@ namespace MyLocker
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(397, 5);
             this.panel6.TabIndex = 9;
-            this.panel6.Visible = false;
             // 
             // guna2Button5
             // 
@@ -389,7 +388,8 @@ namespace MyLocker
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(397, 86);
             this.guna2Button4.TabIndex = 6;
-            this.guna2Button4.Text = "Alugar um Armário";
+            this.guna2Button4.Text = "Dados dos Armários";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button1
             // 
@@ -399,14 +399,14 @@ namespace MyLocker
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Enabled = false;
-            this.guna2Button1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.FillColor = System.Drawing.Color.LightGray;
             this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.Location = new System.Drawing.Point(0, 0);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(397, 86);
             this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Dados dos Armários";
+            this.guna2Button1.Text = "Alugar um Armário";
             // 
             // panel4
             // 

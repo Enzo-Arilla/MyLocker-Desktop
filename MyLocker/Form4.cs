@@ -49,6 +49,8 @@ namespace MyLocker
         {
             if(panel2.Visible == false)
             {
+                label3.ForeColor = Color.FromArgb(253, 200, 0);
+                label4.ForeColor = Color.White;
                 panel3.Visible = true;
                 panel5.Visible = true;
                 panel2.Visible = true;
@@ -57,6 +59,7 @@ namespace MyLocker
             }
             else if(panel2.Visible == true)
             {
+                label3.ForeColor = Color.White;
                 panel3.Visible = false;
                 panel5.Visible = false;
                 panel2.Visible = false;
@@ -67,6 +70,8 @@ namespace MyLocker
         {
             if(panel7.Visible == false)
             {
+                label4.ForeColor = Color.FromArgb(253, 200, 0);
+                label3.ForeColor = Color.White;
                 panel4.Visible = true;
                 panel7.Visible = true;
                 panel3.Visible = false;
@@ -75,6 +80,7 @@ namespace MyLocker
             }
             else if(panel7.Visible == true)
             {
+                label4.ForeColor = Color.White;
                 panel4.Visible = false;
                 panel7.Visible = false;
             }
@@ -109,18 +115,17 @@ namespace MyLocker
             this.Hide();
         }
 
-
-        private void label3_MouseHover(object sender, EventArgs e)
-        {
-           //label3.ForeColor = Color.Gray;
-        }
-
-        private void label3_MouseLeave(object sender, EventArgs e)
-        {
-            //label3.ForeColor = Color.White;
-        }
-
         private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

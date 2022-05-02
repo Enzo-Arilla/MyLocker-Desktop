@@ -19,25 +19,17 @@ namespace MyLocker
     public partial class Form2 : Form
     {
         MySqlConnection connection;
-        string cpf, senha, first_nameDB, last_nameDB, emailDB, cpfDB, senhaDB;
-        Funcionario funcionario;
+        string cpf, senha;
 
         public Form2()
         {
             InitializeComponent();
-            try
-            {
-                connection = new MySqlConnection(global_variables.bdConnnection);
-            }
-            catch
-            {
-                MessageBox.Show("Falha na Conexão");
-            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             label2.Focus();
+            rjTextBox2.PasswordChar = true;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -72,11 +64,7 @@ namespace MyLocker
             catch (ApiException erro)
             {
                 string[] mensagemErro = erro.Content.Split('"');
-                MessageBox.Show(mensagemErro[3]);
-            }
-            finally
-            {
-                connection.Close();
+                MyMessageBox.ShowBox(mensagemErro[3], "Erro");
             }
         }
 
@@ -123,16 +111,8 @@ namespace MyLocker
         }
 
         static async Task<Funcionario> GetFuncionario(string cpf) {
-            var apiClient = RestService.For<IRepositorioFuncionarios>("http://localhost:3333");
+            var apiClient = RestService.For<IRepositorioFuncionarios>("http://mylocker-backend.herokuapp.com");
 
-            Funcionario response = await apiClient.ReturnFuncionario(cpf);
-
-            return response;
-        }
-
-        static async Task<Funcionario> GetFunctionaries(string cpf)
-        {
-            var apiClient = RestService.For<IRepositorioFuncionarios>("http://localhost:3333");
             Funcionario response = await apiClient.ReturnFuncionario(cpf);
 
             return response;

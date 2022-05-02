@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "F:\\MyLocker\\MyLocker\\MyLocker.csproj": {}
+    "C:\\Users\\aluno\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj": {}
   },
   "projects": {
-    "F:\\MyLocker\\MyLocker\\MyLocker.csproj": {
+    "C:\\Users\\aluno\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MyLocker\\MyLocker\\MyLocker.csproj",
+        "projectUniqueName": "C:\\Users\\aluno\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
         "projectName": "MyLocker",
-        "projectPath": "F:\\MyLocker\\MyLocker\\MyLocker.csproj",
-        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "F:\\MyLocker\\MyLocker\\obj\\",
+        "projectPath": "C:\\Users\\aluno\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
+        "packagesPath": "C:\\Users\\aluno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aluno\\Documents\\MyLocker-Desktop\\MyLocker\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
