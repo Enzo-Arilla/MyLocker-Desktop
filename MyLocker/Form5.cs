@@ -31,6 +31,7 @@ namespace MyLocker
                 panel2.Visible = true;
                 panel4.Visible = false;
                 label1.Visible = false;
+                panel7.Visible = false;
             }
             else if (panel2.Visible == true)
             {
@@ -47,11 +48,11 @@ namespace MyLocker
             {
                 panel4.Visible = true;
                 panel7.Visible = true;
-                panel5.Visible = false;
                 panel2.Visible = false;
             }
             else if (panel7.Visible == true)
             {
+                panel7.Visible = false;
                 panel4.Visible = false;
                 panel2.Visible = false;
             }
@@ -146,6 +147,19 @@ namespace MyLocker
             var form6 = new Form6();
             form6.Closed += (s, args) => this.Close();
             form6.Show();
+            this.Hide();
+        }
+
+        private void guna2Button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button5_Click_2(object sender, EventArgs e)
+        {
+            var form7 = new Form7();
+            form7.Closed += (s, args) => this.Close();
+            form7.Show();
             this.Hide();
         }
     }

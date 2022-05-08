@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj": {}
+    "D:\\Users\\Acer\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj": {
+    "D:\\Users\\Acer\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
+        "projectUniqueName": "D:\\Users\\Acer\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
         "projectName": "MyLocker",
-        "projectPath": "C:\\Projetos\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\MyLocker-Desktop\\MyLocker\\obj\\",
+        "projectPath": "D:\\Users\\Acer\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Acer\\Documents\\MyLocker-Desktop\\MyLocker\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

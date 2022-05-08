@@ -373,6 +373,7 @@ namespace MyLocker
             this.guna2Button5.Size = new System.Drawing.Size(397, 86);
             this.guna2Button5.TabIndex = 7;
             this.guna2Button5.Text = "Desocupar um Armário";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click_2);
             // 
             // guna2Button4
             // 
@@ -422,7 +423,7 @@ namespace MyLocker
             this.panel7.Controls.Add(this.panel4);
             this.panel7.Controls.Add(this.guna2Button3);
             this.panel7.Controls.Add(this.guna2Button6);
-            this.panel7.Location = new System.Drawing.Point(288, 113);
+            this.panel7.Location = new System.Drawing.Point(288, 112);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(397, 167);
             this.panel7.TabIndex = 49;

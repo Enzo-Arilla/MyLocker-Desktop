@@ -97,7 +97,9 @@ namespace MyLocker
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-
+            Form7 form7 = new Form7();
+            form7.Show();
+            this.Hide();
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
