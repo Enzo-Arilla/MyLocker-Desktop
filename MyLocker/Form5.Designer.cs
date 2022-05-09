@@ -332,7 +332,7 @@ namespace MyLocker
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(0, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 5);
+            this.panel5.Size = new System.Drawing.Size(397, 2);
             this.panel5.TabIndex = 9;
             this.panel5.Visible = false;
             // 
@@ -354,12 +354,11 @@ namespace MyLocker
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(0, 83);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(397, 5);
+            this.panel6.Size = new System.Drawing.Size(397, 2);
             this.panel6.TabIndex = 9;
             // 
             // guna2Button5
             // 
-            this.guna2Button5.BorderRadius = 10;
             this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -373,7 +372,6 @@ namespace MyLocker
             this.guna2Button5.Size = new System.Drawing.Size(397, 86);
             this.guna2Button5.TabIndex = 7;
             this.guna2Button5.Text = "Desocupar um Armário";
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click_2);
             // 
             // guna2Button4
             // 
@@ -394,13 +392,13 @@ namespace MyLocker
             // 
             // guna2Button1
             // 
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.No;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Enabled = false;
-            this.guna2Button1.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
             this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.Location = new System.Drawing.Point(0, 0);
@@ -414,7 +412,7 @@ namespace MyLocker
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(0, 83);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(397, 5);
+            this.panel4.Size = new System.Drawing.Size(397, 2);
             this.panel4.TabIndex = 12;
             this.panel4.Visible = false;
             // 

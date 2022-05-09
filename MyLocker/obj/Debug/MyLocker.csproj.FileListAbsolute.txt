@@ -278,3 +278,5 @@ D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.Copy
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.exe
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.pdb
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Form7.resources
+C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Form7.resources
+C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Form8.resources

@@ -34,16 +34,15 @@ namespace MyLocker
                 panel3.Visible = true;
                 panel5.Visible = true;
                 panel2.Visible = true;
+                panel2.BringToFront();
                 panel4.Visible = false;
                 panel7.Visible = false;
-                guna2Button2.Visible = false;
             }
             else if (panel2.Visible == true)
             {
                 panel3.Visible = false;
                 panel5.Visible = false;
                 panel2.Visible = false;
-                guna2Button2.Visible = true;
             }
         }
 
@@ -53,11 +52,10 @@ namespace MyLocker
             {
                 panel4.Visible = true;
                 panel7.Visible = true;
+                panel7.BringToFront();
                 panel3.Visible = false;
                 panel5.Visible = false;
                 panel2.Visible = false;
-                rjTextBox1.Visible = false;
-                guna2Button2.Visible = false;
             }
             else if (panel7.Visible == true)
             {

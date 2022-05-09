@@ -28,9 +28,9 @@ namespace MyLocker
             {
                 panel4.Visible = true;
                 panel5.Visible = true;
+                panel5.BringToFront();
                 panel2.Visible = true;
                 panel4.Visible = false;
-                label1.Visible = false;
                 panel7.Visible = false;
             }
             else if (panel2.Visible == true)
@@ -148,11 +148,6 @@ namespace MyLocker
             form6.Closed += (s, args) => this.Close();
             form6.Show();
             this.Hide();
-        }
-
-        private void guna2Button5_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void guna2Button5_Click_2(object sender, EventArgs e)

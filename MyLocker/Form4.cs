@@ -123,5 +123,13 @@ namespace MyLocker
         {
 
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            var form8 = new Form8();
+            form8.Closed += (s, args) => this.Close();
+            form8.Show();
+            this.Hide();
+        }
     }
 }

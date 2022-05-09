@@ -46,8 +46,8 @@ namespace MyLocker
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.rjTextBox1 = new MyLocker.RJTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rjTextBox1 = new MyLocker.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
@@ -138,7 +138,7 @@ namespace MyLocker
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(0, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 5);
+            this.panel5.Size = new System.Drawing.Size(397, 2);
             this.panel5.TabIndex = 9;
             this.panel5.Visible = false;
             // 
@@ -165,7 +165,7 @@ namespace MyLocker
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(0, 83);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 5);
+            this.panel3.Size = new System.Drawing.Size(397, 2);
             this.panel3.TabIndex = 8;
             this.panel3.Visible = false;
             // 
@@ -220,7 +220,7 @@ namespace MyLocker
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel4.Location = new System.Drawing.Point(0, 83);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(397, 5);
+            this.panel4.Size = new System.Drawing.Size(397, 2);
             this.panel4.TabIndex = 12;
             this.panel4.Visible = false;
             // 
@@ -273,6 +273,17 @@ namespace MyLocker
             this.guna2Button2.TabIndex = 12;
             this.guna2Button2.Text = "Tipo de Pesquisa";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1489, 176);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
             // rjTextBox1
             // 
             this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
@@ -293,17 +304,6 @@ namespace MyLocker
             this.rjTextBox1.Size = new System.Drawing.Size(1000, 106);
             this.rjTextBox1.TabIndex = 32;
             this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1489, 176);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
             // 
             // Form6
             // 
