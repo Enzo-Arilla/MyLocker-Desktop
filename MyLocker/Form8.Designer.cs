@@ -47,16 +47,16 @@ namespace MyLocker
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.myGroupBox1 = new MyLocker.MyGroupBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.rjTextBox4 = new MyLocker.RJTextBox();
+            this.rjTextBox3 = new MyLocker.RJTextBox();
+            this.rjTextBox2 = new MyLocker.RJTextBox();
             this.rjTextBox1 = new MyLocker.RJTextBox();
             this.myLabel1 = new MyLocker.MyLabel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new MyLocker.RJTextBox();
-            this.rjTextBox3 = new MyLocker.RJTextBox();
-            this.rjTextBox4 = new MyLocker.RJTextBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
@@ -89,6 +89,7 @@ namespace MyLocker
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 34;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label5
             // 
@@ -290,6 +291,90 @@ namespace MyLocker
             this.myGroupBox1.TabIndex = 17;
             this.myGroupBox1.TabStop = false;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button2.BorderRadius = 20;
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.Location = new System.Drawing.Point(472, 820);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(500, 87);
+            this.guna2Button2.TabIndex = 52;
+            this.guna2Button2.Text = "Registrar";
+            // 
+            // rjTextBox4
+            // 
+            this.rjTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.rjTextBox4.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox4.BorderRadius = 50;
+            this.rjTextBox4.BorderSize = 2;
+            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox4.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.rjTextBox4.Location = new System.Drawing.Point(414, 632);
+            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.rjTextBox4.Multiline = false;
+            this.rjTextBox4.Name = "rjTextBox4";
+            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.rjTextBox4.PasswordChar = false;
+            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.rjTextBox4.PlaceholderText = "Último nome";
+            this.rjTextBox4.Size = new System.Drawing.Size(633, 106);
+            this.rjTextBox4.TabIndex = 36;
+            this.rjTextBox4.UnderlinedStyle = false;
+            this.rjTextBox4.Enter += new System.EventHandler(this.rjTextBox4_Enter);
+            // 
+            // rjTextBox3
+            // 
+            this.rjTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.rjTextBox3.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox3.BorderRadius = 50;
+            this.rjTextBox3.BorderSize = 2;
+            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.rjTextBox3.Location = new System.Drawing.Point(414, 506);
+            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.rjTextBox3.Multiline = false;
+            this.rjTextBox3.Name = "rjTextBox3";
+            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.rjTextBox3.PasswordChar = false;
+            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.rjTextBox3.PlaceholderText = "Primeiro nome";
+            this.rjTextBox3.Size = new System.Drawing.Size(633, 106);
+            this.rjTextBox3.TabIndex = 35;
+            this.rjTextBox3.UnderlinedStyle = false;
+            this.rjTextBox3.Enter += new System.EventHandler(this.rjTextBox3_Enter);
+            // 
+            // rjTextBox2
+            // 
+            this.rjTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.rjTextBox2.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox2.BorderRadius = 50;
+            this.rjTextBox2.BorderSize = 2;
+            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.rjTextBox2.Location = new System.Drawing.Point(414, 378);
+            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.rjTextBox2.Multiline = false;
+            this.rjTextBox2.Name = "rjTextBox2";
+            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.rjTextBox2.PasswordChar = false;
+            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.rjTextBox2.PlaceholderText = "E-mail do aluno";
+            this.rjTextBox2.Size = new System.Drawing.Size(633, 106);
+            this.rjTextBox2.TabIndex = 34;
+            this.rjTextBox2.UnderlinedStyle = false;
+            this.rjTextBox2.Enter += new System.EventHandler(this.rjTextBox2_Enter);
+            // 
             // rjTextBox1
             // 
             this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
@@ -320,9 +405,9 @@ namespace MyLocker
             this.myLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.myLabel1.Location = new System.Drawing.Point(566, 164);
             this.myLabel1.Name = "myLabel1";
-            this.myLabel1.Size = new System.Drawing.Size(304, 44);
+            this.myLabel1.Size = new System.Drawing.Size(291, 44);
             this.myLabel1.TabIndex = 18;
-            this.myLabel1.Text = "Gerenciar Aluno";
+            this.myLabel1.Text = "Registrar Aluno";
             // 
             // panel6
             // 
@@ -335,116 +420,38 @@ namespace MyLocker
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.label2.Location = new System.Drawing.Point(580, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(234, 44);
             this.label2.TabIndex = 15;
             this.label2.Text = "Editar Aluno";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.label6.Location = new System.Drawing.Point(858, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(258, 44);
             this.label6.TabIndex = 16;
             this.label6.Text = "Apagar Aluno";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.label1.Location = new System.Drawing.Point(224, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(291, 44);
             this.label1.TabIndex = 14;
             this.label1.Text = "Registrar Aluno";
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox2.BorderRadius = 50;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rjTextBox2.Location = new System.Drawing.Point(414, 378);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.rjTextBox2.PlaceholderText = "E-mail do aluno";
-            this.rjTextBox2.Size = new System.Drawing.Size(633, 106);
-            this.rjTextBox2.TabIndex = 34;
-            this.rjTextBox2.UnderlinedStyle = false;
-            this.rjTextBox2.Enter += new System.EventHandler(this.rjTextBox2_Enter);
-            // 
-            // rjTextBox3
-            // 
-            this.rjTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.rjTextBox3.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox3.BorderRadius = 50;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rjTextBox3.Location = new System.Drawing.Point(414, 506);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.rjTextBox3.PlaceholderText = "Primeiro nome";
-            this.rjTextBox3.Size = new System.Drawing.Size(633, 106);
-            this.rjTextBox3.TabIndex = 35;
-            this.rjTextBox3.UnderlinedStyle = false;
-            this.rjTextBox3.Enter += new System.EventHandler(this.rjTextBox3_Enter);
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.rjTextBox4.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox4.BorderRadius = 50;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rjTextBox4.Location = new System.Drawing.Point(414, 632);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.rjTextBox4.PlaceholderText = "Último nome";
-            this.rjTextBox4.Size = new System.Drawing.Size(633, 106);
-            this.rjTextBox4.TabIndex = 36;
-            this.rjTextBox4.UnderlinedStyle = false;
-            this.rjTextBox4.Enter += new System.EventHandler(this.rjTextBox4_Enter);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Button2.BorderRadius = 20;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(472, 820);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(500, 87);
-            this.guna2Button2.TabIndex = 52;
-            this.guna2Button2.Text = "Registrar";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form8
             // 

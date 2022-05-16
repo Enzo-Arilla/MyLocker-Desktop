@@ -80,48 +80,26 @@ namespace MyLocker
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            var form5 = new Form5();
+            form5.Closed += (s, args) => this.Close();
             form5.Show();
-            this.Hide();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-            Form7 form7 = new Form7();
-            form7.Show();
-            this.Hide();
+            this.Hide(); ;
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
+            var form6 = new Form6();
+            form6.Closed += (s, args) => this.Close();
             form6.Show();
             this.Hide();
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
+        private void guna2Button5_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            var form7 = new Form7();
+            form7.Closed += (s, args) => this.Close();
+            form7.Show();
+            this.Hide();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -130,6 +108,38 @@ namespace MyLocker
             form8.Closed += (s, args) => this.Close();
             form8.Show();
             this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            var form9 = new Form9();
+            form9.Closed += (s, args) => this.Close();
+            form9.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+            if(panel6.Visible == false)
+            {
+                panel6.Visible = true;
+                panel8.Visible = true;
+                panel9.Visible = true;
+                panel11.Visible = true;
+            }
+            else
+            {
+                panel6.Visible = false;
+                panel8.Visible = false;
+                panel9.Visible = false;
+                panel11.Visible = false;
+            }
+            
         }
     }
 }

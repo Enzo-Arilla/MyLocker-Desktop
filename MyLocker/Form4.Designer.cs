@@ -34,7 +34,6 @@ namespace MyLocker
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,11 +47,23 @@ namespace MyLocker
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -90,12 +101,11 @@ namespace MyLocker
             this.label2.Size = new System.Drawing.Size(297, 105);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
-            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -105,19 +115,6 @@ namespace MyLocker
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1440, 113);
             this.panel1.TabIndex = 3;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1254, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(161, 94);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 34;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label5
             // 
@@ -130,6 +127,7 @@ namespace MyLocker
             this.label5.Size = new System.Drawing.Size(141, 61);
             this.label5.TabIndex = 2;
             this.label5.Text = "APM";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -211,7 +209,6 @@ namespace MyLocker
             this.guna2Button6.Size = new System.Drawing.Size(397, 86);
             this.guna2Button6.TabIndex = 5;
             this.guna2Button6.Text = "Dados dos Alunos";
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // panel2
             // 
@@ -261,7 +258,6 @@ namespace MyLocker
             this.panel3.Size = new System.Drawing.Size(397, 2);
             this.panel3.TabIndex = 8;
             this.panel3.Visible = false;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // guna2Button4
             // 
@@ -297,12 +293,146 @@ namespace MyLocker
             this.guna2Button1.Text = "Alugar um Armário";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1214, 15);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(85, 82);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 35;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
+            // 
+            // guna2Button9
+            // 
+            this.guna2Button9.BorderRadius = 10;
+            this.guna2Button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button9.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
+            this.guna2Button9.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button9.Location = new System.Drawing.Point(0, 254);
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.Size = new System.Drawing.Size(397, 86);
+            this.guna2Button9.TabIndex = 10;
+            this.guna2Button9.Text = "Fechar Aplicativo";
+            // 
+            // guna2Button8
+            // 
+            this.guna2Button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button8.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.guna2Button8.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button8.Location = new System.Drawing.Point(0, 0);
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.Size = new System.Drawing.Size(397, 86);
+            this.guna2Button8.TabIndex = 5;
+            this.guna2Button8.Text = "Alterar Senha";
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button7.Location = new System.Drawing.Point(0, 83);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(397, 86);
+            this.guna2Button7.TabIndex = 6;
+            this.guna2Button7.Text = "Alterar Foto";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Location = new System.Drawing.Point(0, 83);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(397, 2);
+            this.panel9.TabIndex = 8;
+            this.panel9.Visible = false;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.Location = new System.Drawing.Point(0, 166);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(397, 86);
+            this.guna2Button2.TabIndex = 7;
+            this.guna2Button2.Text = "Trocar Perfil";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Location = new System.Drawing.Point(0, 166);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(397, 2);
+            this.panel8.TabIndex = 9;
+            this.panel8.Visible = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Black;
+            this.panel10.Location = new System.Drawing.Point(0, -42);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(397, 2);
+            this.panel10.TabIndex = 11;
+            this.panel10.Visible = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.guna2Button2);
+            this.panel6.Controls.Add(this.guna2Button9);
+            this.panel6.Controls.Add(this.panel9);
+            this.panel6.Controls.Add(this.guna2Button7);
+            this.panel6.Controls.Add(this.guna2Button8);
+            this.panel6.Location = new System.Drawing.Point(1043, 113);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(397, 345);
+            this.panel6.TabIndex = 10;
+            this.panel6.Visible = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Black;
+            this.panel11.Location = new System.Drawing.Point(1043, 365);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(397, 2);
+            this.panel11.TabIndex = 9;
+            this.panel11.Visible = false;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(1440, 878);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -318,9 +448,11 @@ namespace MyLocker
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,7 +476,16 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private System.Windows.Forms.Panel panel9;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel11;
     }
 }

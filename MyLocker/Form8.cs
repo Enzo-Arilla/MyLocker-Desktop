@@ -160,5 +160,28 @@ namespace MyLocker
                 rjTextBox4.ForeColor = Color.Black;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            myLabel1.Text = "Registrar Aluno";
+            guna2Button2.Text = "Registrar";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            myLabel1.Text = "Editar Aluno";
+            guna2Button2.Text = "Editar";
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            myLabel1.Text = "Apagar Aluno";
+            guna2Button2.Text = "Apagar";
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

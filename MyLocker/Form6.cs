@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Refit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,20 @@ namespace MyLocker
             InitializeComponent();
         }
 
-        private void Form6_Load(object sender, EventArgs e)
+        async private void Form6_Load(object sender, EventArgs e)
         {
-            
+            Armario[] armarios = null;
+
+            try
+            {
+               armarios  = await ListArmarios();
+                MessageBox.Show(armarios.ToString());
+            }
+            catch (ApiException erro)
+            {
+                string[] mensagemErro = erro.Content.Split('"');
+                MyMessageBox.ShowBox(mensagemErro[3], "Erro");
+            }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -80,6 +92,15 @@ namespace MyLocker
             form7.Closed += (s, args) => this.Close();
             form7.Show();
             this.Hide();
+        }
+
+        static async Task<Armario[]> ListArmarios()
+        {
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api-production.up.railway.app");
+
+            Armario[] response = await apiClient.ListArmarios();
+
+            return response;
         }
     }
 }
