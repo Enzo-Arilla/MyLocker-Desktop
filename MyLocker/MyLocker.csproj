@@ -86,7 +86,6 @@
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario.cs" />
-    <Compile Include="global_variables.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

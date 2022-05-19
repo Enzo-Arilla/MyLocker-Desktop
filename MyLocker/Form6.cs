@@ -21,16 +21,10 @@ namespace MyLocker
         async private void Form6_Load(object sender, EventArgs e)
         {
             Armario[] armarios = null;
+            armarios  = await ListArmarios();
 
-            try
-            {
-               armarios  = await ListArmarios();
-                MessageBox.Show(armarios.ToString());
-            }
-            catch (ApiException erro)
-            {
-                string[] mensagemErro = erro.Content.Split('"');
-                MyMessageBox.ShowBox(mensagemErro[3], "Erro");
+            foreach(Armario a in armarios) {
+                MessageBox.Show(a.Number.ToString());
             }
         }
 
