@@ -157,5 +157,23 @@ namespace MyLocker
             form7.Show();
             this.Hide();
         }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+            if (panel6.Visible == false)
+            {
+                panel6.Visible = true;
+                panel8.Visible = true;
+                panel9.Visible = true;
+                panel11.Visible = true;
+            }
+            else
+            {
+                panel6.Visible = false;
+                panel8.Visible = false;
+                panel9.Visible = false;
+                panel11.Visible = false;
+            }
+        }
     }
 }

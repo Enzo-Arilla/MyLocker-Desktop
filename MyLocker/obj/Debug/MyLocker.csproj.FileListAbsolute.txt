@@ -374,3 +374,5 @@ D:\Users\Acer\Documents\ped\MyLocker-Desktop\MyLocker\bin\Debug\K4os.Compression
 D:\Users\Acer\Documents\ped\MyLocker-Desktop\MyLocker\bin\Debug\K4os.Hash.xxHash.dll
 D:\Users\Acer\Documents\ped\MyLocker-Desktop\MyLocker\bin\Debug\MySql.Data.xml
 D:\Users\Acer\Documents\ped\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.CopyComplete
+C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Form9.resources
+C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Form10.resources

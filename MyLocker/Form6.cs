@@ -24,7 +24,9 @@ namespace MyLocker
             armarios  = await ListArmarios();
 
             foreach(Armario a in armarios) {
-                MessageBox.Show(a.Number.ToString());
+                //MessageBox.Show(a.Number.ToString());
+                string[] row = new string[]{a.Number.ToString()};
+                guna2DataGridView1.Rows.Add(row);
             }
         }
 
@@ -90,11 +92,16 @@ namespace MyLocker
 
         static async Task<Armario[]> ListArmarios()
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api-production.up.railway.app");
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
 
             Armario[] response = await apiClient.ListArmarios();
 
             return response;
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

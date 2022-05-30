@@ -141,5 +141,26 @@ namespace MyLocker
             }
             
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            var form2 = new Form2();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            var form10 = new Form10();
+            form10.FormClosed += (s, args) => this.Close();
+            form10.Show();
+            this.Hide();
+        }
     }
 }
