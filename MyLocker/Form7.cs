@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Refit;
 
 namespace MyLocker
 {
@@ -15,6 +16,28 @@ namespace MyLocker
         public Form7()
         {
             InitializeComponent();
+        }
+
+        static async Task<Armario[]> ListArmarios()
+        {
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
+
+            Armario[] response = await apiClient.ListArmarios();
+
+            return response;
+        }
+
+        async private void Form7_Load(object sender, EventArgs e)
+        {
+            Armario[] armarios = null;
+            armarios = await ListArmarios();
+
+            foreach (Armario a in armarios)
+            {
+                //MessageBox.Show(a.Number.ToString());
+                string[] row = new string[] {a.Number.ToString()};
+                guna2DataGridView1.Rows.Add(row);
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -69,6 +92,16 @@ namespace MyLocker
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_MouseHover(object sender, EventArgs e)
+        {
+            
         }
     }
 }

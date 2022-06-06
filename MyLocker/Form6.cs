@@ -20,6 +20,7 @@ namespace MyLocker
 
         async private void Form6_Load(object sender, EventArgs e)
         {
+            
             Armario[] armarios = null;
             armarios  = await ListArmarios();
 
