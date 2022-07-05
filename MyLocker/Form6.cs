@@ -104,5 +104,60 @@ namespace MyLocker
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            var form9 = new Form9();
+            form9.Closed += (s, args) => this.Close();
+            form9.Show();
+            this.Hide();
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+            if (panel6.Visible == false)
+            {
+                panel6.Visible = true;
+                panel8.Visible = true;
+                panel9.Visible = true;
+                panel11.Visible = true;
+            }
+            else if (panel6.Visible == true)
+            {
+                panel6.Visible = false;
+                panel8.Visible = false;
+                panel9.Visible = false;
+                panel11.Visible = false;
+            }
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            var form10 = new Form10();
+            form10.Closed += (s, args) => this.Close();
+            form10.Show();
+            this.Hide();
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            var form11 = new Form11();
+            form11.FormClosed += (s, args) => this.Close();
+            form11.Show();
+            this.Hide();
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            var form2 = new Form2();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

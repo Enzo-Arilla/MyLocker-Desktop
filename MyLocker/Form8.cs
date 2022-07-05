@@ -20,6 +20,7 @@ namespace MyLocker
         private void Form8_Load(object sender, EventArgs e)
         {
             label7.Focus();
+            rjTextBox1.Width = 633;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -161,27 +162,45 @@ namespace MyLocker
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            myLabel1.Text = "Registrar Aluno";
-            guna2Button2.Text = "Registrar";
-        }
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
             myLabel1.Text = "Editar Aluno";
             guna2Button2.Text = "Editar";
+            rjTextBox1.Width = 450;
+            guna2CircleButton1.Visible = true;
+            if (rjTextBox1.Width == 633)
+            {
+                rjTextBox1.Width = 450;
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
             myLabel1.Text = "Apagar Aluno";
             guna2Button2.Text = "Apagar";
+            guna2CircleButton1.Visible = true;
+            if (rjTextBox1.Width==633)
+            {
+                rjTextBox1.Width = 450;
+            }
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+            myLabel1.Text = "Registrar Aluno";
+            guna2Button2.Text = "Registrar";
+            guna2CircleButton1.Visible = false;
+            rjTextBox1.Width =  633;
+            rjTextBox1.Focus();
         }
     }
 }

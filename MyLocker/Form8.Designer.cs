@@ -47,6 +47,7 @@ namespace MyLocker
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.myGroupBox1 = new MyLocker.MyGroupBox();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.rjTextBox4 = new MyLocker.RJTextBox();
             this.rjTextBox3 = new MyLocker.RJTextBox();
@@ -275,6 +276,7 @@ namespace MyLocker
             // 
             this.myGroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.myGroupBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.myGroupBox1.Controls.Add(this.guna2CircleButton1);
             this.myGroupBox1.Controls.Add(this.guna2Button2);
             this.myGroupBox1.Controls.Add(this.rjTextBox4);
             this.myGroupBox1.Controls.Add(this.rjTextBox3);
@@ -290,6 +292,26 @@ namespace MyLocker
             this.myGroupBox1.Size = new System.Drawing.Size(1410, 950);
             this.myGroupBox1.TabIndex = 17;
             this.myGroupBox1.TabStop = false;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(50, 50);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(910, 260);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(85, 85);
+            this.guna2CircleButton1.TabIndex = 53;
+            this.guna2CircleButton1.Visible = false;
             // 
             // guna2Button2
             // 
@@ -510,5 +532,6 @@ namespace MyLocker
         private RJTextBox rjTextBox3;
         private RJTextBox rjTextBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }

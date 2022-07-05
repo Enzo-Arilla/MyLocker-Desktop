@@ -191,7 +191,6 @@ namespace MyLocker
             // 
             // guna2Button3
             // 
-            this.guna2Button3.BorderRadius = 10;
             this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -222,6 +221,7 @@ namespace MyLocker
             this.guna2Button6.Size = new System.Drawing.Size(397, 86);
             this.guna2Button6.TabIndex = 5;
             this.guna2Button6.Text = "Dados dos Alunos";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // panel2
             // 
@@ -247,7 +247,6 @@ namespace MyLocker
             // 
             // guna2Button5
             // 
-            this.guna2Button5.BorderRadius = 10;
             this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -308,7 +307,6 @@ namespace MyLocker
             // 
             // guna2Button9
             // 
-            this.guna2Button9.BorderRadius = 10;
             this.guna2Button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -356,6 +354,7 @@ namespace MyLocker
             this.guna2Button7.Size = new System.Drawing.Size(397, 86);
             this.guna2Button7.TabIndex = 6;
             this.guna2Button7.Text = "Alterar Foto";
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
             // 
             // panel9
             // 

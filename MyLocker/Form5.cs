@@ -150,7 +150,8 @@ namespace MyLocker
             this.Hide();
         }
 
-        private void guna2Button5_Click_2(object sender, EventArgs e)
+
+        private void guna2Button5_Click_1(object sender, EventArgs e)
         {
             var form7 = new Form7();
             form7.Closed += (s, args) => this.Close();
@@ -158,22 +159,72 @@ namespace MyLocker
             this.Hide();
         }
 
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            var form8 = new Form8();
+            form8.Closed += (s, args) => this.Close();
+            form8.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            var form9 = new Form9();
+            form9.Closed += (s, args) => this.Close();
+            form9.Show();
+            this.Hide();
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
-            if (panel6.Visible == false)
+            if (panel3.Visible == false)
             {
-                panel6.Visible = true;
+                panel3.Visible = true;
                 panel8.Visible = true;
                 panel9.Visible = true;
                 panel11.Visible = true;
             }
-            else
+            else if (panel3.Visible == true)
             {
-                panel6.Visible = false;
+                panel3.Visible = false;
                 panel8.Visible = false;
                 panel9.Visible = false;
                 panel11.Visible = false;
             }
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            var form2 = new Form2();
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            var form10 = new Form10();
+            form10.Closed += (s, args) => this.Close();
+            form10.Show();
+            this.Hide();
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            var form11 = new Form11();
+            form11.Closed += (s, args) => this.Close();
+            form11.Show();
+            this.Hide();
         }
     }
 }

@@ -31,6 +31,7 @@ namespace MyLocker
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,9 +63,6 @@ namespace MyLocker
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.rjTextBox1 = new MyLocker.RJTextBox();
-            this.rjTextBox5 = new MyLocker.RJTextBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -73,11 +71,13 @@ namespace MyLocker
             this.panel9 = new System.Windows.Forms.Panel();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            this.rjTextBox1 = new MyLocker.RJTextBox();
+            this.rjTextBox5 = new MyLocker.RJTextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,21 @@ namespace MyLocker
             this.panel1.Size = new System.Drawing.Size(1440, 113);
             this.panel1.TabIndex = 4;
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1214, 15);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(85, 82);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 36;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -106,6 +121,7 @@ namespace MyLocker
             this.label5.Size = new System.Drawing.Size(141, 61);
             this.label5.TabIndex = 2;
             this.label5.Text = "APM";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -356,7 +372,7 @@ namespace MyLocker
             this.panel2.Controls.Add(this.guna2Button5);
             this.panel2.Controls.Add(this.guna2Button4);
             this.panel2.Controls.Add(this.guna2Button1);
-            this.panel2.Location = new System.Drawing.Point(-1, 112);
+            this.panel2.Location = new System.Drawing.Point(0, 112);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(397, 254);
             this.panel2.TabIndex = 48;
@@ -385,6 +401,7 @@ namespace MyLocker
             this.guna2Button5.Size = new System.Drawing.Size(397, 86);
             this.guna2Button5.TabIndex = 7;
             this.guna2Button5.Text = "Desocupar um Armário";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click_1);
             // 
             // guna2Button4
             // 
@@ -442,7 +459,6 @@ namespace MyLocker
             // 
             // guna2Button3
             // 
-            this.guna2Button3.BorderRadius = 10;
             this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -456,6 +472,7 @@ namespace MyLocker
             this.guna2Button3.Size = new System.Drawing.Size(397, 86);
             this.guna2Button3.TabIndex = 6;
             this.guna2Button3.Text = "Gerenciar Alunos";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button6
             // 
@@ -472,6 +489,7 @@ namespace MyLocker
             this.guna2Button6.Size = new System.Drawing.Size(397, 86);
             this.guna2Button6.TabIndex = 5;
             this.guna2Button6.Text = "Dados dos Alunos";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2Button2
             // 
@@ -490,66 +508,6 @@ namespace MyLocker
             this.guna2Button2.TabIndex = 50;
             this.guna2Button2.Text = "guna2Button2";
             this.guna2Button2.Visible = false;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox1.BorderRadius = 50;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rjTextBox1.Location = new System.Drawing.Point(138, 545);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.rjTextBox1.PlaceholderText = "RA do Aluno";
-            this.rjTextBox1.Size = new System.Drawing.Size(761, 109);
-            this.rjTextBox1.TabIndex = 31;
-            this.rjTextBox1.UnderlinedStyle = false;
-            this.rjTextBox1.Enter += new System.EventHandler(this.rjTextBox1_Enter);
-            // 
-            // rjTextBox5
-            // 
-            this.rjTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.rjTextBox5.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox5.BorderRadius = 50;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rjTextBox5.Location = new System.Drawing.Point(138, 408);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.rjTextBox5.PlaceholderText = "Número do Armário";
-            this.rjTextBox5.Size = new System.Drawing.Size(761, 109);
-            this.rjTextBox5.TabIndex = 30;
-            this.rjTextBox5.UnderlinedStyle = false;
-            this.rjTextBox5._TextChanged += new System.EventHandler(this.rjTextBox5__TextChanged);
-            this.rjTextBox5.Enter += new System.EventHandler(this.rjTextBox5_Enter);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1214, 15);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(85, 82);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 36;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
             // panel3
             // 
@@ -600,10 +558,10 @@ namespace MyLocker
             this.guna2Button7.Size = new System.Drawing.Size(397, 86);
             this.guna2Button7.TabIndex = 7;
             this.guna2Button7.Text = "Trocar Perfil";
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
             // 
             // guna2Button9
             // 
-            this.guna2Button9.BorderRadius = 10;
             this.guna2Button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -617,6 +575,7 @@ namespace MyLocker
             this.guna2Button9.Size = new System.Drawing.Size(397, 86);
             this.guna2Button9.TabIndex = 10;
             this.guna2Button9.Text = "Fechar Aplicativo";
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // panel9
             // 
@@ -642,6 +601,7 @@ namespace MyLocker
             this.guna2Button8.Size = new System.Drawing.Size(397, 86);
             this.guna2Button8.TabIndex = 6;
             this.guna2Button8.Text = "Alterar Foto";
+            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
             // guna2Button10
             // 
@@ -658,6 +618,52 @@ namespace MyLocker
             this.guna2Button10.Size = new System.Drawing.Size(397, 86);
             this.guna2Button10.TabIndex = 5;
             this.guna2Button10.Text = "Alterar Senha";
+            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.rjTextBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox1.BorderRadius = 50;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.rjTextBox1.Location = new System.Drawing.Point(138, 545);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.rjTextBox1.PlaceholderText = "RA do Aluno";
+            this.rjTextBox1.Size = new System.Drawing.Size(761, 109);
+            this.rjTextBox1.TabIndex = 31;
+            this.rjTextBox1.UnderlinedStyle = false;
+            this.rjTextBox1.Enter += new System.EventHandler(this.rjTextBox1_Enter);
+            // 
+            // rjTextBox5
+            // 
+            this.rjTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.rjTextBox5.BorderColor = System.Drawing.Color.Transparent;
+            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.rjTextBox5.BorderRadius = 50;
+            this.rjTextBox5.BorderSize = 2;
+            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjTextBox5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.rjTextBox5.Location = new System.Drawing.Point(138, 408);
+            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.rjTextBox5.Multiline = false;
+            this.rjTextBox5.Name = "rjTextBox5";
+            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.rjTextBox5.PasswordChar = false;
+            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.rjTextBox5.PlaceholderText = "Número do Armário";
+            this.rjTextBox5.Size = new System.Drawing.Size(761, 109);
+            this.rjTextBox5.TabIndex = 30;
+            this.rjTextBox5.UnderlinedStyle = false;
+            this.rjTextBox5._TextChanged += new System.EventHandler(this.rjTextBox5__TextChanged);
+            this.rjTextBox5.Enter += new System.EventHandler(this.rjTextBox5_Enter);
             // 
             // Form5
             // 
@@ -696,10 +702,10 @@ namespace MyLocker
             this.Load += new System.EventHandler(this.Form5_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

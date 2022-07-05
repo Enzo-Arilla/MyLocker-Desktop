@@ -83,7 +83,7 @@ namespace MyLocker
             var form5 = new Form5();
             form5.Closed += (s, args) => this.Close();
             form5.Show();
-            this.Hide(); ;
+            this.Hide(); 
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -160,6 +160,19 @@ namespace MyLocker
             var form10 = new Form10();
             form10.FormClosed += (s, args) => this.Close();
             form10.Show();
+            this.Hide();
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            var form11 = new Form11();
+            form11.FormClosed += (s, args) => this.Close();
+            form11.Show();
             this.Hide();
         }
     }
