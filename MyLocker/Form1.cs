@@ -15,18 +15,11 @@ namespace MyLocker
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            panel3.Width += 12;
-            if (panel3.Width >= 1300)
-            {
-                timer1.Stop();
-                Form2 form2 = new Form2();
-                form2.Show();
-                this.Hide();
-            }
+            lblResultadoAndar.Visible = true;
+            lblResultadoCor.Visible = true;
+            lblResultadoSalaEsquerda.Visible = true;
+            lblResultadoSalaDireita.Visible = true;
+            lblResultadoSituacao.Visible = true;
         }
     }
 }

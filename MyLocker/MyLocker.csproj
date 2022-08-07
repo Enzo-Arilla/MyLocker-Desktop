@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
@@ -59,72 +62,99 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Armario.cs" />
-    <Compile Include="Form11.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Elipse.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form11.Designer.cs">
-      <DependentUpon>Form11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form10.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form7.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form8.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form9.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Funcionario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormAlterarFoto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormAlterarFoto.Designer.cs">
+      <DependentUpon>FormAlterarFoto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="FormAlterarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="FormAlterarSenha.Designer.cs">
+      <DependentUpon>FormAlterarSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="FormAlugarArmario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="FormAlugarArmario.Designer.cs">
+      <DependentUpon>FormAlugarArmario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDadosAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDadosAlunos.Designer.cs">
+      <DependentUpon>FormDadosAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDadosArmarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDadosArmarios.Designer.cs">
+      <DependentUpon>FormDadosArmarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesocuparArmario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesocuparArmario.Designer.cs">
+      <DependentUpon>FormDesocuparArmario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGerenciarAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGerenciarAlunos.Designer.cs">
+      <DependentUpon>FormGerenciarAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormApm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApm.Designer.cs">
+      <DependentUpon>FormApm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="MyMessageBoxWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyMessageBoxWarning.Designer.cs">
+      <DependentUpon>MyMessageBoxWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBoxSucess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyMessageBoxSucess.Designer.cs">
+      <DependentUpon>MyMessageBoxSucess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastro.Designer.cs">
+      <DependentUpon>FormCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="IRepositorioArmarios.cs" />
     <Compile Include="IRepositorioFuncionarios.cs" />
@@ -140,11 +170,11 @@
     <Compile Include="MyLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MyMessageBox.cs">
+    <Compile Include="MyMessageBoxError.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyMessageBox.Designer.cs">
-      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    <Compile Include="MyMessageBoxError.Designer.cs">
+      <DependentUpon>MyMessageBoxError.cs</DependentUpon>
     </Compile>
     <Compile Include="MyPlaceholderTextBox.cs">
       <SubType>Component</SubType>
@@ -160,41 +190,53 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form11.resx">
-      <DependentUpon>Form11.cs</DependentUpon>
+    <EmbeddedResource Include="FormDadosAlunos.resx">
+      <DependentUpon>FormDadosAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <EmbeddedResource Include="MyMessageBoxWarning.resx">
+      <DependentUpon>MyMessageBoxWarning.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="MyMessageBoxSucess.resx">
+      <DependentUpon>MyMessageBoxSucess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="FormAlterarFoto.resx">
+      <DependentUpon>FormAlterarFoto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="FormAlterarSenha.resx">
+      <DependentUpon>FormAlterarSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="FormCadastro.resx">
+      <DependentUpon>FormCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <EmbeddedResource Include="FormAlugarArmario.resx">
+      <DependentUpon>FormAlugarArmario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDadosArmarios.resx">
+      <DependentUpon>FormDadosArmarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesocuparArmario.resx">
+      <DependentUpon>FormDesocuparArmario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGerenciarAlunos.resx">
+      <DependentUpon>FormGerenciarAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormApm.resx">
+      <DependentUpon>FormApm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MeuControle.resx">
       <DependentUpon>MeuControle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyMessageBox.resx">
-      <DependentUpon>MyMessageBox.cs</DependentUpon>
+    <EmbeddedResource Include="MyMessageBoxError.resx">
+      <DependentUpon>MyMessageBoxError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -205,6 +247,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -223,7 +266,7 @@
       <Version>4.0.3</Version>
     </PackageReference>
     <PackageReference Include="Guna.UI2.WinForms">
-      <Version>2.0.3.2</Version>
+      <Version>2.0.3.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation">
       <Version>6.0.4</Version>
