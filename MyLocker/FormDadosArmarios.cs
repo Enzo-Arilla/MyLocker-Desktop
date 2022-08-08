@@ -18,7 +18,29 @@ namespace MyLocker
             InitializeComponent();
         }
 
-        async private void FormDadosArmarios_Load(object sender, EventArgs e)
+        private string transformHexToPlainText(string hex)
+        {
+            if (hex == "#FDFF97")
+            {
+                return "Amarelo";
+            }
+            else if (hex == "#FF7B7B")
+            {
+                return "Vermelho";
+            }
+            else if (hex == "#92B7FF")
+            {
+                return "Azul";
+            }
+            else if (hex == "#A6FFEA")
+            {
+                return "Verde Água";
+            }
+
+            return "Erro";
+        }
+
+            async private void FormDadosArmarios_Load(object sender, EventArgs e)
         {
 
             lblFoco.Focus();
@@ -28,19 +50,18 @@ namespace MyLocker
 
             foreach(Armario a in armarios) {
                 //MessageBox.Show(a.Number.ToString());
-                string[] row = new string[]{a.Number.ToString()};
+                string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                string[] row = new string[]{a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
                 tblDadosArmarios.Rows.Add(row);
             }
 
-            btnDesocuparArmario.BackColor = Color.Empty;
-            panel2.BackColor = Color.Empty;
-            btnGerenciarAlunos.BackColor = Color.Empty;
-            panel7.BackColor = Color.Empty;
+            btnStatusApm.BackColor = Color.Transparent;
+
         }
 
         static async Task<Armario[]> ListArmarios()
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api-production.up.railway.app");
 
             Armario[] response = await apiClient.ListArmarios();
 

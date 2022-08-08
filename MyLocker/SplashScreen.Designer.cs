@@ -89,7 +89,7 @@ namespace MyLocker
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SplashScreen";
+            this.Text = "MyLocker";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -77,7 +77,7 @@ namespace MyLocker
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnLogin.Font = new System.Drawing.Font("Roboto", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.Location = new System.Drawing.Point(831, 875);
             this.btnLogin.Name = "btnLogin";
@@ -116,7 +116,7 @@ namespace MyLocker
             this.txtSenha.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtSenha.BorderRadius = 15;
             this.txtSenha.BorderSize = 2;
-            this.txtSenha.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.LightGray;
             this.txtSenha.Location = new System.Drawing.Point(368, 720);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
@@ -139,7 +139,7 @@ namespace MyLocker
             this.txtCpf.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtCpf.BorderRadius = 15;
             this.txtCpf.BorderSize = 2;
-            this.txtCpf.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCpf.ForeColor = System.Drawing.Color.Silver;
             this.txtCpf.Location = new System.Drawing.Point(368, 572);
             this.txtCpf.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
@@ -159,11 +159,11 @@ namespace MyLocker
             this.lblCriarConta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCriarConta.AutoSize = true;
             this.lblCriarConta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCriarConta.Font = new System.Drawing.Font("Roboto", 38.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 38.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriarConta.ForeColor = System.Drawing.Color.White;
             this.lblCriarConta.Location = new System.Drawing.Point(400, 891);
             this.lblCriarConta.Name = "lblCriarConta";
-            this.lblCriarConta.Size = new System.Drawing.Size(282, 61);
+            this.lblCriarConta.Size = new System.Drawing.Size(284, 59);
             this.lblCriarConta.TabIndex = 11;
             this.lblCriarConta.Text = "Criar Conta";
             this.lblCriarConta.Click += new System.EventHandler(this.lblCriarConta_Click);
@@ -172,11 +172,11 @@ namespace MyLocker
             // 
             this.lblIniciarSessao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblIniciarSessao.AutoSize = true;
-            this.lblIniciarSessao.Font = new System.Drawing.Font("Roboto", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIniciarSessao.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIniciarSessao.ForeColor = System.Drawing.Color.White;
             this.lblIniciarSessao.Location = new System.Drawing.Point(502, 456);
             this.lblIniciarSessao.Name = "lblIniciarSessao";
-            this.lblIniciarSessao.Size = new System.Drawing.Size(453, 81);
+            this.lblIniciarSessao.Size = new System.Drawing.Size(452, 76);
             this.lblIniciarSessao.TabIndex = 3;
             this.lblIniciarSessao.Text = "Iniciar Sessão";
             // 
@@ -213,12 +213,14 @@ namespace MyLocker
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyLocker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyUp);
             this.gbConjunto.ResumeLayout(false);
             this.gbConjunto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();

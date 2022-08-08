@@ -10,13 +10,14 @@ namespace MyLocker
     public class Armario
     {
         [JsonConstructor]
-        public Armario(int number, int isRented, string rentedAt, int fk_section_id, int status)
+        public Armario(int number, int isRented, string rentedAt, int fk_section_id, int status, SectionType section)
         {
             Number = number;
             IsRented = isRented;
             RentedAt = rentedAt;
             FK_section_id = fk_section_id;
             Status = status;
+            Section = section;
         }
 
         public Armario()
@@ -33,5 +34,7 @@ namespace MyLocker
         public int FK_section_id { get; set; }
         [JsonProperty("status")]
         public int Status { get; set; }
+        [JsonProperty("section")]
+        public SectionType Section { get; set; }
     }
 }

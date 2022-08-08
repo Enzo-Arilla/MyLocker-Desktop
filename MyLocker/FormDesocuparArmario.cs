@@ -29,7 +29,7 @@ namespace MyLocker
             foreach (Armario a in armarios)
             {
                 //MessageBox.Show(a.Number.ToString());
-                string[] row = new string[] { a.Number.ToString() };
+                string[] row = new string[] { a.Number.ToString(), a.IsRented.ToString() };
                 tblDesocuparArmario.Rows.Add(row);
             }
 
@@ -38,7 +38,7 @@ namespace MyLocker
 
         static async Task<Armario[]> ListArmarios()
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api-production.up.railway.app");
 
             Armario[] response = await apiClient.ListArmarios();
 

@@ -21,21 +21,21 @@ namespace MyLocker
         async private void FormDadosArmarios_Load(object sender, EventArgs e)
         {
             
-            Armario[] armarios = null;
-            armarios  = await ListArmarios();
+            Alunos[] alunos = null;
+            alunos = await ListAlunos();
 
-            foreach(Armario a in armarios) {
+            foreach(Alunos a in alunos) {
                 //MessageBox.Show(a.Number.ToString());
-                string[] row = new string[]{a.Number.ToString()};
+                string[] row = new string[]{a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), a.Locker_number.ToString(), a.Status.ToString()};
                 tblDadosArmarios.Rows.Add(row);
             }
         }
 
-        static async Task<Armario[]> ListArmarios()
+        static async Task<Alunos[]> ListAlunos()
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api-production.up.railway.app");
 
-            Armario[] response = await apiClient.ListArmarios();
+            Alunos[] response = await apiClient.ListAlunos();
 
             return response;
         }

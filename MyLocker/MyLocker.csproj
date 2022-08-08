@@ -61,6 +61,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alunos.cs" />
+    <Compile Include="IRepositorioAlunos.cs" />
+    <Compile Include="SectionType.cs" />
     <Compile Include="Armario.cs" />
     <Compile Include="Elipse.cs">
       <SubType>Component</SubType>

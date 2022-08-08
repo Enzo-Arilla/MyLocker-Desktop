@@ -13,8 +13,7 @@ namespace MyLocker
      {
           public MyTextBox()
           {
-
-            this.AutoSize = false;
+               this.AutoSize = false;
           }
      }
 }

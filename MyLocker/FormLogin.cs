@@ -108,6 +108,14 @@ namespace MyLocker
             this.Hide();
         }
 
+        private void FormLogin_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
