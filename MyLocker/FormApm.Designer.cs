@@ -40,7 +40,6 @@ namespace MyLocker
             this.lblAlunos = new System.Windows.Forms.Label();
             this.lblArmarios = new System.Windows.Forms.Label();
             this.btnTipoPesquisa = new Guna.UI2.WinForms.Guna2Button();
-            this.tblApm = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -61,6 +60,9 @@ namespace MyLocker
             this.btnAlterarSenha = new Guna.UI2.WinForms.Guna2Button();
             this.txtPesquisarArmario = new MyLocker.RJTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.tblApm = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,11 +71,12 @@ namespace MyLocker
             this.Aprovar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblApm)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblApm)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -158,92 +161,6 @@ namespace MyLocker
             this.btnTipoPesquisa.Size = new System.Drawing.Size(354, 75);
             this.btnTipoPesquisa.TabIndex = 52;
             this.btnTipoPesquisa.Text = "Tipo de Pesquisa";
-            // 
-            // tblApm
-            // 
-            this.tblApm.AllowUserToAddRows = false;
-            this.tblApm.AllowUserToDeleteRows = false;
-            this.tblApm.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tblApm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tblApm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tblApm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tblApm.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tblApm.BackgroundColor = System.Drawing.Color.White;
-            this.tblApm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tblApm.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.tblApm.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblApm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tblApm.ColumnHeadersHeight = 50;
-            this.tblApm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.RA,
-            this.Nome,
-            this.Sobrenome,
-            this.ComprovantePagamento,
-            this.Aprovar});
-            this.tblApm.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblApm.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tblApm.EnableHeadersVisualStyles = false;
-            this.tblApm.GridColor = System.Drawing.Color.Black;
-            this.tblApm.Location = new System.Drawing.Point(12, 371);
-            this.tblApm.MultiSelect = false;
-            this.tblApm.Name = "tblApm";
-            this.tblApm.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblApm.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tblApm.RowHeadersVisible = false;
-            this.tblApm.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.tblApm.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tblApm.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tblApm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblApm.Size = new System.Drawing.Size(1555, 615);
-            this.tblApm.TabIndex = 55;
-            this.tblApm.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tblApm.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tblApm.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tblApm.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tblApm.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tblApm.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.tblApm.ThemeStyle.GridColor = System.Drawing.Color.Black;
-            this.tblApm.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
-            this.tblApm.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.tblApm.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tblApm.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.tblApm.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tblApm.ThemeStyle.HeaderStyle.Height = 50;
-            this.tblApm.ThemeStyle.ReadOnly = false;
-            this.tblApm.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.Black;
-            this.tblApm.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.tblApm.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.tblApm.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tblApm.ThemeStyle.RowsStyle.Height = 22;
-            this.tblApm.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White;
-            this.tblApm.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // panel2
             // 
@@ -534,6 +451,120 @@ namespace MyLocker
             this.pictureBox1.TabIndex = 61;
             this.pictureBox1.TabStop = false;
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientPanel1.BorderRadius = 50;
+            this.guna2GradientPanel1.Controls.Add(this.guna2VScrollBar1);
+            this.guna2GradientPanel1.Controls.Add(this.tblApm);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(-58, 354);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1600, 690);
+            this.guna2GradientPanel1.TabIndex = 63;
+            // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.tblApm;
+            this.guna2VScrollBar1.BorderRadius = 3;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1560, 38);
+            this.guna2VScrollBar1.Minimum = 1;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 615);
+            this.guna2VScrollBar1.TabIndex = 55;
+            this.guna2VScrollBar1.Value = 1;
+            // 
+            // tblApm
+            // 
+            this.tblApm.AllowUserToAddRows = false;
+            this.tblApm.AllowUserToDeleteRows = false;
+            this.tblApm.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tblApm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tblApm.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tblApm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblApm.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tblApm.BackgroundColor = System.Drawing.Color.White;
+            this.tblApm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tblApm.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tblApm.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblApm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tblApm.ColumnHeadersHeight = 50;
+            this.tblApm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.RA,
+            this.Nome,
+            this.Sobrenome,
+            this.ComprovantePagamento,
+            this.Aprovar});
+            this.tblApm.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblApm.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tblApm.EnableHeadersVisualStyles = false;
+            this.tblApm.GridColor = System.Drawing.Color.Black;
+            this.tblApm.Location = new System.Drawing.Point(23, 38);
+            this.tblApm.MultiSelect = false;
+            this.tblApm.Name = "tblApm";
+            this.tblApm.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblApm.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.tblApm.RowHeadersVisible = false;
+            this.tblApm.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.tblApm.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tblApm.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tblApm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblApm.Size = new System.Drawing.Size(1555, 615);
+            this.tblApm.TabIndex = 56;
+            this.tblApm.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.tblApm.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.tblApm.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.tblApm.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.tblApm.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.tblApm.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.tblApm.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.tblApm.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.tblApm.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tblApm.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblApm.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.tblApm.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tblApm.ThemeStyle.HeaderStyle.Height = 50;
+            this.tblApm.ThemeStyle.ReadOnly = false;
+            this.tblApm.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.Black;
+            this.tblApm.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tblApm.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.tblApm.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tblApm.ThemeStyle.RowsStyle.Height = 22;
+            this.tblApm.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.tblApm.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // ID
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -589,7 +620,7 @@ namespace MyLocker
             this.Controls.Add(this.btnTipoPesquisa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tblApm);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormApm";
@@ -600,11 +631,12 @@ namespace MyLocker
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblApm)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblApm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -617,7 +649,6 @@ namespace MyLocker
         private System.Windows.Forms.Label lblArmarios;
         private Guna.UI2.WinForms.Guna2Button btnTipoPesquisa;
         private RJTextBox txtPesquisarArmario;
-        private Guna.UI2.WinForms.Guna2DataGridView tblApm;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
@@ -638,6 +669,9 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnAlterarFoto;
         private Guna.UI2.WinForms.Guna2Button btnAlterarSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
+        private Guna.UI2.WinForms.Guna2DataGridView tblApm;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
