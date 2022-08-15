@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Refit;
@@ -13,27 +14,12 @@ namespace MyLocker
 {
     public partial class FormDesocuparArmario : Form
     {
+
+
         public FormDesocuparArmario()
         {
             InitializeComponent();
-        }
-
-        async private void FormDesocuparArmario_Load(object sender, EventArgs e)
-        {
-
-            lblFoco.Focus();
-
-            Armario[] armarios = null;
-            armarios = await ListArmarios();
-
-            foreach (Armario a in armarios)
-            {
-                //MessageBox.Show(a.Number.ToString());
-                string[] row = new string[] { a.Number.ToString(), a.IsRented.ToString() };
-                tblDesocuparArmario.Rows.Add(row);
-            }
-
-            tblDesocuparArmario.AllowUserToAddRows = false;
+       
         }
 
         static async Task<Armario[]> ListArmarios()
@@ -43,6 +29,27 @@ namespace MyLocker
             Armario[] response = await apiClient.ListArmarios();
 
             return response;
+        }
+
+
+        private async void FormDesocuparArmario_Load(object sender, EventArgs e)
+        {
+       
+
+            lblFoco.Focus();
+
+            Armario[] armarios = null;
+            
+            armarios = await ListArmarios();
+
+            foreach (Armario a in armarios)
+            {
+       
+                string[] row = new string[] { a.Number.ToString(), a.IsRented.ToString() };
+                tblDesocuparArmario.Rows.Add(row);
+
+            }
+
         }
 
         private void btnAlugarArmario_Click(object sender, EventArgs e)

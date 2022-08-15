@@ -48,6 +48,14 @@ namespace MyLocker
             this.Hide();
         }
 
+        private void btnDadosArmarios_Click(object sender, EventArgs e)
+        {
+            var FormDadosArmarios = new FormDadosArmarios();
+            FormDadosArmarios.FormClosed += (s, args) => this.Close();
+            FormDadosArmarios.Show();
+            this.Hide();
+        }
+
         private void btnDesocuparArmario_Click(object sender, EventArgs e)
         {
             var FormDesocuparArmario = new FormDesocuparArmario();
@@ -158,5 +166,6 @@ namespace MyLocker
             }
         }
 
+        
     }
 }

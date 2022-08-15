@@ -45,7 +45,6 @@ namespace MyLocker
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDadosArmarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnAlugarArmario = new Guna.UI2.WinForms.Guna2Button();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnGerenciarAlunos = new Guna.UI2.WinForms.Guna2Button();
             this.btnDadosAlunos = new Guna.UI2.WinForms.Guna2Button();
@@ -70,25 +69,26 @@ namespace MyLocker
             this.btnNome = new Guna.UI2.WinForms.Guna2Button();
             this.btnRaLocatario = new Guna.UI2.WinForms.Guna2Button();
             this.lblFoco = new System.Windows.Forms.Label();
-            this.txtPesquisarArmario = new MyLocker.RJTextBox();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.tblDadosArmarios = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.raLocatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SalaDireita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SalaEsquerda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Andar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Andar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalaEsquerda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalaDireita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.raLocatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtPesquisarArmario = new MyLocker.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblDadosArmarios)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,7 +161,7 @@ namespace MyLocker
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.btnDesocuparArmario);
             this.panel2.Controls.Add(this.panel3);
@@ -249,18 +249,6 @@ namespace MyLocker
             this.btnAlugarArmario.Text = "Alugar um Armário";
             this.btnAlugarArmario.Click += new System.EventHandler(this.btnAlugarArmario_Click);
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.panel4);
-            this.panel7.Controls.Add(this.btnGerenciarAlunos);
-            this.panel7.Controls.Add(this.btnDadosAlunos);
-            this.panel7.Location = new System.Drawing.Point(288, 113);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(397, 167);
-            this.panel7.TabIndex = 11;
-            this.panel7.Visible = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
@@ -318,7 +306,7 @@ namespace MyLocker
             this.btnTipoPesquisa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
             this.btnTipoPesquisa.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoPesquisa.ForeColor = System.Drawing.Color.White;
-            this.btnTipoPesquisa.Location = new System.Drawing.Point(169, 211);
+            this.btnTipoPesquisa.Location = new System.Drawing.Point(33, 209);
             this.btnTipoPesquisa.Name = "btnTipoPesquisa";
             this.btnTipoPesquisa.Size = new System.Drawing.Size(354, 75);
             this.btnTipoPesquisa.TabIndex = 12;
@@ -329,7 +317,7 @@ namespace MyLocker
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1355, 207);
+            this.pictureBox1.Location = new System.Drawing.Point(1377, 211);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -464,7 +452,7 @@ namespace MyLocker
             this.panel10.Controls.Add(this.panel14);
             this.panel10.Controls.Add(this.btnNome);
             this.panel10.Controls.Add(this.btnRaLocatario);
-            this.panel10.Location = new System.Drawing.Point(148, 301);
+            this.panel10.Location = new System.Drawing.Point(18, 325);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(397, 430);
             this.panel10.TabIndex = 55;
@@ -607,29 +595,6 @@ namespace MyLocker
             this.lblFoco.TabIndex = 56;
             this.lblFoco.Visible = false;
             // 
-            // txtPesquisarArmario
-            // 
-            this.txtPesquisarArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.txtPesquisarArmario.BorderColor = System.Drawing.Color.Transparent;
-            this.txtPesquisarArmario.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtPesquisarArmario.BorderRadius = 50;
-            this.txtPesquisarArmario.BorderSize = 2;
-            this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPesquisarArmario.Location = new System.Drawing.Point(555, 194);
-            this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.txtPesquisarArmario.Multiline = false;
-            this.txtPesquisarArmario.Name = "txtPesquisarArmario";
-            this.txtPesquisarArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.txtPesquisarArmario.PasswordChar = false;
-            this.txtPesquisarArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
-            this.txtPesquisarArmario.Size = new System.Drawing.Size(1000, 106);
-            this.txtPesquisarArmario.TabIndex = 32;
-            this.txtPesquisarArmario.UnderlinedStyle = false;
-            this.txtPesquisarArmario.Enter += new System.EventHandler(this.txtPesquisarArmario_Enter);
-            this.txtPesquisarArmario.Leave += new System.EventHandler(this.txtPesquisarArmario_Leave);
-            // 
             // guna2VScrollBar1
             // 
             this.guna2VScrollBar1.BindingContainer = this.tblDadosArmarios;
@@ -730,31 +695,6 @@ namespace MyLocker
             this.tblDadosArmarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White;
             this.tblDadosArmarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // raLocatario
-            // 
-            this.raLocatario.HeaderText = "RA Locatário";
-            this.raLocatario.Name = "raLocatario";
-            // 
-            // SalaDireita
-            // 
-            this.SalaDireita.HeaderText = "Sala na Direita";
-            this.SalaDireita.Name = "SalaDireita";
-            // 
-            // SalaEsquerda
-            // 
-            this.SalaEsquerda.HeaderText = "Sala na Esquerda";
-            this.SalaEsquerda.Name = "SalaEsquerda";
-            // 
-            // Cor
-            // 
-            this.Cor.HeaderText = "Cor";
-            this.Cor.Name = "Cor";
-            // 
-            // Andar
-            // 
-            this.Andar.HeaderText = "Andar";
-            this.Andar.Name = "Andar";
-            // 
             // Nome
             // 
             this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -765,6 +705,31 @@ namespace MyLocker
             this.Nome.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Nome.Width = 123;
             // 
+            // Andar
+            // 
+            this.Andar.HeaderText = "Andar";
+            this.Andar.Name = "Andar";
+            // 
+            // Cor
+            // 
+            this.Cor.HeaderText = "Cor";
+            this.Cor.Name = "Cor";
+            // 
+            // SalaEsquerda
+            // 
+            this.SalaEsquerda.HeaderText = "Sala na Esquerda";
+            this.SalaEsquerda.Name = "SalaEsquerda";
+            // 
+            // SalaDireita
+            // 
+            this.SalaDireita.HeaderText = "Sala na Direita";
+            this.SalaDireita.Name = "SalaDireita";
+            // 
+            // raLocatario
+            // 
+            this.raLocatario.HeaderText = "RA Locatário";
+            this.raLocatario.Name = "raLocatario";
+            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -774,10 +739,45 @@ namespace MyLocker
             this.guna2GradientPanel1.Controls.Add(this.tblDadosArmarios);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(67, 340);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(221, 340);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1396, 690);
             this.guna2GradientPanel1.TabIndex = 62;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.Controls.Add(this.panel4);
+            this.panel7.Controls.Add(this.btnGerenciarAlunos);
+            this.panel7.Controls.Add(this.btnDadosAlunos);
+            this.panel7.Location = new System.Drawing.Point(288, 113);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(397, 167);
+            this.panel7.TabIndex = 11;
+            this.panel7.Visible = false;
+            // 
+            // txtPesquisarArmario
+            // 
+            this.txtPesquisarArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtPesquisarArmario.BorderColor = System.Drawing.Color.Transparent;
+            this.txtPesquisarArmario.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtPesquisarArmario.BorderRadius = 50;
+            this.txtPesquisarArmario.BorderSize = 2;
+            this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPesquisarArmario.Location = new System.Drawing.Point(587, 202);
+            this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtPesquisarArmario.Multiline = false;
+            this.txtPesquisarArmario.Name = "txtPesquisarArmario";
+            this.txtPesquisarArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtPesquisarArmario.PasswordChar = false;
+            this.txtPesquisarArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
+            this.txtPesquisarArmario.Size = new System.Drawing.Size(1000, 106);
+            this.txtPesquisarArmario.TabIndex = 32;
+            this.txtPesquisarArmario.UnderlinedStyle = false;
+            this.txtPesquisarArmario.Enter += new System.EventHandler(this.txtPesquisarArmario_Enter);
+            this.txtPesquisarArmario.Leave += new System.EventHandler(this.txtPesquisarArmario_Leave);
             // 
             // FormDadosArmarios
             // 
@@ -806,12 +806,12 @@ namespace MyLocker
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblDadosArmarios)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -829,7 +829,6 @@ namespace MyLocker
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button btnDadosArmarios;
         private Guna.UI2.WinForms.Guna2Button btnAlugarArmario;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btnGerenciarAlunos;
         private Guna.UI2.WinForms.Guna2Button btnDadosAlunos;
@@ -865,5 +864,6 @@ namespace MyLocker
         private System.Windows.Forms.DataGridViewTextBoxColumn SalaDireita;
         private System.Windows.Forms.DataGridViewTextBoxColumn raLocatario;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private System.Windows.Forms.Panel panel7;
     }
 }

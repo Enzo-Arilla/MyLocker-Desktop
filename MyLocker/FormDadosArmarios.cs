@@ -1,4 +1,5 @@
-﻿using Refit;
+﻿using Guna.UI2.WinForms;
+using Refit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,15 @@ namespace MyLocker
         public FormDadosArmarios()
         {
             InitializeComponent();
+        }
+
+        static async Task<Armario[]> ListArmarios()
+        {
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api-production.up.railway.app");
+
+            Armario[] response = await apiClient.ListArmarios();
+
+            return response;
         }
 
         private string transformHexToPlainText(string hex)
@@ -41,31 +51,34 @@ namespace MyLocker
         }
 
             async private void FormDadosArmarios_Load(object sender, EventArgs e)
-        {
+            {
+            try
+            {
+                var Carregamento = new Carregamento();
+                Carregamento.Show();
+                lblFoco.Focus();
 
-            lblFoco.Focus();
+                Armario[] armarios = null;
 
-            Armario[] armarios = null;
-            armarios  = await ListArmarios();
+                armarios = await ListArmarios();
 
-            foreach(Armario a in armarios) {
-                //MessageBox.Show(a.Number.ToString());
-                string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                string[] row = new string[]{a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
-                tblDadosArmarios.Rows.Add(row);
+                foreach (Armario a in armarios)
+                {
+                    //MessageBox.Show(a.Number.ToString());
+                    string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                    string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                    tblDadosArmarios.Rows.Add(row);
+                }
+
+                Carregamento.Close();
+                btnStatusApm.BackColor = Color.Transparent;
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
 
-            btnStatusApm.BackColor = Color.Transparent;
-
-        }
-
-        static async Task<Armario[]> ListArmarios()
-        {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api-production.up.railway.app");
-
-            Armario[] response = await apiClient.ListArmarios();
-
-            return response;
         }
 
         private void btnAlugarArmario_Click(object sender, EventArgs e)

@@ -176,7 +176,7 @@ namespace MyLocker
             this.lblIniciarSessao.ForeColor = System.Drawing.Color.White;
             this.lblIniciarSessao.Location = new System.Drawing.Point(502, 456);
             this.lblIniciarSessao.Name = "lblIniciarSessao";
-            this.lblIniciarSessao.Size = new System.Drawing.Size(452, 76);
+            this.lblIniciarSessao.Size = new System.Drawing.Size(451, 76);
             this.lblIniciarSessao.TabIndex = 3;
             this.lblIniciarSessao.Text = "Iniciar Sessão";
             // 

@@ -506,7 +506,7 @@ namespace MyLocker
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1355, 207);
+            this.pictureBox1.Location = new System.Drawing.Point(1419, 207);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -521,7 +521,7 @@ namespace MyLocker
             this.guna2GradientPanel1.Controls.Add(this.tblDesocuparArmario);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(802, 336);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(903, 336);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(483, 730);
             this.guna2GradientPanel1.TabIndex = 61;
@@ -664,7 +664,7 @@ namespace MyLocker
             this.txtPesquisarArmario.BorderSize = 2;
             this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPesquisarArmario.Location = new System.Drawing.Point(555, 194);
+            this.txtPesquisarArmario.Location = new System.Drawing.Point(616, 194);
             this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
             this.txtPesquisarArmario.Multiline = false;
             this.txtPesquisarArmario.Name = "txtPesquisarArmario";

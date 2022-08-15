@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -10,13 +11,20 @@ namespace MyLocker
     public class Alunos
     {
         [JsonConstructor]
-        public Alunos(string ra, string first_name, string last_name, string email, string code, int locker_number, int status)
+        public Alunos(string ra, string first_name, string last_name, string email, string? code, int? locker_number, int? status)
         {
             Ra = ra;
             First_name = first_name;
             Last_name = last_name;
             Email = email;
-            Code = code;
+            if (code != "")
+            {
+                Code = "-";
+            }
+            else
+            {
+                Code = "-";
+            }
             Locker_number = locker_number;
             Status = status;
         }
@@ -38,13 +46,13 @@ namespace MyLocker
         public string Email { get; set; }
 
         [JsonProperty("code")]
-        public string Code { get; set; }
+        public string? Code { get; set; }
 
         [JsonProperty("locker_number")]
-        public int Locker_number { get; set; }
+        public int? Locker_number { get; set; }
 
         [JsonProperty("status")]
-        public int Status { get; set; }
+        public int? Status { get; set; }
 
     }
 

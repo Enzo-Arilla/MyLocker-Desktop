@@ -375,7 +375,6 @@ D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormDadosAl
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.MyMessageBoxWarning.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.MyMessageBoxSucess.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.MyMessageBoxError.resources
-D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Form1.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormDadosAlunos.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.MyMessageBoxWarning.resources
@@ -392,3 +391,5 @@ C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormDesocu
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormGerenciarAlunos.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormApm.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.MyMessageBoxError.resources
+D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Carregamento.resources
+D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.SuggestedBindingRedirects.cache

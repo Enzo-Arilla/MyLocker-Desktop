@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
-using MySql.Data.MySqlClient;
-using System.Text;
-using System.Security.Cryptography;
 using BC = BCrypt.Net.BCrypt;
-using Guna;
 using Refit;
 
 namespace MyLocker
@@ -34,6 +24,7 @@ namespace MyLocker
 
         static async Task<Funcionario> GetFuncionario(string cpf)
         {
+        
             var apiClient = RestService.For<IRepositorioFuncionarios>("http://mylocker-backend.herokuapp.com");
 
             Funcionario response = await apiClient.ReturnFuncionario(cpf);
@@ -45,6 +36,10 @@ namespace MyLocker
         {
             try
             {
+
+                var Carregamento = new Carregamento();
+                Carregamento.Show();
+
                 cpf = txtCpf.Text;
                 senha = txtSenha.Text;
 
@@ -59,10 +54,12 @@ namespace MyLocker
                     FormMenu.Closed += (s, args) => this.Close();
                     FormMenu.Show();
                     this.Hide();
+                    Carregamento.Close();
                 }
                 else
                 {
                     MyMessageBoxError.ShowBox("Você inseriu dados incorretos!", "Erro - Credênciais Incorretas");
+                    Carregamento.Close();
                 }
 
             }

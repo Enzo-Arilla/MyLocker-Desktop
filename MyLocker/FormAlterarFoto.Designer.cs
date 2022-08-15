@@ -243,6 +243,7 @@ namespace MyLocker
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.btnDesocuparArmario);
@@ -331,7 +332,7 @@ namespace MyLocker
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.panel11);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.btnTrocarPerfil);
@@ -341,7 +342,7 @@ namespace MyLocker
             this.panel3.Controls.Add(this.btnAlterarSenha);
             this.panel3.Location = new System.Drawing.Point(1043, 113);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 345);
+            this.panel3.Size = new System.Drawing.Size(397, 341);
             this.panel3.TabIndex = 54;
             this.panel3.Visible = false;
             // 
@@ -383,6 +384,7 @@ namespace MyLocker
             // btnFecharAplicativo
             // 
             this.btnFecharAplicativo.BackColor = System.Drawing.Color.Transparent;
+            this.btnFecharAplicativo.BorderColor = System.Drawing.Color.Transparent;
             this.btnFecharAplicativo.BorderRadius = 20;
             this.btnFecharAplicativo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFecharAplicativo.CustomizableEdges.BottomRight = false;
@@ -398,9 +400,10 @@ namespace MyLocker
             this.btnFecharAplicativo.ImageSize = new System.Drawing.Size(0, 0);
             this.btnFecharAplicativo.Location = new System.Drawing.Point(0, 254);
             this.btnFecharAplicativo.Name = "btnFecharAplicativo";
-            this.btnFecharAplicativo.Size = new System.Drawing.Size(397, 86);
+            this.btnFecharAplicativo.Size = new System.Drawing.Size(397, 87);
             this.btnFecharAplicativo.TabIndex = 10;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
+            this.btnFecharAplicativo.UseTransparentBackground = true;
             this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
             // 
             // panel9
@@ -437,13 +440,13 @@ namespace MyLocker
             this.btnAlterarSenha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAlterarSenha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
-            this.btnAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.btnAlterarSenha.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.Black;
             this.btnAlterarSenha.Location = new System.Drawing.Point(0, 0);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
             this.btnAlterarSenha.Size = new System.Drawing.Size(397, 86);
             this.btnAlterarSenha.TabIndex = 5;
-            this.btnAlterarSenha.Text = "Alterar Senha";
+            this.btnAlterarSenha.Text = "ALTERAR SENHA";
             this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
             // panel7

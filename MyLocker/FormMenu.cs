@@ -13,12 +13,12 @@ namespace MyLocker
     public partial class FormMenu : Form
     {
 
+        DateTime time;
+
         public FormMenu()
         {
             InitializeComponent();
         }
-
-        DateTime time;
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
@@ -66,11 +66,16 @@ namespace MyLocker
             this.Hide();
         }
 
-        private void btnDadosArmarios_Click(object sender, EventArgs e)
+        private async void btnDadosArmarios_Click(object sender, EventArgs e)
         {
             var FormDadosArmarios = new FormDadosArmarios();
+            var Load = new Carregamento();
+            Load.Closed += (s, args) => this.Close();
             FormDadosArmarios.Closed += (s, args) => this.Close();
             FormDadosArmarios.Show();
+            Load.Show();
+            await Task.Delay(5000);
+            Load.Close();
             this.Hide();
         }
 
