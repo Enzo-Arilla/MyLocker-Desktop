@@ -34,7 +34,9 @@ namespace MyLocker
 
         private async void FormDesocuparArmario_Load(object sender, EventArgs e)
         {
-       
+
+            var Load = new Carregamento();
+            Load.Show();
 
             lblFoco.Focus();
 
@@ -49,6 +51,8 @@ namespace MyLocker
                 tblDesocuparArmario.Rows.Add(row);
 
             }
+
+            Load.Close();
 
         }
 

@@ -467,6 +467,7 @@ namespace MyLocker
             this.btnGerenciamento.Size = new System.Drawing.Size(500, 87);
             this.btnGerenciamento.TabIndex = 52;
             this.btnGerenciamento.Text = "Registrar";
+            this.btnGerenciamento.Click += new System.EventHandler(this.btnGerenciamento_Click);
             // 
             // txtUltimoNome
             // 

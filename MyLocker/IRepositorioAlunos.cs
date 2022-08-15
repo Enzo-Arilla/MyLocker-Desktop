@@ -11,5 +11,8 @@ namespace MyLocker
     {
         [Get("/students")]
         Task<Alunos[]> ListAlunos();
+
+        [Post("/students")]
+        Task CreateAluno([Body] Alunos aluno); 
     }
 }

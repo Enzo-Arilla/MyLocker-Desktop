@@ -52,7 +52,8 @@ namespace MyLocker
             this.Controls.Add(this.AnimacaoLoad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Carregamento";
-            this.Opacity = 0.7D;
+            this.Opacity = 0.8D;
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Carregamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AnimacaoLoad)).EndInit();

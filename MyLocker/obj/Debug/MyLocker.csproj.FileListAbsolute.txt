@@ -146,7 +146,6 @@ F:\MyLocker\MyLocker\bin\Debug\System.ValueTuple.dll
 F:\MyLocker\MyLocker\obj\Debug\MyLocker.GeneratedMSBuildEditorConfig.editorconfig
 F:\MyLocker\MyLocker\obj\Debug\MyLocker.Form6.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.AssemblyReference.cache
-C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Form1.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.RJTextBox.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Properties.Resources.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.GenerateResource.cache
@@ -393,3 +392,5 @@ C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormApm.re
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.MyMessageBoxError.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Carregamento.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.SuggestedBindingRedirects.cache
+C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Carregamento.resources
+C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenha.resources

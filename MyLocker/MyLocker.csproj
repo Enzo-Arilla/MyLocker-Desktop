@@ -86,9 +86,6 @@
     <Compile Include="IRepositorioAlunos.cs" />
     <Compile Include="SectionType.cs" />
     <Compile Include="Armario.cs" />
-    <Compile Include="Elipse.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="FormAlterarFoto.cs">
       <SubType>Form</SubType>
     </Compile>

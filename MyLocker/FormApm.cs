@@ -20,6 +20,8 @@ namespace MyLocker
 
         async private void FormApm_Load(object sender, EventArgs e)
         {
+            var Load = new Carregamento();
+            Load.Show();
             Armario[] armarios = null;
             armarios = await ListArmarios();
 
@@ -29,6 +31,8 @@ namespace MyLocker
                 string[] row = new string[] { a.Number.ToString() };
                 tblApm.Rows.Add(row);
             }
+
+            Load.Close();
         }
 
         static async Task<Armario[]> ListArmarios()

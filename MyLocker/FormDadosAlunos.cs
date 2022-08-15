@@ -20,7 +20,10 @@ namespace MyLocker
 
         async private void FormDadosArmarios_Load(object sender, EventArgs e)
         {
-            
+            var Load = new Carregamento();
+            Load.Show();
+
+
             Alunos[] alunos = null;
             alunos = await ListAlunos();
 
@@ -29,6 +32,8 @@ namespace MyLocker
                 string[] row = new string[]{a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), a.Locker_number.ToString(), a.Status.ToString()};
                 tblDadosArmarios.Rows.Add(row);
             }
+
+            Load.Close();
         }
 
         static async Task<Alunos[]> ListAlunos()

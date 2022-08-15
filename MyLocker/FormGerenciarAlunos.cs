@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Refit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,15 @@ namespace MyLocker
         {
             InitializeComponent();
         }
+
+        static async Task CreateAluno(Alunos aluno)
+        {
+            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api-production.up.railway.app");
+
+            await apiClient.CreateAluno(aluno);
+
+        }
+
 
         private void FormGerenciarAlunos_Load(object sender, EventArgs e)
         {
@@ -282,5 +292,47 @@ namespace MyLocker
                 panel11.Visible = false;
             }
         }
+
+        private async void btnGerenciamento_Click(object sender, EventArgs e)
+        {
+            if(txtRaAluno.Text.Trim() != "" && txtEmailAluno.Text.Trim() != "" && txtPrimeiroNome.Text.Trim() != "" && txtUltimoNome.Text.Trim() != "")
+            {
+                if (txtEmailAluno.Text.StartsWith("cl") && txtEmailAluno.Text.Contains("@g.unicamp.br"))
+                {
+                    if (btnGerenciamento.Text == "Registrar")
+                    {
+                        try
+                        {
+                            Alunos aluno = new Alunos(txtRaAluno.Text, txtPrimeiroNome.Text, txtUltimoNome.Text, txtEmailAluno.Text);
+
+                            await CreateAluno(aluno);
+                            MyMessageBoxSucess.ShowBox("O aluno foi registrado com sucesso!", "Sucesso");
+                        }
+                        catch (ApiException erro)
+                        {
+                            string[] mensagemErro = erro.Content.Split('"');
+                            MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
+                        }
+                    }
+                    else if (btnGerenciamento.Text == "Editar")
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }  
+                else
+                {
+                    MyMessageBoxError.ShowBox("O formato do e-mail utilizado está incorreto!", "Erro");
+                }
+            }
+            else
+            {
+                MyMessageBoxError.ShowBox("Campo(s) não preenchido(s)!", "Erro");
+            }
+        }
+
     }
 }

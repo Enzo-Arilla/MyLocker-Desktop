@@ -405,7 +405,7 @@ namespace MyLocker
             this.btnAlugar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAlugar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAlugar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnAlugar.Font = new System.Drawing.Font("Roboto", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlugar.ForeColor = System.Drawing.Color.Black;
             this.btnAlugar.Location = new System.Drawing.Point(565, 608);
             this.btnAlugar.Name = "btnAlugar";
@@ -533,6 +533,7 @@ namespace MyLocker
             this.txtRaAluno.Size = new System.Drawing.Size(761, 109);
             this.txtRaAluno.TabIndex = 74;
             this.txtRaAluno.UnderlinedStyle = false;
+            this.txtRaAluno.Enter += new System.EventHandler(this.txtRaAluno_Enter);
             // 
             // txtNumeroArmario
             // 
@@ -554,6 +555,7 @@ namespace MyLocker
             this.txtNumeroArmario.Size = new System.Drawing.Size(761, 109);
             this.txtNumeroArmario.TabIndex = 73;
             this.txtNumeroArmario.UnderlinedStyle = false;
+            this.txtNumeroArmario.Enter += new System.EventHandler(this.txtNumeroArmario_Enter);
             // 
             // cbPossuiApm
             // 

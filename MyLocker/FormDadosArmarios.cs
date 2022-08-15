@@ -54,8 +54,8 @@ namespace MyLocker
             {
             try
             {
-                var Carregamento = new Carregamento();
-                Carregamento.Show();
+                var Load = new Carregamento();
+                Load.Show();
                 lblFoco.Focus();
 
                 Armario[] armarios = null;
@@ -70,7 +70,7 @@ namespace MyLocker
                     tblDadosArmarios.Rows.Add(row);
                 }
 
-                Carregamento.Close();
+                Load.Close();
                 btnStatusApm.BackColor = Color.Transparent;
             }
             catch(Exception ex)

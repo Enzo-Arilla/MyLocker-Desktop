@@ -17,17 +17,25 @@ namespace MyLocker
             First_name = first_name;
             Last_name = last_name;
             Email = email;
-            if (code != "")
-            {
-                Code = "-";
-            }
-            else
-            {
-                Code = "-";
-            }
+            Code = code;
             Locker_number = locker_number;
             Status = status;
         }
+
+        public Alunos(string ra, string first_name, string last_name, string email)
+        {
+            Ra = ra;
+            First_name = first_name;
+            Last_name = last_name;
+            Email = email;
+        }
+
+        public Alunos(string ra, int locker_number)
+        {
+            Ra = ra;
+            Locker_number = locker_number;
+        }
+
 
         public Alunos()
         {
