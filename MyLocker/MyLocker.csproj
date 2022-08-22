@@ -147,6 +147,8 @@
     <Compile Include="MyMessageBoxSucess.Designer.cs">
       <DependentUpon>MyMessageBoxSucess.cs</DependentUpon>
     </Compile>
+    <Compile Include="SetLockerIsRentedRequest.cs" />
+    <Compile Include="SetStudentLockerNumberRequest.cs" />
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>

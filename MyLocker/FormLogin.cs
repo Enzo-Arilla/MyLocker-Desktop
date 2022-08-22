@@ -53,7 +53,6 @@ namespace MyLocker
                     var FormMenu = new FormMenu();
                     FormMenu.Closed += (s, args) => this.Close();
                     FormMenu.Show();
-                    this.Hide();
                     Carregamento.Close();
                 }
                 else
@@ -67,7 +66,6 @@ namespace MyLocker
             {
                 string[] mensagemErro = erro.Content.Split('"');
                 MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
-               
             }
         }
 

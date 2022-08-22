@@ -11,5 +11,12 @@ namespace MyLocker
     {
         [Get("/lockers")]
         Task<Armario[]> ListArmarios();
+
+        [Get("/lockers/{lockerNumberString}")]
+        Task<Armario> FindLockerByNumber(String lockerNumberString);
+
+        [Post("/lockers/set-is-rented")]
+        Task SetLockerIsRented([Body] SetLockerIsRentedRequest locker);
+
     }
 }

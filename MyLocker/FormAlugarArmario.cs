@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Refit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,62 @@ namespace MyLocker
         {
             InitializeComponent();
         }
+
+        static async Task SetStudentLockerNumber(SetStudentLockerNumberRequest aluno)
+        {
+            var apiClient = RestService.For<IRepositorioAlunos>("http://mylocker-api.herokuapp.com");
+
+            await apiClient.SetStudentLockerNumber(aluno);
+
+            return;
+        }
+        static async Task SetLockerIsRented(SetLockerIsRentedRequest armario)
+        {
+            var apiClient = RestService.For<IRepositorioArmarios>("http://mylocker-api.herokuapp.com");
+
+            await apiClient.SetLockerIsRented(armario);
+
+            return;
+        }
+
+        static async Task<Armario> FindLockerByNumber(String lockerNumberString)
+        {
+            var apiClient = RestService.For<IRepositorioArmarios>("http://mylocker-api.herokuapp.com");
+
+            Armario armario = await apiClient.FindLockerByNumber(lockerNumberString);
+
+            return armario;
+        }
+
+        static async Task RentLocker(SetLockerIsRentedRequest armario, SetStudentLockerNumberRequest aluno) {
+            await SetStudentLockerNumber(aluno);
+            await SetLockerIsRented(armario);
+        }
+
+        private async void btnAlugar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNumeroArmario.Text.Trim() == "" || txtRaAluno.Text.Trim() == "" /*|| txtNumeroArmario.PlaceholderText == "Número do Armário" || txtRaAluno.PlaceholderText == "RA do Aluno"*/)
+                {
+                    MyMessageBoxError.ShowBox("Preencher todos os campos antes de efetuar a locação.", "Campos obrigatórios não preenchidos!");
+                }
+                else
+                {
+                    SetLockerIsRentedRequest setLockerIsRentedRequest = new SetLockerIsRentedRequest(int.Parse(txtNumeroArmario.Text), 1);
+                    SetStudentLockerNumberRequest setStudentLockerNumberRequest = new SetStudentLockerNumberRequest(txtRaAluno.Text, int.Parse(txtNumeroArmario.Text));
+                    await RentLocker(setLockerIsRentedRequest, setStudentLockerNumberRequest);
+                    MyMessageBoxSucess.ShowBox("O armário foi alugado com sucesso!");
+                }
+            }
+            catch (ApiException erro)
+            {
+                string[] mensagemErro = erro.Content.Split('"');
+                MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
+            }
+
+        }
+
 
         private void FormAlugarArmario_Load(object sender, EventArgs e)
         {
@@ -158,7 +215,7 @@ namespace MyLocker
             }
         }
 
-        private void txtNumeroArmario_Enter(object sender, EventArgs e)
+        private async void txtNumeroArmario_Enter(object sender, EventArgs e)
         {
             if (txtNumeroArmario.PlaceholderText == "Número do Armário")
             {
@@ -213,14 +270,40 @@ namespace MyLocker
 
         }
 
-        private void btnAlugar_Click(object sender, EventArgs e)
+        private async void FormAlugarArmario_KeyUp(object sender, KeyPressEventArgs e)
         {
-            if (txtNumeroArmario.Text == "" || txtRaAluno.Text == "" || txtNumeroArmario.PlaceholderText == "Número do Armário" || txtRaAluno.PlaceholderText == "RA do Aluno")
-            {
-                MyMessageBoxError.ShowBox("Preencher todos os campos antes de efetuar a locação.", "Campos obrigatórios não preenchidos!");
-            }
             
         }
 
+        private async void gpGerenciamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                
+            }
+        }
+
+        private async void btnProcurar_Click(object sender, EventArgs e)
+        {
+            if (txtNumeroArmario.Text.Trim() == "")
+            {
+                MyMessageBoxError.ShowBox("Preencha o campo do número do armário!", "Erro");
+            }
+            else
+            {
+                Armario armario = await FindLockerByNumber(txtNumeroArmario.Text);
+                if (armario.IsRented == 1)
+                {
+                    btnDisponibilidade.Visible = true;
+                    btnDisponibilidade.FillColor = Color.Red;
+                    lblResultadoAndar.Text = armario.RentedAt;
+                    lblResultadoCor.Text = armario.Section.Color;
+                    lblResultadoSalaEsquerda.Text = armario.Section.Left_room;
+                    lblResultadoSalaDireita.Text = armario.Section.Right_room;
+                    lblResultadoSituacao.Text = "Alugado";
+
+                }
+            }
+        }
     }
 }

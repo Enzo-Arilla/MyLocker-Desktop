@@ -172,7 +172,7 @@ namespace MyLocker
                 panel3.Visible = true;
                 panel8.Visible = true;
             }
-            else if (panel3.Visible == true)
+            else if (guna2GradientPanelImgPerfil.Visible == true)
             {
                 guna2GradientPanelImgPerfil.Visible = false;
                 panel3.Visible = false;
