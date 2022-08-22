@@ -39,29 +39,29 @@ namespace MyLocker
                 panel5.BringToFront();
                 panel2.Visible = true;
                 panel4.Visible = false;
-                panel7.Visible = false;
+                guna2GradientPanel1.Visible = false;
             }
             else if (panel2.Visible == true)
             {
                 label1.Visible = true;
                 panel5.Visible = false;
                 panel2.Visible = false;
-                panel7.Visible = false;
+                guna2GradientPanel1.Visible = false;
             }
         }
 
         private void lblAlunos_Click(object sender, EventArgs e)
         {
 
-            if (panel7.Visible == false)
+            if (guna2GradientPanel1.Visible == false)
             {
                 panel4.Visible = true;
-                panel7.Visible = true;
+                guna2GradientPanel1.Visible = true;
                 panel2.Visible = false;
             }
-            else if (panel7.Visible == true)
+            else if (guna2GradientPanel1.Visible == true)
             {
-                panel7.Visible = false;
+                guna2GradientPanel1.Visible = false;
                 panel4.Visible = false;
                 panel2.Visible = false;
             }
@@ -120,18 +120,12 @@ namespace MyLocker
 
         private void btnDadosAlunos_Click(object sender, EventArgs e)
         {
-            var FormDadosAlunos = new FormDadosAlunos();
-            FormDadosAlunos.Closed += (s, args) => this.Close();
-            FormDadosAlunos.Show();
-            this.Hide();
+
         }
 
         private void btnGerenciarAlunos_Click(object sender, EventArgs e)
         {
-            var FormGerenciarAlunos = new FormGerenciarAlunos();
-            FormGerenciarAlunos.Closed += (s, args) => this.Close();
-            FormGerenciarAlunos.Show();
-            this.Hide();
+
         }
 
         private void btnAlterarFoto_Click(object sender, EventArgs e)

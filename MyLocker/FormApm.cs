@@ -37,7 +37,7 @@ namespace MyLocker
 
         static async Task<Armario[]> ListArmarios()
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com/");
 
             Armario[] response = await apiClient.ListArmarios();
 
@@ -126,27 +126,27 @@ namespace MyLocker
                 panel5.Visible = true;
                 panel2.Visible = true;
                 panel4.Visible = false;
-                panel7.Visible = false;
+                guna2GradientPanel2.Visible = false;
             }
             else if (panel2.Visible == true)
             {
                 panel5.Visible = false;
                 panel2.Visible = false;
-                panel7.Visible = false;
+                guna2GradientPanel2.Visible = false;
             }
         }
 
         private void lblAlunos_Click(object sender, EventArgs e)
         {
-            if (panel7.Visible == false)
+            if (guna2GradientPanel2.Visible == false)
             {
                 panel4.Visible = true;
-                panel7.Visible = true;
+                guna2GradientPanel2.Visible = true;
                 panel2.Visible = false;
             }
-            else if (panel7.Visible == true)
+            else if (guna2GradientPanel2.Visible == true)
             {
-                panel7.Visible = false;
+                guna2GradientPanel2.Visible = false;
                 panel4.Visible = false;
                 panel2.Visible = false;
             }
@@ -154,20 +154,36 @@ namespace MyLocker
 
         private void imgPerfil_Click(object sender, EventArgs e)
         {
-            if (panel3.Visible == false)
+            if (guna2GradientPanelImgPerfil.Visible == false)
             {
-                panel3.Visible = true;
+
+                guna2GradientPanelImgPerfil.Visible = true;
                 panel8.Visible = true;
-                panel9.Visible = true;
-                panel11.Visible = true;
+                panel3.Visible = true;
+               
             }
-            else if (panel3.Visible == true)
+            else if (guna2GradientPanelImgPerfil.Visible == true)
             {
-                panel3.Visible = false;
+                guna2GradientPanelImgPerfil.Visible = false;
                 panel8.Visible = false;
-                panel9.Visible = false;
-                panel11.Visible = false;
+                panel3.Visible = false;
+  
             }
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -11,13 +11,17 @@
           "System"
         ],
         "compile": {
-          "lib/net472/BCrypt.Net-Next.dll": {}
+          "lib/net472/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/BCrypt.Net-Next.dll": {}
+          "lib/net472/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "Guna.UI2.WinForms/2.0.3.3": {
+      "Guna.UI2.WinForms/2.0.3.4": {
         "type": "package",
         "compile": {
           "lib/net40/Guna.UI2.dll": {}
@@ -26,25 +30,33 @@
           "lib/net40/Guna.UI2.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Cryptography.Internal/6.0.4": {
+      "Microsoft.AspNetCore.Cryptography.Internal/6.0.8": {
         "type": "package",
         "compile": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.4": {
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.4"
+          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.8"
         },
         "compile": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -53,19 +65,27 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Refit/6.3.2": {
@@ -79,10 +99,14 @@
           "System.Web"
         ],
         "compile": {
-          "lib/net461/Refit.dll": {}
+          "lib/net461/Refit.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Refit.dll": {}
+          "lib/net461/Refit.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
@@ -95,10 +119,14 @@
           "mscorlib"
         ],
         "compile": {
-          "ref/net45/System.Buffers.dll": {}
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Buffers.dll": {}
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.IO/4.3.0": {
@@ -126,10 +154,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Memory.dll": {}
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Memory.dll": {}
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Net.Http/4.3.4": {
@@ -171,10 +203,14 @@
           "System.Net.Http"
         ],
         "compile": {
-          "lib/net461/System.Net.Http.Json.dll": {}
+          "lib/net461/System.Net.Http.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Net.Http.Json.dll": {}
+          "lib/net461/System.Net.Http.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -184,10 +220,14 @@
           "mscorlib"
         ],
         "compile": {
-          "ref/net46/System.Numerics.Vectors.dll": {}
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/System.Numerics.Vectors.dll": {}
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Runtime/4.3.0": {
@@ -211,10 +251,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Security.Cryptography.Algorithms/4.3.0": {
@@ -321,10 +365,14 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net461/System.Text.Encodings.Web.dll": {}
+          "lib/net461/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Text.Encodings.Web.dll": {}
+          "lib/net461/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Text.Json/6.0.1": {
@@ -340,10 +388,14 @@
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
-          "lib/net461/System.Text.Json.dll": {}
+          "lib/net461/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Text.Json.dll": {}
+          "lib/net461/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "build/_._": {}
@@ -358,10 +410,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -373,7 +429,9 @@
           "ref/net47/System.ValueTuple.dll": {}
         },
         "runtime": {
-          "lib/net47/System.ValueTuple.dll": {}
+          "lib/net47/System.ValueTuple.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -387,13 +445,17 @@
           "System"
         ],
         "compile": {
-          "lib/net472/BCrypt.Net-Next.dll": {}
+          "lib/net472/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/BCrypt.Net-Next.dll": {}
+          "lib/net472/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "Guna.UI2.WinForms/2.0.3.3": {
+      "Guna.UI2.WinForms/2.0.3.4": {
         "type": "package",
         "compile": {
           "lib/net40/Guna.UI2.dll": {}
@@ -402,25 +464,33 @@
           "lib/net40/Guna.UI2.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Cryptography.Internal/6.0.4": {
+      "Microsoft.AspNetCore.Cryptography.Internal/6.0.8": {
         "type": "package",
         "compile": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.4": {
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.4"
+          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.8"
         },
         "compile": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -429,19 +499,27 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Refit/6.3.2": {
@@ -455,10 +533,14 @@
           "System.Web"
         ],
         "compile": {
-          "lib/net461/Refit.dll": {}
+          "lib/net461/Refit.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Refit.dll": {}
+          "lib/net461/Refit.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
@@ -471,10 +553,14 @@
           "mscorlib"
         ],
         "compile": {
-          "ref/net45/System.Buffers.dll": {}
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Buffers.dll": {}
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.IO/4.3.0": {
@@ -502,10 +588,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Memory.dll": {}
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Memory.dll": {}
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Net.Http/4.3.4": {
@@ -537,10 +627,14 @@
           "System.Net.Http"
         ],
         "compile": {
-          "lib/net461/System.Net.Http.Json.dll": {}
+          "lib/net461/System.Net.Http.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Net.Http.Json.dll": {}
+          "lib/net461/System.Net.Http.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -550,10 +644,14 @@
           "mscorlib"
         ],
         "compile": {
-          "ref/net46/System.Numerics.Vectors.dll": {}
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/System.Numerics.Vectors.dll": {}
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Runtime/4.3.0": {
@@ -577,10 +675,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Security.Cryptography.Algorithms/4.3.0": {
@@ -653,10 +755,14 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net461/System.Text.Encodings.Web.dll": {}
+          "lib/net461/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Text.Encodings.Web.dll": {}
+          "lib/net461/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Text.Json/6.0.1": {
@@ -672,10 +778,14 @@
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
-          "lib/net461/System.Text.Json.dll": {}
+          "lib/net461/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Text.Json.dll": {}
+          "lib/net461/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "build/_._": {}
@@ -690,10 +800,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -705,7 +819,9 @@
           "ref/net47/System.ValueTuple.dll": {}
         },
         "runtime": {
-          "lib/net47/System.ValueTuple.dll": {}
+          "lib/net47/System.ValueTuple.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -719,13 +835,17 @@
           "System"
         ],
         "compile": {
-          "lib/net472/BCrypt.Net-Next.dll": {}
+          "lib/net472/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/BCrypt.Net-Next.dll": {}
+          "lib/net472/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "Guna.UI2.WinForms/2.0.3.3": {
+      "Guna.UI2.WinForms/2.0.3.4": {
         "type": "package",
         "compile": {
           "lib/net40/Guna.UI2.dll": {}
@@ -734,25 +854,33 @@
           "lib/net40/Guna.UI2.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Cryptography.Internal/6.0.4": {
+      "Microsoft.AspNetCore.Cryptography.Internal/6.0.8": {
         "type": "package",
         "compile": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.4": {
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.4"
+          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.8"
         },
         "compile": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -761,19 +889,27 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Refit/6.3.2": {
@@ -787,10 +923,14 @@
           "System.Web"
         ],
         "compile": {
-          "lib/net461/Refit.dll": {}
+          "lib/net461/Refit.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Refit.dll": {}
+          "lib/net461/Refit.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
@@ -803,10 +943,14 @@
           "mscorlib"
         ],
         "compile": {
-          "ref/net45/System.Buffers.dll": {}
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Buffers.dll": {}
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.IO/4.3.0": {
@@ -834,10 +978,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Memory.dll": {}
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Memory.dll": {}
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Net.Http/4.3.4": {
@@ -869,10 +1017,14 @@
           "System.Net.Http"
         ],
         "compile": {
-          "lib/net461/System.Net.Http.Json.dll": {}
+          "lib/net461/System.Net.Http.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Net.Http.Json.dll": {}
+          "lib/net461/System.Net.Http.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -882,10 +1034,14 @@
           "mscorlib"
         ],
         "compile": {
-          "ref/net46/System.Numerics.Vectors.dll": {}
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/System.Numerics.Vectors.dll": {}
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Runtime/4.3.0": {
@@ -909,10 +1065,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Security.Cryptography.Algorithms/4.3.0": {
@@ -985,10 +1145,14 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net461/System.Text.Encodings.Web.dll": {}
+          "lib/net461/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Text.Encodings.Web.dll": {}
+          "lib/net461/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Text.Json/6.0.1": {
@@ -1004,10 +1168,14 @@
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
-          "lib/net461/System.Text.Json.dll": {}
+          "lib/net461/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Text.Json.dll": {}
+          "lib/net461/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "build/_._": {}
@@ -1022,10 +1190,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -1037,7 +1209,9 @@
           "ref/net47/System.ValueTuple.dll": {}
         },
         "runtime": {
-          "lib/net47/System.ValueTuple.dll": {}
+          "lib/net47/System.ValueTuple.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -1051,13 +1225,17 @@
           "System"
         ],
         "compile": {
-          "lib/net472/BCrypt.Net-Next.dll": {}
+          "lib/net472/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net472/BCrypt.Net-Next.dll": {}
+          "lib/net472/BCrypt.Net-Next.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "Guna.UI2.WinForms/2.0.3.3": {
+      "Guna.UI2.WinForms/2.0.3.4": {
         "type": "package",
         "compile": {
           "lib/net40/Guna.UI2.dll": {}
@@ -1066,25 +1244,33 @@
           "lib/net40/Guna.UI2.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Cryptography.Internal/6.0.4": {
+      "Microsoft.AspNetCore.Cryptography.Internal/6.0.8": {
         "type": "package",
         "compile": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.Internal.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.4": {
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.4"
+          "Microsoft.AspNetCore.Cryptography.Internal": "6.0.8"
         },
         "compile": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+          "lib/net461/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -1093,19 +1279,27 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Refit/6.3.2": {
@@ -1119,10 +1313,14 @@
           "System.Web"
         ],
         "compile": {
-          "lib/net461/Refit.dll": {}
+          "lib/net461/Refit.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/Refit.dll": {}
+          "lib/net461/Refit.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "buildTransitive/netstandard2.0/refit.props": {},
@@ -1135,10 +1333,14 @@
           "mscorlib"
         ],
         "compile": {
-          "ref/net45/System.Buffers.dll": {}
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Buffers.dll": {}
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.IO/4.3.0": {
@@ -1166,10 +1368,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Memory.dll": {}
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Memory.dll": {}
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Net.Http/4.3.4": {
@@ -1201,10 +1407,14 @@
           "System.Net.Http"
         ],
         "compile": {
-          "lib/net461/System.Net.Http.Json.dll": {}
+          "lib/net461/System.Net.Http.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Net.Http.Json.dll": {}
+          "lib/net461/System.Net.Http.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -1214,10 +1424,14 @@
           "mscorlib"
         ],
         "compile": {
-          "ref/net46/System.Numerics.Vectors.dll": {}
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net46/System.Numerics.Vectors.dll": {}
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Runtime/4.3.0": {
@@ -1241,10 +1455,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Security.Cryptography.Algorithms/4.3.0": {
@@ -1317,10 +1535,14 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net461/System.Text.Encodings.Web.dll": {}
+          "lib/net461/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Text.Encodings.Web.dll": {}
+          "lib/net461/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Text.Json/6.0.1": {
@@ -1336,10 +1558,14 @@
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
-          "lib/net461/System.Text.Json.dll": {}
+          "lib/net461/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Text.Json.dll": {}
+          "lib/net461/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "build/_._": {}
@@ -1354,10 +1580,14 @@
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -1369,7 +1599,9 @@
           "ref/net47/System.ValueTuple.dll": {}
         },
         "runtime": {
-          "lib/net47/System.ValueTuple.dll": {}
+          "lib/net47/System.ValueTuple.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -1406,24 +1638,24 @@
         "readme.md"
       ]
     },
-    "Guna.UI2.WinForms/2.0.3.3": {
-      "sha512": "PGwcBC4jmWJ5+YPMjwRaBE5VB92qEWZZI8ud4gTjOC9gf81mGg/62cuiCa2/W1cgDg7nm76qdbUn5pBlTPdQSw==",
+    "Guna.UI2.WinForms/2.0.3.4": {
+      "sha512": "p/Ibrg/SgWcwuh8Z5UxnV7F5XMGR/063uwNdcr9nVRKK9UNMGNEAmA1J3CGIhVRemA+EU4p+xpmO/7aVjx0slw==",
       "type": "package",
-      "path": "guna.ui2.winforms/2.0.3.3",
+      "path": "guna.ui2.winforms/2.0.3.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "guna.ui2.winforms.2.0.3.3.nupkg.sha512",
+        "guna.ui2.winforms.2.0.3.4.nupkg.sha512",
         "guna.ui2.winforms.nuspec",
         "icon.png",
         "lib/net40/Guna.UI2.dll"
       ]
     },
-    "Microsoft.AspNetCore.Cryptography.Internal/6.0.4": {
-      "sha512": "/0FX1OqckMmXAAlsHgBFNymTZuq4nuAOMhiwm6e8CEMi2aOjnMYwiMc7mtvpGTAO0O4C0zwx+iaChxDgvqit2A==",
+    "Microsoft.AspNetCore.Cryptography.Internal/6.0.8": {
+      "sha512": "W7IAX1zk131s1B4D/MdrOBVPD2+bUd+qHF6bGhzH47lilpDuo0wRLxzn8LKoGFsVwbMUJNfmWtxR3EXLLwbe/g==",
       "type": "package",
-      "path": "microsoft.aspnetcore.cryptography.internal/6.0.4",
+      "path": "microsoft.aspnetcore.cryptography.internal/6.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1435,14 +1667,14 @@
         "lib/net6.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
-        "microsoft.aspnetcore.cryptography.internal.6.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.internal.6.0.8.nupkg.sha512",
         "microsoft.aspnetcore.cryptography.internal.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.4": {
-      "sha512": "1Lbwrxg/HRY/nbrkcrB3EUXUYQN8Tkw7Ktgb6/2on2P7ybT5aM59H05gk+OBC8ZTBxwdle9e1tyT3wxEYKw5xw==",
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.8": {
+      "sha512": "eDRPXA6l9iMiDjKlrKsMS9Up+7LSkVLyHY6FY8R1W1ej004ZA/roe9feQztS9e/VcI5F3p/00V/dvmjfr2ZOjQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.cryptography.keyderivation/6.0.4",
+      "path": "microsoft.aspnetcore.cryptography.keyderivation/6.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1454,7 +1686,7 @@
         "lib/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
-        "microsoft.aspnetcore.cryptography.keyderivation.6.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.keyderivation.6.0.8.nupkg.sha512",
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
       ]
     },
@@ -2232,36 +2464,28 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "BCrypt.Net-Next >= 4.0.3",
-      "Guna.UI2.WinForms >= 2.0.3.3",
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation >= 6.0.4",
+      "Guna.UI2.WinForms >= 2.0.3.4",
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation >= 6.0.8",
       "Newtonsoft.Json >= 13.0.1",
       "Refit >= 6.3.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aluno\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Acer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aluno\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
+      "projectUniqueName": "D:\\Users\\Acer\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
       "projectName": "MyLocker",
-      "projectPath": "C:\\Users\\aluno\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
-      "packagesPath": "C:\\Users\\aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aluno\\Documents\\MyLocker-Desktop\\MyLocker\\obj\\",
+      "projectPath": "D:\\Users\\Acer\\Documents\\MyLocker-Desktop\\MyLocker\\MyLocker.csproj",
+      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\Acer\\Documents\\MyLocker-Desktop\\MyLocker\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net472"
@@ -2285,11 +2509,11 @@
           },
           "Guna.UI2.WinForms": {
             "target": "Package",
-            "version": "[2.0.3.3, )"
+            "version": "[2.0.3.4, )"
           },
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
             "target": "Package",
-            "version": "[6.0.4, )"
+            "version": "[6.0.8, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

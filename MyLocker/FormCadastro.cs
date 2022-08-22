@@ -35,7 +35,7 @@ namespace MyLocker
             return;
         }
 
-        private async void pictureBox7_Click(object sender, EventArgs e)
+        private async void btnCadastrar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -52,19 +52,21 @@ namespace MyLocker
                 }
                 else
                 {
+                    var Load = new Carregamento();
+                    Load.Show();
+
                     Funcionario funcionario = new Funcionario(cpf, primeiroNome, ultimoNome, email, senha, status);
+
                     await PostFuncionario(funcionario);
 
-                    //MySqlCommand register = new MySqlCommand("insert into functionary (email, first_name, last_name, cpf, password) values ('" + rjTextBox1.Text + "', '" + rjTextBox5.Text + "','" + rjTextBox6.Text + "','" + rjTextBox2.Text + "','" + rjTextBox3.Text + "')", connection);
-                    //register.ExecuteNonQuery();
-                    //MyMessageBox.ShowBox("Você se cadastrou com sucesso!", "Sucesso - Você cadastrou sua conta");
-                    //connection.Close();
+                    Load.Close();
 
+                    MyMessageBoxSucess.ShowBox("Você se cadastrou com sucesso!", "Sucesso");
+
+                    var FormLogin = new FormLogin();
+                    FormLogin.Closed += (s, args) => this.Close();
+                    FormLogin.Show();
                     this.Hide();
-                    var form2 = new FormLogin();
-                    form2.Closed += (s, args) => this.Close();
-                    form2.Show();
-
 
                 }
             }

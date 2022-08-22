@@ -25,7 +25,7 @@ namespace MyLocker
         static async Task<Funcionario> GetFuncionario(string cpf)
         {
         
-            var apiClient = RestService.For<IRepositorioFuncionarios>("http://mylocker-backend.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioFuncionarios>("https://mylocker-api.herokuapp.com");
 
             Funcionario response = await apiClient.ReturnFuncionario(cpf);
 
@@ -67,6 +67,7 @@ namespace MyLocker
             {
                 string[] mensagemErro = erro.Content.Split('"');
                 MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
+               
             }
         }
 

@@ -133,6 +133,7 @@ namespace MyLocker
             this.btnCadastrar.Size = new System.Drawing.Size(275, 87);
             this.btnCadastrar.TabIndex = 52;
             this.btnCadastrar.Text = "Registrar";
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtUltimoNome
             // 

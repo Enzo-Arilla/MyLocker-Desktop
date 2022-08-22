@@ -85,19 +85,17 @@ namespace MyLocker
 
         private void imgPerfil_Click(object sender, EventArgs e)
         {
-            if (panel3.Visible == false)
+            if (guna2GradientPanelImgPerfil.Visible == false)
             {
+                guna2GradientPanelImgPerfil.Visible = true;
                 panel3.Visible = true;
                 panel8.Visible = true;
-                panel9.Visible = true;
-                panel11.Visible = true;
             }
-            else if (panel3.Visible == true)
+            else if (guna2GradientPanelImgPerfil.Visible == true)
             {
+                guna2GradientPanelImgPerfil.Visible = false;
                 panel3.Visible = false;
                 panel8.Visible = false;
-                panel9.Visible = false;
-                panel11.Visible = false;
             }
         }
 

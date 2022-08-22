@@ -66,20 +66,18 @@ namespace MyLocker
             this.cbPossuiApm = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.lblPossuiApm = new System.Windows.Forms.Label();
             this.lblDadosArmario = new System.Windows.Forms.Label();
-            this.btnAlterarSenha = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAlterarFoto = new Guna.UI2.WinForms.Guna2Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2GradientPanelImgPerfil = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnAlterarSenha = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.gpGerenciamento.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.guna2GradientPanelImgPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -599,6 +597,31 @@ namespace MyLocker
             this.lblDadosArmario.TabIndex = 77;
             this.lblDadosArmario.Text = "Dados do Armário";
             // 
+            // guna2GradientPanelImgPerfil
+            // 
+            this.guna2GradientPanelImgPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanelImgPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientPanelImgPerfil.Controls.Add(this.panel8);
+            this.guna2GradientPanelImgPerfil.Controls.Add(this.btnAlterarSenha);
+            this.guna2GradientPanelImgPerfil.Controls.Add(this.btnTrocarPerfil);
+            this.guna2GradientPanelImgPerfil.Controls.Add(this.btnFecharAplicativo);
+            this.guna2GradientPanelImgPerfil.Controls.Add(this.panel3);
+            this.guna2GradientPanelImgPerfil.Location = new System.Drawing.Point(1043, 113);
+            this.guna2GradientPanelImgPerfil.Name = "guna2GradientPanelImgPerfil";
+            this.guna2GradientPanelImgPerfil.Size = new System.Drawing.Size(397, 271);
+            this.guna2GradientPanelImgPerfil.TabIndex = 66;
+            this.guna2GradientPanelImgPerfil.UseTransparentBackground = true;
+            this.guna2GradientPanelImgPerfil.Visible = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Location = new System.Drawing.Point(3, 181);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(397, 2);
+            this.panel8.TabIndex = 67;
+            this.panel8.Visible = false;
+            // 
             // btnAlterarSenha
             // 
             this.btnAlterarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -609,42 +632,30 @@ namespace MyLocker
             this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
             this.btnAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(0, 0);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(3, 3);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
-            this.btnAlterarSenha.Size = new System.Drawing.Size(397, 86);
-            this.btnAlterarSenha.TabIndex = 5;
+            this.btnAlterarSenha.Size = new System.Drawing.Size(393, 86);
+            this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
-            this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
-            // btnAlterarFoto
+            // btnTrocarPerfil
             // 
-            this.btnAlterarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarFoto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAlterarFoto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAlterarFoto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAlterarFoto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAlterarFoto.FillColor = System.Drawing.Color.White;
-            this.btnAlterarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
-            this.btnAlterarFoto.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarFoto.Location = new System.Drawing.Point(0, 83);
-            this.btnAlterarFoto.Name = "btnAlterarFoto";
-            this.btnAlterarFoto.Size = new System.Drawing.Size(397, 86);
-            this.btnAlterarFoto.TabIndex = 6;
-            this.btnAlterarFoto.Text = "Alterar Foto";
-            this.btnAlterarFoto.Click += new System.EventHandler(this.btnAlterarFoto_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(0, 83);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(397, 2);
-            this.panel9.TabIndex = 8;
-            this.panel9.Visible = false;
+            this.btnTrocarPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTrocarPerfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTrocarPerfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTrocarPerfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTrocarPerfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTrocarPerfil.FillColor = System.Drawing.Color.White;
+            this.btnTrocarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
+            this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
+            this.btnTrocarPerfil.Location = new System.Drawing.Point(2, 93);
+            this.btnTrocarPerfil.Name = "btnTrocarPerfil";
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(394, 87);
+            this.btnTrocarPerfil.TabIndex = 66;
+            this.btnTrocarPerfil.Text = "Trocar Perfil";
             // 
             // btnFecharAplicativo
             // 
-            this.btnFecharAplicativo.BackColor = System.Drawing.Color.White;
             this.btnFecharAplicativo.BorderRadius = 20;
             this.btnFecharAplicativo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFecharAplicativo.CustomizableEdges.BottomRight = false;
@@ -657,62 +668,19 @@ namespace MyLocker
             this.btnFecharAplicativo.FillColor = System.Drawing.Color.White;
             this.btnFecharAplicativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnFecharAplicativo.ForeColor = System.Drawing.Color.Black;
-            this.btnFecharAplicativo.Location = new System.Drawing.Point(0, 254);
+            this.btnFecharAplicativo.Location = new System.Drawing.Point(2, 182);
             this.btnFecharAplicativo.Name = "btnFecharAplicativo";
-            this.btnFecharAplicativo.Size = new System.Drawing.Size(397, 86);
-            this.btnFecharAplicativo.TabIndex = 10;
-            this.btnFecharAplicativo.Text = "       Fechar Aplicativo                              ";
-            this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
-            // 
-            // btnTrocarPerfil
-            // 
-            this.btnTrocarPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTrocarPerfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTrocarPerfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTrocarPerfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTrocarPerfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTrocarPerfil.FillColor = System.Drawing.Color.White;
-            this.btnTrocarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
-            this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
-            this.btnTrocarPerfil.Location = new System.Drawing.Point(0, 166);
-            this.btnTrocarPerfil.Name = "btnTrocarPerfil";
-            this.btnTrocarPerfil.Size = new System.Drawing.Size(397, 86);
-            this.btnTrocarPerfil.TabIndex = 7;
-            this.btnTrocarPerfil.Text = "Trocar Perfil";
-            this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(0, 166);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(397, 2);
-            this.panel8.TabIndex = 9;
-            this.panel8.Visible = false;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Black;
-            this.panel11.Location = new System.Drawing.Point(0, 252);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(397, 2);
-            this.panel11.TabIndex = 11;
-            this.panel11.Visible = false;
+            this.btnFecharAplicativo.Size = new System.Drawing.Size(394, 86);
+            this.btnFecharAplicativo.TabIndex = 66;
+            this.btnFecharAplicativo.Text = "Fechar Aplicativo";
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.panel11);
-            this.panel3.Controls.Add(this.panel8);
-            this.panel3.Controls.Add(this.btnTrocarPerfil);
-            this.panel3.Controls.Add(this.btnFecharAplicativo);
-            this.panel3.Controls.Add(this.panel9);
-            this.panel3.Controls.Add(this.btnAlterarFoto);
-            this.panel3.Controls.Add(this.btnAlterarSenha);
-            this.panel3.Location = new System.Drawing.Point(1043, 113);
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(0, 90);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 340);
-            this.panel3.TabIndex = 67;
+            this.panel3.Size = new System.Drawing.Size(397, 2);
+            this.panel3.TabIndex = 12;
             this.panel3.Visible = false;
             // 
             // FormAlugarArmario
@@ -720,7 +688,7 @@ namespace MyLocker
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 878);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.guna2GradientPanelImgPerfil);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gpGerenciamento);
@@ -740,7 +708,7 @@ namespace MyLocker
             this.panel7.ResumeLayout(false);
             this.gpGerenciamento.ResumeLayout(false);
             this.gpGerenciamento.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.guna2GradientPanelImgPerfil.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -765,14 +733,6 @@ namespace MyLocker
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgPerfil;
         private Guna.UI2.WinForms.Guna2GroupBox gpGerenciamento;
-        private Guna.UI2.WinForms.Guna2Button btnAlterarSenha;
-        private Guna.UI2.WinForms.Guna2Button btnAlterarFoto;
-        private System.Windows.Forms.Panel panel9;
-        private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
-        private Guna.UI2.WinForms.Guna2Button btnTrocarPerfil;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblResultadoSituacao;
         private System.Windows.Forms.Label lblResultadoSalaDireita;
         private System.Windows.Forms.Label lblResultadoSalaEsquerda;
@@ -792,5 +752,11 @@ namespace MyLocker
         private System.Windows.Forms.Label lblPossuiApm;
         private System.Windows.Forms.Label lblDadosArmario;
         private System.Windows.Forms.Panel panel10;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanelImgPerfil;
+        private System.Windows.Forms.Panel panel8;
+        private Guna.UI2.WinForms.Guna2Button btnAlterarSenha;
+        private Guna.UI2.WinForms.Guna2Button btnTrocarPerfil;
+        private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
+        private System.Windows.Forms.Panel panel3;
     }
 }
