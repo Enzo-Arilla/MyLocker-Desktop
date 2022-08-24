@@ -34,10 +34,10 @@ namespace MyLocker
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+            var Carregamento = new Carregamento();
+
             try
             {
-
-                var Carregamento = new Carregamento();
                 Carregamento.Show();
 
                 cpf = txtCpf.Text;
@@ -53,17 +53,19 @@ namespace MyLocker
                     var FormMenu = new FormMenu();
                     FormMenu.Closed += (s, args) => this.Close();
                     FormMenu.Show();
-                    Carregamento.Close();
+                    this.Close();   
+                    Carregamento.Close();   
                 }
                 else
                 {
-                    MyMessageBoxError.ShowBox("Você inseriu dados incorretos!", "Erro - Credênciais Incorretas");
                     Carregamento.Close();
+                    MyMessageBoxError.ShowBox("Você inseriu dados incorretos!", "Erro - Credênciais Incorretas");     
                 }
 
             }
             catch (ApiException erro)
             {
+                Carregamento.Close();
                 string[] mensagemErro = erro.Content.Split('"');
                 MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
             }

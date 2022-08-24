@@ -15,6 +15,8 @@ namespace MyLocker
     public partial class FormDesocuparArmario : Form
     {
 
+        int controle = 0;
+        Armario[] armarios = null;
 
         public FormDesocuparArmario()
         {
@@ -40,19 +42,88 @@ namespace MyLocker
 
             lblFoco.Focus();
 
-            Armario[] armarios = null;
-            
             armarios = await ListArmarios();
 
             foreach (Armario a in armarios)
             {
        
-                string[] row = new string[] { a.Number.ToString(), a.IsRented.ToString() };
+                string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
                 tblDesocuparArmario.Rows.Add(row);
 
             }
 
             Load.Close();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string filtro = txtPesquisarArmario.Text;
+
+            if(filtro.Trim() == "")
+            {
+                MyMessageBoxError.ShowBox("Preencha o campo de pesquisa para realizar a busca!", "Erro");
+            }
+            else
+            {
+                if(controle == 0)
+                {
+                   tblDesocuparArmario.Rows.Clear();
+                    tblDesocuparArmario.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+                        if (a.Number.ToString().Equals(filtro) || a.Number.ToString().StartsWith(filtro))
+                        {
+                            string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
+                            tblDesocuparArmario.Rows.Add(row);
+                        }
+
+                    }
+                    if (tblDesocuparArmario.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O número informado não corresponde a um armário!", "Aviso");
+                        foreach (Armario a in armarios)
+                        {
+
+                            string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
+                            tblDesocuparArmario.Rows.Add(row);
+
+                        }
+                    }
+
+                }
+                else if(controle == 1)
+                {
+
+                    tblDesocuparArmario.Rows.Clear();
+                    tblDesocuparArmario.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+
+                        if (a.Status.ToString().Equals(filtro) || a.Status.ToString().StartsWith(filtro))
+                        {
+                            string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
+                            tblDesocuparArmario.Rows.Add(row);
+ 
+                        }
+                    }
+                    if(tblDesocuparArmario.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O RA informado não corresponde a um armário!", "Aviso");
+                        foreach (Armario a in armarios)
+                        {
+
+                            string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
+                            tblDesocuparArmario.Rows.Add(row);
+
+                        }
+
+                    }
+                }
+            }
+            
 
         }
 
@@ -238,6 +309,7 @@ namespace MyLocker
                 btnNumero.FillColor = Color.LightGray;
                 btnNumero.HoverState.FillColor = Color.Empty;
                 txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (RA Locatário)";
+                controle = 1;
                 panel10.Visible = false;
             }
         }
@@ -247,12 +319,13 @@ namespace MyLocker
             if(btnNumero.Cursor == Cursors.Hand)
             {
                 btnNumero.Cursor = Cursors.No;
-                btnRaLocatario.Cursor = Cursors.Hand;
                 btnNumero.FillColor = Color.FromArgb(255, 220, 81);
                 btnNumero.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnRaLocatario.Cursor = Cursors.Hand;
                 btnRaLocatario.FillColor = Color.LightGray;
                 btnRaLocatario.HoverState.FillColor = Color.Empty;
                 txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
+                controle = 0;
                 panel10.Visible = false;
             }
         }
@@ -298,5 +371,9 @@ namespace MyLocker
                 }
             }
         }
+
+        
+
+        
     }
 }

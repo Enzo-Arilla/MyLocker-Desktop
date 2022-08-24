@@ -30,10 +30,10 @@ namespace MyLocker
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDesocuparArmario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.imgPerfil = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblApm = new System.Windows.Forms.Label();
@@ -58,17 +58,17 @@ namespace MyLocker
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.tblDesocuparArmario = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Deletar = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.txtPesquisarArmario = new MyLocker.RJTextBox();
             this.guna2GradientPanelImgPerfil = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnAlterarSenha = new Guna.UI2.WinForms.Guna2Button();
             this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtPesquisarArmario = new MyLocker.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel2.SuspendLayout();
@@ -379,6 +379,7 @@ namespace MyLocker
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1445, 215);
             this.pictureBox1.Name = "pictureBox1";
@@ -386,6 +387,7 @@ namespace MyLocker
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // guna2GradientPanel1
             // 
@@ -420,50 +422,50 @@ namespace MyLocker
             this.tblDesocuparArmario.AllowUserToDeleteRows = false;
             this.tblDesocuparArmario.AllowUserToResizeColumns = false;
             this.tblDesocuparArmario.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tblDesocuparArmario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tblDesocuparArmario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tblDesocuparArmario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblDesocuparArmario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblDesocuparArmario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tblDesocuparArmario.ColumnHeadersHeight = 50;
             this.tblDesocuparArmario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tblDesocuparArmario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
+            this.Numero,
             this.RA,
             this.Deletar});
             this.tblDesocuparArmario.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblDesocuparArmario.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblDesocuparArmario.DefaultCellStyle = dataGridViewCellStyle3;
             this.tblDesocuparArmario.GridColor = System.Drawing.Color.Black;
             this.tblDesocuparArmario.Location = new System.Drawing.Point(30, 20);
             this.tblDesocuparArmario.MultiSelect = false;
             this.tblDesocuparArmario.Name = "tblDesocuparArmario";
             this.tblDesocuparArmario.ReadOnly = true;
             this.tblDesocuparArmario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblDesocuparArmario.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblDesocuparArmario.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.tblDesocuparArmario.RowHeadersVisible = false;
             this.tblDesocuparArmario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.tblDesocuparArmario.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -493,15 +495,15 @@ namespace MyLocker
             this.tblDesocuparArmario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tblDesocuparArmario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblDesocuparArmario_CellClick);
             // 
-            // Nome
+            // Numero
             // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Nome.HeaderText = "Número";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nome.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nome.Width = 123;
+            this.Numero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Numero.HeaderText = "Número";
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            this.Numero.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Numero.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Numero.Width = 123;
             // 
             // RA
             // 
@@ -535,29 +537,6 @@ namespace MyLocker
             this.guna2GradientPanel2.TabIndex = 63;
             this.guna2GradientPanel2.UseTransparentBackground = true;
             this.guna2GradientPanel2.Visible = false;
-            // 
-            // txtPesquisarArmario
-            // 
-            this.txtPesquisarArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.txtPesquisarArmario.BorderColor = System.Drawing.Color.Transparent;
-            this.txtPesquisarArmario.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtPesquisarArmario.BorderRadius = 50;
-            this.txtPesquisarArmario.BorderSize = 2;
-            this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPesquisarArmario.Location = new System.Drawing.Point(630, 197);
-            this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.txtPesquisarArmario.Multiline = false;
-            this.txtPesquisarArmario.Name = "txtPesquisarArmario";
-            this.txtPesquisarArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.txtPesquisarArmario.PasswordChar = false;
-            this.txtPesquisarArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
-            this.txtPesquisarArmario.Size = new System.Drawing.Size(1000, 106);
-            this.txtPesquisarArmario.TabIndex = 57;
-            this.txtPesquisarArmario.UnderlinedStyle = false;
-            this.txtPesquisarArmario.Enter += new System.EventHandler(this.txtPesquisarArmario_Enter);
-            this.txtPesquisarArmario.Leave += new System.EventHandler(this.txtPesquisarArmario_Leave);
             // 
             // guna2GradientPanelImgPerfil
             // 
@@ -599,6 +578,7 @@ namespace MyLocker
             this.btnAlterarSenha.Size = new System.Drawing.Size(393, 86);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
+            this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
             // btnTrocarPerfil
             // 
@@ -615,6 +595,7 @@ namespace MyLocker
             this.btnTrocarPerfil.Size = new System.Drawing.Size(394, 87);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
+            this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
             // 
             // btnFecharAplicativo
             // 
@@ -635,6 +616,7 @@ namespace MyLocker
             this.btnFecharAplicativo.Size = new System.Drawing.Size(394, 86);
             this.btnFecharAplicativo.TabIndex = 66;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
+            this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
             // 
             // panel3
             // 
@@ -644,6 +626,29 @@ namespace MyLocker
             this.panel3.Size = new System.Drawing.Size(397, 2);
             this.panel3.TabIndex = 12;
             this.panel3.Visible = false;
+            // 
+            // txtPesquisarArmario
+            // 
+            this.txtPesquisarArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtPesquisarArmario.BorderColor = System.Drawing.Color.Transparent;
+            this.txtPesquisarArmario.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtPesquisarArmario.BorderRadius = 50;
+            this.txtPesquisarArmario.BorderSize = 2;
+            this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPesquisarArmario.Location = new System.Drawing.Point(630, 197);
+            this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtPesquisarArmario.Multiline = false;
+            this.txtPesquisarArmario.Name = "txtPesquisarArmario";
+            this.txtPesquisarArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtPesquisarArmario.PasswordChar = false;
+            this.txtPesquisarArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
+            this.txtPesquisarArmario.Size = new System.Drawing.Size(1000, 106);
+            this.txtPesquisarArmario.TabIndex = 57;
+            this.txtPesquisarArmario.UnderlinedStyle = false;
+            this.txtPesquisarArmario.Enter += new System.EventHandler(this.txtPesquisarArmario_Enter);
+            this.txtPesquisarArmario.Leave += new System.EventHandler(this.txtPesquisarArmario_Leave);
             // 
             // FormDesocuparArmario
             // 
@@ -707,9 +712,6 @@ namespace MyLocker
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2DataGridView tblDesocuparArmario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RA;
-        private System.Windows.Forms.DataGridViewImageColumn Deletar;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private RJTextBox txtPesquisarArmario;
@@ -719,5 +721,8 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnTrocarPerfil;
         private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RA;
+        private System.Windows.Forms.DataGridViewImageColumn Deletar;
     }
 }

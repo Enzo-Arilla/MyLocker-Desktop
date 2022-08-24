@@ -18,6 +18,15 @@ namespace MyLocker
             InitializeComponent();
         }
 
+        static async Task<Alunos[]> ListAlunos()
+        {
+            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api.herokuapp.com/");
+
+            Alunos[] response = await apiClient.ListAlunos();
+
+            return response;
+        }
+
         async private void FormDadosArmarios_Load(object sender, EventArgs e)
         {
             var Load = new Carregamento();
@@ -27,22 +36,14 @@ namespace MyLocker
             Alunos[] alunos = null;
             alunos = await ListAlunos();
 
-            foreach(Alunos a in alunos) {
+            foreach (Alunos a in alunos)
+            {
                 //MessageBox.Show(a.Number.ToString());
-                string[] row = new string[]{a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), a.Locker_number.ToString(), a.Status.ToString()};
+                string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), a.Locker_number.ToString(), a.Status.ToString() };
                 tblDadosArmarios.Rows.Add(row);
             }
 
             Load.Close();
-        }
-
-        static async Task<Alunos[]> ListAlunos()
-        {
-            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api.herokuapp.com/");
-
-            Alunos[] response = await apiClient.ListAlunos();
-
-            return response;
         }
 
         private void btnAlugarArmario_Click(object sender, EventArgs e)
@@ -158,13 +159,13 @@ namespace MyLocker
             if (guna2GradientPanelImgPerfil.Visible == false)
             {
                 guna2GradientPanelImgPerfil.Visible = true;
-                panel3.Visible = true;
+                panel6.Visible = true;
                 panel8.Visible = true;
             }
             else if (panel6.Visible == true)
             {
                 guna2GradientPanelImgPerfil.Visible = false;
-                panel3.Visible = false;
+                panel6.Visible = false;
                 panel8.Visible = false;
             }
         }

@@ -14,6 +14,9 @@ namespace MyLocker
 {
     public partial class FormDadosArmarios : Form
     {
+        int controle = 0;
+        Armario[] armarios = null;
+
         public FormDadosArmarios()
         {
             InitializeComponent();
@@ -50,6 +53,28 @@ namespace MyLocker
             return "Erro";
         }
 
+        private string transformPlainTextToHex(string text)
+        {
+            if (text == "Amarelo")
+            {
+                return "#FDFF97";
+            }
+            else if (text == "Vermelho")
+            {
+                return "#FF7B7B";
+            }
+            else if (text == "Azul")
+            {
+                return "#92B7FF";
+            }
+            else if (text == "Verde Água")
+            {
+                return "#A6FFEA";
+            }
+
+            return "Erro";
+        }
+
             async private void FormDadosArmarios_Load(object sender, EventArgs e)
             {
             try
@@ -58,20 +83,16 @@ namespace MyLocker
                 Load.Show();
                 lblFoco.Focus();
 
-                Armario[] armarios = null;
-
                 armarios = await ListArmarios();
 
                 foreach (Armario a in armarios)
                 {
-                    //MessageBox.Show(a.Number.ToString());
                     string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
                     string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
                     tblDadosArmarios.Rows.Add(row);
                 }
 
                 Load.Close();
-                btnStatusApm.BackColor = Color.Transparent;
             }
             catch(Exception ex)
             {
@@ -236,25 +257,37 @@ namespace MyLocker
             }
         }
 
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnNumero_Click(object sender, EventArgs e)
         {
             if (btnNumero.Cursor == Cursors.Hand)
             {
-                btnNumero.Cursor = Cursors.No;
+                controle = 0;
+
                 btnNumero.FillColor = Color.FromArgb(255, 220, 81);
+                btnNumero.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnNumero.PressedColor = Color.FromArgb(255, 220, 81);
+                btnNumero.Cursor = Cursors.No;
+
                 btnRaLocatario.FillColor = Color.LightGray;
+                btnRaLocatario.HoverState.FillColor = Color.Empty;
+                btnRaLocatario.PressedColor = Color.Empty;
                 btnRaLocatario.Cursor = Cursors.Hand;
+
                 btnNome.FillColor = Color.LightGray;
+                btnNome.HoverState.FillColor = Color.Empty;
+                btnNome.PressedColor = Color.Empty;
                 btnNome.Cursor = Cursors.Hand;
-                btnArmario.FillColor = Color.LightGray;
-                btnArmario.Cursor = Cursors.Hand;
+
+                btnCor.FillColor = Color.LightGray;
+                btnCor.HoverState.FillColor = Color.Empty;
+                btnCor.PressedColor = Color.Empty;
+                btnCor.Cursor = Cursors.Hand;
+
                 btnStatusApm.FillColor = Color.LightGray;
+                btnStatusApm.HoverState.FillColor = Color.Empty;
+                btnStatusApm.PressedColor = Color.Empty;
                 btnStatusApm.Cursor = Cursors.Hand;
+
                 txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
                 panel10.Visible = false;
             }
@@ -264,16 +297,33 @@ namespace MyLocker
         {
             if(btnRaLocatario.Cursor == Cursors.Hand)
             {
+                controle = 1;
+
                 btnRaLocatario.Cursor = Cursors.No;
                 btnRaLocatario.FillColor = Color.FromArgb(255, 220, 81);
+                btnRaLocatario.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnRaLocatario.PressedColor = Color.FromArgb(255, 220, 81);
+
                 btnNumero.FillColor = Color.LightGray;
+                btnNumero.HoverState.FillColor = Color.Empty;
+                btnNumero.PressedColor = Color.Empty;
                 btnNumero.Cursor = Cursors.Hand;
+
                 btnNome.FillColor = Color.LightGray;
+                btnNome.HoverState.FillColor = Color.Empty;
+                btnNome.PressedColor = Color.Empty;
                 btnNome.Cursor = Cursors.Hand;
-                btnArmario.FillColor = Color.LightGray;
-                btnArmario.Cursor = Cursors.Hand;
+
+                btnCor.FillColor = Color.LightGray;
+                btnCor.HoverState.FillColor = Color.Empty;
+                btnCor.PressedColor = Color.Empty;
+                btnCor.Cursor = Cursors.Hand;
+
                 btnStatusApm.FillColor = Color.LightGray;
+                btnStatusApm.HoverState.FillColor = Color.Empty;
+                btnStatusApm.PressedColor = Color.Empty;
                 btnStatusApm.Cursor = Cursors.Hand;
+
                 txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (RA Locatário)";
                 panel10.Visible = false;
             }
@@ -283,35 +333,69 @@ namespace MyLocker
         {
             if(btnNome.Cursor == Cursors.Hand)
             {
+                controle = 2;
+
                 btnNome.Cursor = Cursors.No;
                 btnNome.FillColor = Color.FromArgb(255, 220, 81);
+                btnNome.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnNome.PressedColor = Color.FromArgb(255, 220, 81);
+
                 btnNumero.FillColor = Color.LightGray;
+                btnNumero.HoverState.FillColor = Color.Empty;
+                btnNumero.PressedColor = Color.Empty;
                 btnNumero.Cursor = Cursors.Hand;
+
                 btnRaLocatario.FillColor = Color.LightGray;
+                btnRaLocatario.HoverState.FillColor = Color.Empty;
+                btnRaLocatario.PressedColor = Color.Empty;
                 btnRaLocatario.Cursor = Cursors.Hand;
-                btnArmario.FillColor = Color.LightGray;
-                btnArmario.Cursor = Cursors.Hand;
+
+                btnCor.FillColor = Color.LightGray;
+                btnCor.HoverState.FillColor = Color.Empty;
+                btnCor.PressedColor = Color.Empty;
+                btnCor.Cursor = Cursors.Hand;
+
                 btnStatusApm.FillColor = Color.LightGray;
+                btnStatusApm.HoverState.FillColor = Color.Empty;
+                btnStatusApm.PressedColor = Color.Empty;
                 btnStatusApm.Cursor = Cursors.Hand;
+
                 txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Nome)";
                 panel10.Visible = false;
             }
         }
 
-        private void btnArmario_Click(object sender, EventArgs e)
+        private void btnCor_Click(object sender, EventArgs e)
         {
-            if(btnArmario.Cursor == Cursors.Hand)
+            if(btnCor.Cursor == Cursors.Hand)
             {
-                btnArmario.Cursor = Cursors.No;
-                btnArmario.FillColor = Color.FromArgb(255, 220, 81);
+                controle = 3;
+
+                btnCor.Cursor = Cursors.No;
+                btnCor.FillColor = Color.FromArgb(255, 220, 81);
+                btnCor.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnCor.PressedColor = Color.FromArgb(255, 220, 81);
+
                 btnNumero.FillColor = Color.LightGray;
+                btnNumero.HoverState.FillColor = Color.Empty;
+                btnNumero.PressedColor = Color.Empty;
                 btnNumero.Cursor = Cursors.Hand;
+
                 btnNome.FillColor = Color.LightGray;
+                btnNome.HoverState.FillColor = Color.Empty;
+                btnNome.PressedColor = Color.Empty;
                 btnNome.Cursor = Cursors.Hand;
+
                 btnRaLocatario.FillColor = Color.LightGray;
+                btnRaLocatario.HoverState.FillColor = Color.Empty;
+                btnRaLocatario.PressedColor = Color.Empty;
                 btnRaLocatario.Cursor = Cursors.Hand;
+
                 btnStatusApm.FillColor = Color.LightGray;
+                btnStatusApm.HoverState.FillColor = Color.Empty;
+                btnStatusApm.PressedColor = Color.Empty;
                 btnStatusApm.Cursor = Cursors.Hand;
+
                 txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Armário)";
                 panel10.Visible = false;
             }
@@ -321,16 +405,33 @@ namespace MyLocker
         {
             if(btnStatusApm.Cursor == Cursors.Hand)
             {
+                controle = 4;
+
                 btnStatusApm.Cursor = Cursors.No;
                 btnStatusApm.FillColor = Color.FromArgb(255, 220, 81);
+                btnStatusApm.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnStatusApm.PressedColor = Color.FromArgb(255, 220, 81);
+
                 btnNumero.FillColor = Color.LightGray;
+                btnNumero.HoverState.FillColor = Color.Empty;
+                btnNumero.PressedColor = Color.Empty;
                 btnNumero.Cursor = Cursors.Hand;
+
                 btnNome.FillColor = Color.LightGray;
+                btnNome.HoverState.FillColor = Color.Empty;
+                btnNome.PressedColor = Color.Empty;
                 btnNome.Cursor = Cursors.Hand;
-                btnArmario.FillColor = Color.LightGray;
-                btnArmario.Cursor = Cursors.Hand;
+
+                btnCor.FillColor = Color.LightGray;
+                btnCor.HoverState.FillColor = Color.Empty;
+                btnCor.PressedColor = Color.Empty;
+                btnCor.Cursor = Cursors.Hand;
+
                 btnRaLocatario.FillColor = Color.LightGray;
+                btnRaLocatario.HoverState.FillColor = Color.Empty;
+                btnRaLocatario.PressedColor = Color.Empty;
                 btnRaLocatario.Cursor = Cursors.Hand;
+
                 txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Status APM)";
                 panel10.Visible = false;
             }
@@ -365,7 +466,7 @@ namespace MyLocker
                 }
                 panel10.Visible = false;
             }
-            else if (btnArmario.Cursor == Cursors.No)
+            else if (btnCor.Cursor == Cursors.No)
             {
                 if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Armário)")
                 {
@@ -414,7 +515,7 @@ namespace MyLocker
                 }
                 panel10.Visible = false;
             }
-            else if (btnArmario.Cursor == Cursors.No)
+            else if (btnCor.Cursor == Cursors.No)
             {
                 if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Armário)")
                 {
@@ -436,15 +537,155 @@ namespace MyLocker
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(txtPesquisarArmario.Text == "" || txtPesquisarArmario.PlaceholderText.Contains("Pesquisar"))
+            string filtro = txtPesquisarArmario.Text;
+
+            if (filtro.Trim() == "")
             {
-                MyMessageBoxError.ShowBox("Você precisa preencher o campo de pesquisa.", "Campos obrigatórios não preenchidos");
+                MyMessageBoxError.ShowBox("Preencha o campo de pesquisa para realizar a busca!", "Erro");
             }
+            else
+            {
+                if (controle == 0)
+                {
+                    tblDadosArmarios.Rows.Clear();
+                    tblDadosArmarios.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+
+                        if (a.Number.ToString().Equals(filtro) || a.Number.ToString().StartsWith(filtro))
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosArmarios.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O número informado não corresponde a um armário!", "Aviso");
+                        foreach (Armario a in armarios)
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+
+                        }
+                    }
+
+
+                }
+                else if (controle == 1)
+                {
+
+                    tblDadosArmarios.Rows.Clear();
+                    tblDadosArmarios.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+
+                        if (a.IsRented.ToString().Equals(filtro) || a.IsRented.ToString().StartsWith(filtro))
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosArmarios.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O RA informado não corresponde a um armário!", "Aviso");
+                        foreach (Armario a in armarios)
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+
+                        }
+                    }
+                }
+                else if (controle == 2)
+                {
+                    tblDadosArmarios.Rows.Clear();
+                    tblDadosArmarios.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+
+                        if (a.Section.Left_room.ToString().Equals(filtro) || a.Section.Left_room.ToString().Contains(filtro) || a.Section.Right_room.ToString().Equals(filtro) || a.Section.Right_room.ToString().Contains(filtro))
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosArmarios.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("A sala informado não corresponde a um armário!", "Aviso");
+                        foreach (Armario a in armarios)
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+
+                        }
+                    }
+                }
+                else if (controle == 3)
+                {
+                    tblDadosArmarios.Rows.Clear();
+                    tblDadosArmarios.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+                        
+                        if (transformHexToPlainText(a.Section.Color.ToString()).Equals(filtro) || transformHexToPlainText(a.Section.Color.ToString()).StartsWith(filtro))
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosArmarios.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("A cor informada não corresponde a um armário!", "Aviso");
+                        foreach (Armario a in armarios)
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+
+                        }
+                    }
+                }
+                else if (controle == 4)
+                {
+                    tblDadosArmarios.Rows.Clear();
+                    tblDadosArmarios.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+
+                        if (a.IsRented.ToString().Equals(filtro) || a.IsRented.ToString().StartsWith(filtro))
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosArmarios.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O status apm informado não corresponde a um armário!", "Aviso");
+                        foreach (Armario a in armarios)
+                        {
+                            string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            tblDadosArmarios.Rows.Add(row);
+
+                        }
+                    }
+                }
+            }
+
         }
 
-        private void btnDadosAlunos_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

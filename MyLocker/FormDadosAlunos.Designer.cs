@@ -46,7 +46,6 @@ namespace MyLocker
             this.btnDadosArmarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnAlugarArmario = new Guna.UI2.WinForms.Guna2Button();
             this.btnTipoPesquisa = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPesquisarArmario = new MyLocker.RJTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2VScrollBar2 = new Guna.UI2.WinForms.Guna2VScrollBar();
@@ -66,6 +65,17 @@ namespace MyLocker
             this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtPesquisarArmario = new MyLocker.RJTextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnNumero = new Guna.UI2.WinForms.Guna2Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnCor = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStatusApm = new Guna.UI2.WinForms.Guna2Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnNome = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRaLocatario = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,6 +84,7 @@ namespace MyLocker
             ((System.ComponentModel.ISupportInitialize)(this.tblDadosArmarios)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanelImgPerfil.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -246,27 +257,6 @@ namespace MyLocker
             this.btnTipoPesquisa.TabIndex = 12;
             this.btnTipoPesquisa.Text = "Tipo de Pesquisa";
             // 
-            // txtPesquisarArmario
-            // 
-            this.txtPesquisarArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.txtPesquisarArmario.BorderColor = System.Drawing.Color.Transparent;
-            this.txtPesquisarArmario.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtPesquisarArmario.BorderRadius = 50;
-            this.txtPesquisarArmario.BorderSize = 2;
-            this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPesquisarArmario.Location = new System.Drawing.Point(630, 197);
-            this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.txtPesquisarArmario.Multiline = false;
-            this.txtPesquisarArmario.Name = "txtPesquisarArmario";
-            this.txtPesquisarArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.txtPesquisarArmario.PasswordChar = false;
-            this.txtPesquisarArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
-            this.txtPesquisarArmario.Size = new System.Drawing.Size(1000, 106);
-            this.txtPesquisarArmario.TabIndex = 32;
-            this.txtPesquisarArmario.UnderlinedStyle = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -315,7 +305,7 @@ namespace MyLocker
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.tblDadosArmarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tblDadosArmarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tblDadosArmarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -341,13 +331,14 @@ namespace MyLocker
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblDadosArmarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.tblDadosArmarios.GridColor = System.Drawing.Color.Black;
             this.tblDadosArmarios.Location = new System.Drawing.Point(18, 38);
             this.tblDadosArmarios.MultiSelect = false;
             this.tblDadosArmarios.Name = "tblDadosArmarios";
+            this.tblDadosArmarios.ReadOnly = true;
             this.tblDadosArmarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -376,7 +367,7 @@ namespace MyLocker
             this.tblDadosArmarios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.tblDadosArmarios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tblDadosArmarios.ThemeStyle.HeaderStyle.Height = 50;
-            this.tblDadosArmarios.ThemeStyle.ReadOnly = false;
+            this.tblDadosArmarios.ThemeStyle.ReadOnly = true;
             this.tblDadosArmarios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.Black;
             this.tblDadosArmarios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tblDadosArmarios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -399,21 +390,25 @@ namespace MyLocker
             // 
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
             // 
             // Sobrenome
             // 
             this.Sobrenome.HeaderText = "Sobrenome";
             this.Sobrenome.Name = "Sobrenome";
+            this.Sobrenome.ReadOnly = true;
             // 
             // Armario
             // 
             this.Armario.HeaderText = "Armário";
             this.Armario.Name = "Armario";
+            this.Armario.ReadOnly = true;
             // 
             // statusApm
             // 
             this.statusApm.HeaderText = "Status APM";
             this.statusApm.Name = "statusApm";
+            this.statusApm.ReadOnly = true;
             // 
             // guna2GradientPanel2
             // 
@@ -476,6 +471,7 @@ namespace MyLocker
             this.btnGerenciarAlunos.TabIndex = 6;
             this.btnGerenciarAlunos.Text = "Gerenciar Alunos";
             this.btnGerenciarAlunos.UseTransparentBackground = true;
+            this.btnGerenciarAlunos.Click += new System.EventHandler(this.btnGerenciarAlunos_Click);
             // 
             // guna2GradientPanelImgPerfil
             // 
@@ -486,7 +482,7 @@ namespace MyLocker
             this.guna2GradientPanelImgPerfil.Controls.Add(this.btnTrocarPerfil);
             this.guna2GradientPanelImgPerfil.Controls.Add(this.btnFecharAplicativo);
             this.guna2GradientPanelImgPerfil.Controls.Add(this.panel6);
-            this.guna2GradientPanelImgPerfil.Location = new System.Drawing.Point(1043, 113);
+            this.guna2GradientPanelImgPerfil.Location = new System.Drawing.Point(1043, 111);
             this.guna2GradientPanelImgPerfil.Name = "guna2GradientPanelImgPerfil";
             this.guna2GradientPanelImgPerfil.Size = new System.Drawing.Size(397, 271);
             this.guna2GradientPanelImgPerfil.TabIndex = 66;
@@ -517,6 +513,7 @@ namespace MyLocker
             this.btnAlterarSenha.Size = new System.Drawing.Size(393, 86);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
+            this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
             // btnTrocarPerfil
             // 
@@ -533,6 +530,7 @@ namespace MyLocker
             this.btnTrocarPerfil.Size = new System.Drawing.Size(394, 87);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
+            this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
             // 
             // btnFecharAplicativo
             // 
@@ -553,6 +551,7 @@ namespace MyLocker
             this.btnFecharAplicativo.Size = new System.Drawing.Size(394, 86);
             this.btnFecharAplicativo.TabIndex = 66;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
+            this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
             // 
             // panel6
             // 
@@ -563,11 +562,174 @@ namespace MyLocker
             this.panel6.TabIndex = 12;
             this.panel6.Visible = false;
             // 
+            // txtPesquisarArmario
+            // 
+            this.txtPesquisarArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtPesquisarArmario.BorderColor = System.Drawing.Color.Transparent;
+            this.txtPesquisarArmario.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtPesquisarArmario.BorderRadius = 50;
+            this.txtPesquisarArmario.BorderSize = 2;
+            this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPesquisarArmario.Location = new System.Drawing.Point(630, 197);
+            this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtPesquisarArmario.Multiline = false;
+            this.txtPesquisarArmario.Name = "txtPesquisarArmario";
+            this.txtPesquisarArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtPesquisarArmario.PasswordChar = false;
+            this.txtPesquisarArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
+            this.txtPesquisarArmario.Size = new System.Drawing.Size(1000, 106);
+            this.txtPesquisarArmario.TabIndex = 32;
+            this.txtPesquisarArmario.UnderlinedStyle = false;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.panel15);
+            this.panel10.Controls.Add(this.panel12);
+            this.panel10.Controls.Add(this.btnNumero);
+            this.panel10.Controls.Add(this.panel13);
+            this.panel10.Controls.Add(this.btnCor);
+            this.panel10.Controls.Add(this.btnStatusApm);
+            this.panel10.Controls.Add(this.panel14);
+            this.panel10.Controls.Add(this.btnNome);
+            this.panel10.Controls.Add(this.btnRaLocatario);
+            this.panel10.Location = new System.Drawing.Point(84, 462);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(397, 430);
+            this.panel10.TabIndex = 67;
+            this.panel10.Visible = false;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Black;
+            this.panel15.Location = new System.Drawing.Point(-1, 85);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(397, 2);
+            this.panel15.TabIndex = 57;
+            this.panel15.Visible = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Black;
+            this.panel12.Location = new System.Drawing.Point(0, 340);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(397, 2);
+            this.panel12.TabIndex = 11;
+            this.panel12.Visible = false;
+            // 
+            // btnNumero
+            // 
+            this.btnNumero.BorderRadius = 20;
+            this.btnNumero.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnNumero.CustomizableEdges.BottomLeft = false;
+            this.btnNumero.CustomizableEdges.BottomRight = false;
+            this.btnNumero.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNumero.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNumero.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
+            this.btnNumero.DisabledState.ForeColor = System.Drawing.Color.Black;
+            this.btnNumero.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
+            this.btnNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.btnNumero.ForeColor = System.Drawing.Color.Black;
+            this.btnNumero.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
+            this.btnNumero.Location = new System.Drawing.Point(0, 1);
+            this.btnNumero.Name = "btnNumero";
+            this.btnNumero.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
+            this.btnNumero.Size = new System.Drawing.Size(397, 86);
+            this.btnNumero.TabIndex = 56;
+            this.btnNumero.Text = "RA Locatário";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Black;
+            this.panel13.Location = new System.Drawing.Point(0, 254);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(397, 2);
+            this.panel13.TabIndex = 9;
+            this.panel13.Visible = false;
+            // 
+            // btnCor
+            // 
+            this.btnCor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCor.FillColor = System.Drawing.Color.LightGray;
+            this.btnCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
+            this.btnCor.ForeColor = System.Drawing.Color.Black;
+            this.btnCor.Location = new System.Drawing.Point(0, 254);
+            this.btnCor.Name = "btnCor";
+            this.btnCor.Size = new System.Drawing.Size(397, 86);
+            this.btnCor.TabIndex = 7;
+            this.btnCor.Text = "Cor";
+            // 
+            // btnStatusApm
+            // 
+            this.btnStatusApm.BorderRadius = 20;
+            this.btnStatusApm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatusApm.CustomizableEdges.TopLeft = false;
+            this.btnStatusApm.CustomizableEdges.TopRight = false;
+            this.btnStatusApm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatusApm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatusApm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStatusApm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStatusApm.FillColor = System.Drawing.Color.LightGray;
+            this.btnStatusApm.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
+            this.btnStatusApm.ForeColor = System.Drawing.Color.Black;
+            this.btnStatusApm.Location = new System.Drawing.Point(0, 342);
+            this.btnStatusApm.Name = "btnStatusApm";
+            this.btnStatusApm.Size = new System.Drawing.Size(397, 86);
+            this.btnStatusApm.TabIndex = 10;
+            this.btnStatusApm.Text = "Status APM";
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Black;
+            this.panel14.Location = new System.Drawing.Point(0, 171);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(397, 2);
+            this.panel14.TabIndex = 8;
+            this.panel14.Visible = false;
+            // 
+            // btnNome
+            // 
+            this.btnNome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNome.FillColor = System.Drawing.Color.LightGray;
+            this.btnNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.btnNome.ForeColor = System.Drawing.Color.Black;
+            this.btnNome.Location = new System.Drawing.Point(0, 171);
+            this.btnNome.Name = "btnNome";
+            this.btnNome.Size = new System.Drawing.Size(397, 86);
+            this.btnNome.TabIndex = 6;
+            this.btnNome.Text = "Sobrenome";
+            // 
+            // btnRaLocatario
+            // 
+            this.btnRaLocatario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRaLocatario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRaLocatario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRaLocatario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRaLocatario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRaLocatario.FillColor = System.Drawing.Color.LightGray;
+            this.btnRaLocatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.btnRaLocatario.ForeColor = System.Drawing.Color.Black;
+            this.btnRaLocatario.Location = new System.Drawing.Point(0, 87);
+            this.btnRaLocatario.Name = "btnRaLocatario";
+            this.btnRaLocatario.Size = new System.Drawing.Size(397, 86);
+            this.btnRaLocatario.TabIndex = 5;
+            this.btnRaLocatario.Text = "Nome";
+            // 
             // FormDadosAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 878);
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.guna2GradientPanelImgPerfil);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.txtPesquisarArmario);
@@ -593,6 +755,7 @@ namespace MyLocker
             ((System.ComponentModel.ISupportInitialize)(this.tblDadosArmarios)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanelImgPerfil.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -631,5 +794,15 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnTrocarPerfil;
         private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel12;
+        private Guna.UI2.WinForms.Guna2Button btnNumero;
+        private System.Windows.Forms.Panel panel13;
+        private Guna.UI2.WinForms.Guna2Button btnCor;
+        private Guna.UI2.WinForms.Guna2Button btnStatusApm;
+        private System.Windows.Forms.Panel panel14;
+        private Guna.UI2.WinForms.Guna2Button btnNome;
+        private Guna.UI2.WinForms.Guna2Button btnRaLocatario;
     }
 }

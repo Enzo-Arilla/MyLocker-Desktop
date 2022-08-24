@@ -62,6 +62,8 @@ namespace MyLocker
             this.lblSalaEsquerda = new System.Windows.Forms.Label();
             this.lblCor = new System.Windows.Forms.Label();
             this.lblAndar = new System.Windows.Forms.Label();
+            this.txtRaAluno = new MyLocker.RJTextBox();
+            this.txtNumeroArmario = new MyLocker.RJTextBox();
             this.cbPossuiApm = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.lblPossuiApm = new System.Windows.Forms.Label();
             this.lblDadosArmario = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@ namespace MyLocker
             this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtRaAluno = new MyLocker.RJTextBox();
-            this.txtNumeroArmario = new MyLocker.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel2.SuspendLayout();
@@ -537,6 +537,50 @@ namespace MyLocker
             this.lblAndar.TabIndex = 78;
             this.lblAndar.Text = "Andar:";
             // 
+            // txtRaAluno
+            // 
+            this.txtRaAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtRaAluno.BorderColor = System.Drawing.Color.Transparent;
+            this.txtRaAluno.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtRaAluno.BorderRadius = 50;
+            this.txtRaAluno.BorderSize = 2;
+            this.txtRaAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRaAluno.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtRaAluno.Location = new System.Drawing.Point(92, 370);
+            this.txtRaAluno.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtRaAluno.Multiline = false;
+            this.txtRaAluno.Name = "txtRaAluno";
+            this.txtRaAluno.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtRaAluno.PasswordChar = false;
+            this.txtRaAluno.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtRaAluno.PlaceholderText = "RA do Aluno";
+            this.txtRaAluno.Size = new System.Drawing.Size(761, 109);
+            this.txtRaAluno.TabIndex = 74;
+            this.txtRaAluno.UnderlinedStyle = false;
+            this.txtRaAluno.Enter += new System.EventHandler(this.txtRaAluno_Enter);
+            // 
+            // txtNumeroArmario
+            // 
+            this.txtNumeroArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtNumeroArmario.BorderColor = System.Drawing.Color.Transparent;
+            this.txtNumeroArmario.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtNumeroArmario.BorderRadius = 50;
+            this.txtNumeroArmario.BorderSize = 2;
+            this.txtNumeroArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtNumeroArmario.Location = new System.Drawing.Point(92, 233);
+            this.txtNumeroArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtNumeroArmario.Multiline = false;
+            this.txtNumeroArmario.Name = "txtNumeroArmario";
+            this.txtNumeroArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtNumeroArmario.PasswordChar = false;
+            this.txtNumeroArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtNumeroArmario.PlaceholderText = "Número do Armário";
+            this.txtNumeroArmario.Size = new System.Drawing.Size(761, 109);
+            this.txtNumeroArmario.TabIndex = 73;
+            this.txtNumeroArmario.UnderlinedStyle = false;
+            this.txtNumeroArmario.Enter += new System.EventHandler(this.txtNumeroArmario_Enter);
+            // 
             // cbPossuiApm
             // 
             this.cbPossuiApm.BackColor = System.Drawing.Color.Transparent;
@@ -620,6 +664,7 @@ namespace MyLocker
             this.btnAlterarSenha.Size = new System.Drawing.Size(393, 86);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
+            this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
             // 
             // btnTrocarPerfil
             // 
@@ -636,6 +681,7 @@ namespace MyLocker
             this.btnTrocarPerfil.Size = new System.Drawing.Size(394, 87);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
+            this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
             // 
             // btnFecharAplicativo
             // 
@@ -656,6 +702,7 @@ namespace MyLocker
             this.btnFecharAplicativo.Size = new System.Drawing.Size(394, 86);
             this.btnFecharAplicativo.TabIndex = 66;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
+            this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
             // 
             // panel3
             // 
@@ -665,50 +712,6 @@ namespace MyLocker
             this.panel3.Size = new System.Drawing.Size(397, 2);
             this.panel3.TabIndex = 12;
             this.panel3.Visible = false;
-            // 
-            // txtRaAluno
-            // 
-            this.txtRaAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.txtRaAluno.BorderColor = System.Drawing.Color.Transparent;
-            this.txtRaAluno.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtRaAluno.BorderRadius = 50;
-            this.txtRaAluno.BorderSize = 2;
-            this.txtRaAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRaAluno.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtRaAluno.Location = new System.Drawing.Point(92, 370);
-            this.txtRaAluno.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.txtRaAluno.Multiline = false;
-            this.txtRaAluno.Name = "txtRaAluno";
-            this.txtRaAluno.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.txtRaAluno.PasswordChar = false;
-            this.txtRaAluno.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtRaAluno.PlaceholderText = "RA do Aluno";
-            this.txtRaAluno.Size = new System.Drawing.Size(761, 109);
-            this.txtRaAluno.TabIndex = 74;
-            this.txtRaAluno.UnderlinedStyle = false;
-            this.txtRaAluno.Enter += new System.EventHandler(this.txtRaAluno_Enter);
-            // 
-            // txtNumeroArmario
-            // 
-            this.txtNumeroArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.txtNumeroArmario.BorderColor = System.Drawing.Color.Transparent;
-            this.txtNumeroArmario.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtNumeroArmario.BorderRadius = 50;
-            this.txtNumeroArmario.BorderSize = 2;
-            this.txtNumeroArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNumeroArmario.Location = new System.Drawing.Point(92, 233);
-            this.txtNumeroArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.txtNumeroArmario.Multiline = false;
-            this.txtNumeroArmario.Name = "txtNumeroArmario";
-            this.txtNumeroArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.txtNumeroArmario.PasswordChar = false;
-            this.txtNumeroArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtNumeroArmario.PlaceholderText = "Número do Armário";
-            this.txtNumeroArmario.Size = new System.Drawing.Size(761, 109);
-            this.txtNumeroArmario.TabIndex = 73;
-            this.txtNumeroArmario.UnderlinedStyle = false;
-            this.txtNumeroArmario.Enter += new System.EventHandler(this.txtNumeroArmario_Enter);
             // 
             // FormAlugarArmario
             // 

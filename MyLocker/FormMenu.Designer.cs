@@ -323,9 +323,8 @@ namespace MyLocker
             this.lblData.ForeColor = System.Drawing.Color.Black;
             this.lblData.Location = new System.Drawing.Point(487, 755);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(305, 105);
+            this.lblData.Size = new System.Drawing.Size(0, 105);
             this.lblData.TabIndex = 11;
-            this.lblData.Text = "aaaaa";
             // 
             // timer1
             // 
@@ -342,7 +341,7 @@ namespace MyLocker
             this.guna2GradientPanelImgPerfil.Controls.Add(this.btnTrocarPerfil);
             this.guna2GradientPanelImgPerfil.Controls.Add(this.btnFecharAplicativo);
             this.guna2GradientPanelImgPerfil.Controls.Add(this.panel6);
-            this.guna2GradientPanelImgPerfil.Location = new System.Drawing.Point(1043, 113);
+            this.guna2GradientPanelImgPerfil.Location = new System.Drawing.Point(1043, 111);
             this.guna2GradientPanelImgPerfil.Name = "guna2GradientPanelImgPerfil";
             this.guna2GradientPanelImgPerfil.Size = new System.Drawing.Size(397, 271);
             this.guna2GradientPanelImgPerfil.TabIndex = 67;
@@ -352,9 +351,9 @@ namespace MyLocker
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(3, 181);
+            this.panel8.Location = new System.Drawing.Point(1, 178);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(397, 2);
+            this.panel8.Size = new System.Drawing.Size(395, 2);
             this.panel8.TabIndex = 67;
             this.panel8.Visible = false;
             // 
@@ -368,9 +367,9 @@ namespace MyLocker
             this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
             this.btnAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(3, 3);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(0, 3);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
-            this.btnAlterarSenha.Size = new System.Drawing.Size(393, 86);
+            this.btnAlterarSenha.Size = new System.Drawing.Size(396, 86);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
             this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
@@ -385,9 +384,9 @@ namespace MyLocker
             this.btnTrocarPerfil.FillColor = System.Drawing.Color.White;
             this.btnTrocarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
-            this.btnTrocarPerfil.Location = new System.Drawing.Point(2, 93);
+            this.btnTrocarPerfil.Location = new System.Drawing.Point(0, 93);
             this.btnTrocarPerfil.Name = "btnTrocarPerfil";
-            this.btnTrocarPerfil.Size = new System.Drawing.Size(394, 87);
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(395, 87);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
             this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
@@ -406,9 +405,9 @@ namespace MyLocker
             this.btnFecharAplicativo.FillColor = System.Drawing.Color.White;
             this.btnFecharAplicativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnFecharAplicativo.ForeColor = System.Drawing.Color.Black;
-            this.btnFecharAplicativo.Location = new System.Drawing.Point(2, 182);
+            this.btnFecharAplicativo.Location = new System.Drawing.Point(0, 178);
             this.btnFecharAplicativo.Name = "btnFecharAplicativo";
-            this.btnFecharAplicativo.Size = new System.Drawing.Size(394, 86);
+            this.btnFecharAplicativo.Size = new System.Drawing.Size(397, 86);
             this.btnFecharAplicativo.TabIndex = 66;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
             this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
@@ -418,7 +417,7 @@ namespace MyLocker
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(0, 90);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(397, 2);
+            this.panel6.Size = new System.Drawing.Size(394, 2);
             this.panel6.TabIndex = 12;
             this.panel6.Visible = false;
             // 
