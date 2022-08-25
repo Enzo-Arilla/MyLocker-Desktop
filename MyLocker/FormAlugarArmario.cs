@@ -20,7 +20,7 @@ namespace MyLocker
 
         static async Task SetStudentLockerNumber(SetStudentLockerNumberRequest aluno)
         {
-            var apiClient = RestService.For<IRepositorioAlunos>("http://mylocker-api.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api.herokuapp.com");
 
             await apiClient.SetStudentLockerNumber(aluno);
 
@@ -28,7 +28,7 @@ namespace MyLocker
         }
         static async Task SetLockerIsRented(SetLockerIsRentedRequest armario)
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("http://mylocker-api.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
 
             await apiClient.SetLockerIsRented(armario);
 
@@ -37,7 +37,7 @@ namespace MyLocker
 
         static async Task<Armario> FindLockerByNumber(String lockerNumberString)
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("http://mylocker-api.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioArmarios>("http://localhost:3333");
 
             Armario armario = await apiClient.FindLockerByNumber(lockerNumberString);
 
@@ -49,11 +49,33 @@ namespace MyLocker
             await SetLockerIsRented(armario);
         }
 
+        public string transformHexToPlainText(string hex)
+        {
+            if (hex == "#FDFF97")
+            {
+                return "Amarelo";
+            }
+            else if (hex == "#FF7B7B")
+            {
+                return "Vermelho";
+            }
+            else if (hex == "#92B7FF")
+            {
+                return "Azul";
+            }
+            else if (hex == "#A6FFEA")
+            {
+                return "Verde Água";
+            }
+
+            return "Erro";
+        }
+
         private async void btnAlugar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtNumeroArmario.Text.Trim() == "" || txtRaAluno.Text.Trim() == "" /*|| txtNumeroArmario.PlaceholderText == "Número do Armário" || txtRaAluno.PlaceholderText == "RA do Aluno"*/)
+                if (txtNumeroArmario.Text.Trim() == "" || txtRaAluno.Text.Trim() == "")
                 {
                     MyMessageBoxError.ShowBox("Preencher todos os campos antes de efetuar a locação.", "Campos obrigatórios não preenchidos!");
                 }
@@ -63,6 +85,9 @@ namespace MyLocker
                     SetStudentLockerNumberRequest setStudentLockerNumberRequest = new SetStudentLockerNumberRequest(txtRaAluno.Text, int.Parse(txtNumeroArmario.Text));
                     await RentLocker(setLockerIsRentedRequest, setStudentLockerNumberRequest);
                     MyMessageBoxSucess.ShowBox("O armário foi alugado com sucesso!");
+                    btnAlugar.Enabled = false;
+                    txtRaAluno.Enabled = false;
+                    cbPossuiApm.Enabled = false;
                 }
             }
             catch (ApiException erro)
@@ -77,6 +102,7 @@ namespace MyLocker
         private void FormAlugarArmario_Load(object sender, EventArgs e)
         {
             lblFoco.Focus();
+            btnDisponibilidade.FillColor = Color.Empty;
         }
 
         private void btnGerenciarAlunos_Click(object sender, EventArgs e)
@@ -212,6 +238,10 @@ namespace MyLocker
             if (txtNumeroArmario.Text == "")
             {
                 txtNumeroArmario.PlaceholderText = "Número do Armário";
+                txtRaAluno.Enabled = false;
+                btnAlugar.Enabled = false;
+                cbPossuiApm.Enabled = false;
+                btnDisponibilidade.DisabledState.FillColor = Color.Empty;
             }
         }
 
@@ -230,59 +260,6 @@ namespace MyLocker
 
         }
 
-        private void txtNumeroArmario__TextChanged(object sender, EventArgs e)
-        {
-            if (txtNumeroArmario.Text == Convert.ToString(832))
-            {
-                btnDisponibilidade.Visible = true;
-                lblResultadoAndar.Visible = true;
-                lblResultadoCor.Visible = true;
-                lblResultadoSalaEsquerda.Visible = true;
-                lblResultadoSalaDireita.Visible = true;
-                lblResultadoSituacao.Visible = true;
-                //guna2Button2.Visible = true;
-            }
-            else
-            {
-                btnDisponibilidade.Visible = false;
-                lblResultadoAndar.Visible = false;
-                lblResultadoCor.Visible = false;
-                lblResultadoSalaEsquerda.Visible = false;
-                lblResultadoSalaDireita.Visible = false;
-                lblResultadoSituacao.Visible = false;
-                //guna2Button2.Visible = false;
-            }
-        }
-
-        
-        private void cbPossuiApm_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbPossuiApm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private async void FormAlugarArmario_KeyUp(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private async void gpGerenciamento_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 13)
-            {
-                
-            }
-        }
-
         private async void btnProcurar_Click(object sender, EventArgs e)
         {
             if (txtNumeroArmario.Text.Trim() == "")
@@ -291,19 +268,43 @@ namespace MyLocker
             }
             else
             {
-                Armario armario = await FindLockerByNumber(txtNumeroArmario.Text);
-                if (armario.IsRented == 1)
-                {
-                    btnDisponibilidade.Visible = true;
-                    btnDisponibilidade.FillColor = Color.Red;
-                    lblResultadoAndar.Text = armario.RentedAt;
-                    lblResultadoCor.Text = armario.Section.Color;
-                    lblResultadoSalaEsquerda.Text = armario.Section.Left_room;
-                    lblResultadoSalaDireita.Text = armario.Section.Right_room;
-                    lblResultadoSituacao.Text = "Alugado";
 
+                Armario armario = await FindLockerByNumber(txtNumeroArmario.Text);
+
+                if(armario == null)
+                {
+                    MyMessageBoxWarning.ShowBox("O armário solicitado não foi encontrado!", "Aviso");
                 }
+                else
+                {
+                    if (armario.IsRented == 1)
+                    {
+                        //string situacao = armario.IsRented == 1 ? "Alugado" : "Disponível";
+                        btnDisponibilidade.Visible = true;
+                        btnDisponibilidade.DisabledState.FillColor = Color.Red;
+                        lblResultadoAndar.Text = armario.Section.Id.ToString();
+                        lblResultadoCor.Text = transformHexToPlainText(armario.Section.Color);
+                        lblResultadoSalaEsquerda.Text = armario.Section.Left_room;
+                        lblResultadoSalaDireita.Text = armario.Section.Right_room;
+                        lblResultadoSituacao.Text = "Alugado";
+                    }
+                    else
+                    {
+                        btnDisponibilidade.Visible = true;
+                        btnDisponibilidade.DisabledState.FillColor = Color.GreenYellow;
+                        lblResultadoAndar.Text = armario.Section.Id.ToString();
+                        lblResultadoCor.Text = transformHexToPlainText(armario.Section.Color);
+                        lblResultadoSalaEsquerda.Text = armario.Section.Left_room;
+                        lblResultadoSalaDireita.Text = armario.Section.Right_room;
+                        lblResultadoSituacao.Text = "Disponível";
+                        txtRaAluno.Enabled = true;
+                        cbPossuiApm.Enabled = true;
+                        btnAlugar.Enabled = true;
+                    }
+                }
+                
             }
         }
+
     }
 }

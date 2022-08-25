@@ -62,8 +62,6 @@ namespace MyLocker
             this.lblSalaEsquerda = new System.Windows.Forms.Label();
             this.lblCor = new System.Windows.Forms.Label();
             this.lblAndar = new System.Windows.Forms.Label();
-            this.txtRaAluno = new MyLocker.RJTextBox();
-            this.txtNumeroArmario = new MyLocker.RJTextBox();
             this.cbPossuiApm = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.lblPossuiApm = new System.Windows.Forms.Label();
             this.lblDadosArmario = new System.Windows.Forms.Label();
@@ -73,6 +71,8 @@ namespace MyLocker
             this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtRaAluno = new MyLocker.RJTextBox();
+            this.txtNumeroArmario = new MyLocker.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel2.SuspendLayout();
@@ -338,7 +338,6 @@ namespace MyLocker
             this.gpGerenciamento.Size = new System.Drawing.Size(1200, 900);
             this.gpGerenciamento.TabIndex = 50;
             this.gpGerenciamento.Text = "guna2GroupBox1";
-            this.gpGerenciamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gpGerenciamento_KeyPress);
             // 
             // btnProcurar
             // 
@@ -352,7 +351,7 @@ namespace MyLocker
             this.btnProcurar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.btnProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcurar.ForeColor = System.Drawing.Color.Black;
-            this.btnProcurar.Location = new System.Drawing.Point(165, 608);
+            this.btnProcurar.Location = new System.Drawing.Point(165, 631);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(275, 87);
             this.btnProcurar.TabIndex = 91;
@@ -376,9 +375,8 @@ namespace MyLocker
             this.lblResultadoSituacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.lblResultadoSituacao.Location = new System.Drawing.Point(1266, 485);
             this.lblResultadoSituacao.Name = "lblResultadoSituacao";
-            this.lblResultadoSituacao.Size = new System.Drawing.Size(223, 54);
+            this.lblResultadoSituacao.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoSituacao.TabIndex = 89;
-            this.lblResultadoSituacao.Text = "Vermelho";
             // 
             // lblResultadoSalaDireita
             // 
@@ -388,9 +386,8 @@ namespace MyLocker
             this.lblResultadoSalaDireita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.lblResultadoSalaDireita.Location = new System.Drawing.Point(1324, 423);
             this.lblResultadoSalaDireita.Name = "lblResultadoSalaDireita";
-            this.lblResultadoSalaDireita.Size = new System.Drawing.Size(223, 54);
+            this.lblResultadoSalaDireita.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoSalaDireita.TabIndex = 88;
-            this.lblResultadoSalaDireita.Text = "Vermelho";
             // 
             // lblResultadoSalaEsquerda
             // 
@@ -400,20 +397,19 @@ namespace MyLocker
             this.lblResultadoSalaEsquerda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.lblResultadoSalaEsquerda.Location = new System.Drawing.Point(1376, 360);
             this.lblResultadoSalaEsquerda.Name = "lblResultadoSalaEsquerda";
-            this.lblResultadoSalaEsquerda.Size = new System.Drawing.Size(223, 54);
+            this.lblResultadoSalaEsquerda.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoSalaEsquerda.TabIndex = 87;
-            this.lblResultadoSalaEsquerda.Text = "Vermelho";
             // 
             // lblResultadoAndar
             // 
             this.lblResultadoAndar.AutoSize = true;
+            this.lblResultadoAndar.BackColor = System.Drawing.Color.White;
             this.lblResultadoAndar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultadoAndar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.lblResultadoAndar.Location = new System.Drawing.Point(1204, 222);
             this.lblResultadoAndar.Name = "lblResultadoAndar";
-            this.lblResultadoAndar.Size = new System.Drawing.Size(223, 54);
+            this.lblResultadoAndar.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoAndar.TabIndex = 86;
-            this.lblResultadoAndar.Text = "Vermelho";
             // 
             // btnAlugar
             // 
@@ -424,10 +420,11 @@ namespace MyLocker
             this.btnAlugar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAlugar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAlugar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAlugar.Enabled = false;
             this.btnAlugar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.btnAlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlugar.ForeColor = System.Drawing.Color.Black;
-            this.btnAlugar.Location = new System.Drawing.Point(565, 608);
+            this.btnAlugar.Location = new System.Drawing.Point(565, 632);
             this.btnAlugar.Name = "btnAlugar";
             this.btnAlugar.Size = new System.Drawing.Size(275, 87);
             this.btnAlugar.TabIndex = 85;
@@ -456,9 +453,8 @@ namespace MyLocker
             this.lblResultadoCor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.lblResultadoCor.Location = new System.Drawing.Point(1147, 294);
             this.lblResultadoCor.Name = "lblResultadoCor";
-            this.lblResultadoCor.Size = new System.Drawing.Size(223, 54);
+            this.lblResultadoCor.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoCor.TabIndex = 84;
-            this.lblResultadoCor.Text = "Vermelho";
             // 
             // btnDisponibilidade
             // 
@@ -467,7 +463,8 @@ namespace MyLocker
             this.btnDisponibilidade.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDisponibilidade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDisponibilidade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDisponibilidade.FillColor = System.Drawing.Color.White;
+            this.btnDisponibilidade.Enabled = false;
+            this.btnDisponibilidade.FillColor = System.Drawing.Color.Black;
             this.btnDisponibilidade.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDisponibilidade.ForeColor = System.Drawing.Color.Transparent;
             this.btnDisponibilidade.Location = new System.Drawing.Point(758, 254);
@@ -537,50 +534,6 @@ namespace MyLocker
             this.lblAndar.TabIndex = 78;
             this.lblAndar.Text = "Andar:";
             // 
-            // txtRaAluno
-            // 
-            this.txtRaAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.txtRaAluno.BorderColor = System.Drawing.Color.Transparent;
-            this.txtRaAluno.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtRaAluno.BorderRadius = 50;
-            this.txtRaAluno.BorderSize = 2;
-            this.txtRaAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRaAluno.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtRaAluno.Location = new System.Drawing.Point(92, 370);
-            this.txtRaAluno.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.txtRaAluno.Multiline = false;
-            this.txtRaAluno.Name = "txtRaAluno";
-            this.txtRaAluno.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.txtRaAluno.PasswordChar = false;
-            this.txtRaAluno.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtRaAluno.PlaceholderText = "RA do Aluno";
-            this.txtRaAluno.Size = new System.Drawing.Size(761, 109);
-            this.txtRaAluno.TabIndex = 74;
-            this.txtRaAluno.UnderlinedStyle = false;
-            this.txtRaAluno.Enter += new System.EventHandler(this.txtRaAluno_Enter);
-            // 
-            // txtNumeroArmario
-            // 
-            this.txtNumeroArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.txtNumeroArmario.BorderColor = System.Drawing.Color.Transparent;
-            this.txtNumeroArmario.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtNumeroArmario.BorderRadius = 50;
-            this.txtNumeroArmario.BorderSize = 2;
-            this.txtNumeroArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNumeroArmario.Location = new System.Drawing.Point(92, 233);
-            this.txtNumeroArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.txtNumeroArmario.Multiline = false;
-            this.txtNumeroArmario.Name = "txtNumeroArmario";
-            this.txtNumeroArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.txtNumeroArmario.PasswordChar = false;
-            this.txtNumeroArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtNumeroArmario.PlaceholderText = "Número do Armário";
-            this.txtNumeroArmario.Size = new System.Drawing.Size(761, 109);
-            this.txtNumeroArmario.TabIndex = 73;
-            this.txtNumeroArmario.UnderlinedStyle = false;
-            this.txtNumeroArmario.Enter += new System.EventHandler(this.txtNumeroArmario_Enter);
-            // 
             // cbPossuiApm
             // 
             this.cbPossuiApm.BackColor = System.Drawing.Color.Transparent;
@@ -589,6 +542,7 @@ namespace MyLocker
             this.cbPossuiApm.CheckedState.BorderThickness = 0;
             this.cbPossuiApm.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbPossuiApm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbPossuiApm.Enabled = false;
             this.cbPossuiApm.ForeColor = System.Drawing.Color.White;
             this.cbPossuiApm.Location = new System.Drawing.Point(458, 544);
             this.cbPossuiApm.Name = "cbPossuiApm";
@@ -712,6 +666,51 @@ namespace MyLocker
             this.panel3.Size = new System.Drawing.Size(397, 2);
             this.panel3.TabIndex = 12;
             this.panel3.Visible = false;
+            // 
+            // txtRaAluno
+            // 
+            this.txtRaAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtRaAluno.BorderColor = System.Drawing.Color.Transparent;
+            this.txtRaAluno.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtRaAluno.BorderRadius = 50;
+            this.txtRaAluno.BorderSize = 2;
+            this.txtRaAluno.Enabled = false;
+            this.txtRaAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRaAluno.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtRaAluno.Location = new System.Drawing.Point(92, 370);
+            this.txtRaAluno.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtRaAluno.Multiline = false;
+            this.txtRaAluno.Name = "txtRaAluno";
+            this.txtRaAluno.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtRaAluno.PasswordChar = false;
+            this.txtRaAluno.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtRaAluno.PlaceholderText = "RA do Aluno";
+            this.txtRaAluno.Size = new System.Drawing.Size(761, 109);
+            this.txtRaAluno.TabIndex = 74;
+            this.txtRaAluno.UnderlinedStyle = false;
+            this.txtRaAluno.Enter += new System.EventHandler(this.txtRaAluno_Enter);
+            // 
+            // txtNumeroArmario
+            // 
+            this.txtNumeroArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtNumeroArmario.BorderColor = System.Drawing.Color.Transparent;
+            this.txtNumeroArmario.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtNumeroArmario.BorderRadius = 50;
+            this.txtNumeroArmario.BorderSize = 2;
+            this.txtNumeroArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtNumeroArmario.Location = new System.Drawing.Point(92, 233);
+            this.txtNumeroArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtNumeroArmario.Multiline = false;
+            this.txtNumeroArmario.Name = "txtNumeroArmario";
+            this.txtNumeroArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtNumeroArmario.PasswordChar = false;
+            this.txtNumeroArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtNumeroArmario.PlaceholderText = "Número do Armário";
+            this.txtNumeroArmario.Size = new System.Drawing.Size(761, 109);
+            this.txtNumeroArmario.TabIndex = 73;
+            this.txtNumeroArmario.UnderlinedStyle = false;
+            this.txtNumeroArmario.Enter += new System.EventHandler(this.txtNumeroArmario_Enter);
             // 
             // FormAlugarArmario
             // 

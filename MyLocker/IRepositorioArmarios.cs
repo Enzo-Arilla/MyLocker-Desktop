@@ -16,7 +16,7 @@ namespace MyLocker
         Task<Armario> FindLockerByNumber(String lockerNumberString);
 
         [Post("/lockers/set-is-rented")]
-        Task SetLockerIsRented([Body] SetLockerIsRentedRequest locker);
+        Task SetLockerIsRented([Body]SetLockerIsRentedRequest locker);
 
     }
 }

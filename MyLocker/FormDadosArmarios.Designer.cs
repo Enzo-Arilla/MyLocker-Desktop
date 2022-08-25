@@ -437,7 +437,7 @@ namespace MyLocker
             this.guna2VScrollBar1.BorderRadius = 3;
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1375, 41);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1347, 41);
             this.guna2VScrollBar1.Minimum = 1;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
@@ -485,7 +485,7 @@ namespace MyLocker
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tblDadosArmarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.tblDadosArmarios.GridColor = System.Drawing.Color.Black;
-            this.tblDadosArmarios.Location = new System.Drawing.Point(11, 41);
+            this.tblDadosArmarios.Location = new System.Drawing.Point(23, 41);
             this.tblDadosArmarios.MultiSelect = false;
             this.tblDadosArmarios.Name = "tblDadosArmarios";
             this.tblDadosArmarios.ReadOnly = true;
@@ -576,9 +576,9 @@ namespace MyLocker
             this.guna2GradientPanel1.Controls.Add(this.tblDadosArmarios);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(221, 340);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(197, 340);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1396, 690);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1420, 690);
             this.guna2GradientPanel1.TabIndex = 62;
             // 
             // txtPesquisarArmario

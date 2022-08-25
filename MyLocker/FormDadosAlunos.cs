@@ -13,6 +13,10 @@ namespace MyLocker
 {
     public partial class FormDadosAlunos : Form
     {
+
+        Alunos[] alunos = null;
+        int controle = 0;
+
         public FormDadosAlunos()
         {
             InitializeComponent();
@@ -27,20 +31,20 @@ namespace MyLocker
             return response;
         }
 
-        async private void FormDadosArmarios_Load(object sender, EventArgs e)
+        private async void FormDadosArmarios_Load(object sender, EventArgs e)
         {
+
             var Load = new Carregamento();
             Load.Show();
+            lblFoco.Focus();
 
-
-            Alunos[] alunos = null;
             alunos = await ListAlunos();
 
             foreach (Alunos a in alunos)
             {
-                //MessageBox.Show(a.Number.ToString());
-                string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), a.Locker_number.ToString(), a.Status.ToString() };
-                tblDadosArmarios.Rows.Add(row);
+                string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                tblDadosAlunos.Rows.Add(row);
             }
 
             Load.Close();
@@ -170,6 +174,462 @@ namespace MyLocker
             }
         }
 
-        
+        private void btnTipoPesquisa_Click(object sender, EventArgs e)
+        {
+            if (panel10.Visible == false)
+            {
+                panel10.Visible = true;
+                panel12.Visible = true;
+                panel13.Visible = true;
+                panel14.Visible = true;
+                panel15.Visible = true;
+
+            }
+            else if (panel10.Visible == true)
+            {
+                panel10.Visible = false;
+                panel12.Visible = false;
+                panel13.Visible = false;
+                panel14.Visible = false;
+                panel15.Visible = false;
+            }
+        }
+
+        private void btnRaLocatario_Click(object sender, EventArgs e)
+        {
+            if (btnRaLocatario.Cursor == Cursors.Hand)
+            {
+                controle = 0;
+
+                btnRaLocatario.FillColor = Color.FromArgb(255, 220, 81);
+                btnRaLocatario.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnRaLocatario.PressedColor = Color.FromArgb(255, 220, 81);
+                btnRaLocatario.Cursor = Cursors.No;
+
+                btnNome.FillColor = Color.LightGray;
+                btnNome.HoverState.FillColor = Color.Empty;
+                btnNome.PressedColor = Color.Empty;
+                btnNome.Cursor = Cursors.Hand;
+
+                btnSobrenome.FillColor = Color.LightGray;
+                btnSobrenome.HoverState.FillColor = Color.Empty;
+                btnSobrenome.PressedColor = Color.Empty;
+                btnSobrenome.Cursor = Cursors.Hand;
+
+                btnNumero.FillColor = Color.LightGray;
+                btnNumero.HoverState.FillColor = Color.Empty;
+                btnNumero.PressedColor = Color.Empty;
+                btnNumero.Cursor = Cursors.Hand;
+
+                btnStatusApm.FillColor = Color.LightGray;
+                btnStatusApm.HoverState.FillColor = Color.Empty;
+                btnStatusApm.PressedColor = Color.Empty;
+                btnStatusApm.Cursor = Cursors.Hand;
+
+                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (RA Locatário)";
+
+                panel10.Visible = false;
+
+            }
+        }
+
+        private void btnNome_Click(object sender, EventArgs e)
+        {
+            if (btnNome.Cursor == Cursors.Hand)
+            {
+                controle = 1;
+
+                btnNome.FillColor = Color.FromArgb(255, 220, 81);
+                btnNome.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnNome.PressedColor = Color.FromArgb(255, 220, 81);
+                btnNome.Cursor = Cursors.No;
+
+                btnRaLocatario.FillColor = Color.LightGray;
+                btnRaLocatario.HoverState.FillColor = Color.Empty;
+                btnRaLocatario.PressedColor = Color.Empty;
+                btnRaLocatario.Cursor = Cursors.Hand;
+
+                btnSobrenome.FillColor = Color.LightGray;
+                btnSobrenome.HoverState.FillColor = Color.Empty;
+                btnSobrenome.PressedColor = Color.Empty;
+                btnSobrenome.Cursor = Cursors.Hand;
+
+                btnNumero.FillColor = Color.LightGray;
+                btnNumero.HoverState.FillColor = Color.Empty;
+                btnNumero.PressedColor = Color.Empty;
+                btnNumero.Cursor = Cursors.Hand;
+
+                btnStatusApm.FillColor = Color.LightGray;
+                btnStatusApm.HoverState.FillColor = Color.Empty;
+                btnStatusApm.PressedColor = Color.Empty;
+                btnStatusApm.Cursor = Cursors.Hand;
+
+                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Nome)";
+
+                panel10.Visible = false;
+            }
+        }
+
+        private void btnSobrenome_Click(object sender, EventArgs e)
+        {
+            if (btnSobrenome.Cursor == Cursors.Hand)
+            {
+                controle = 2;
+
+                btnSobrenome.FillColor = Color.FromArgb(255, 220, 81);
+                btnSobrenome.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnSobrenome.PressedColor = Color.FromArgb(255, 220, 81);
+                btnSobrenome.Cursor = Cursors.No;
+
+                btnRaLocatario.FillColor = Color.LightGray;
+                btnRaLocatario.HoverState.FillColor = Color.Empty;
+                btnRaLocatario.PressedColor = Color.Empty;
+                btnRaLocatario.Cursor = Cursors.Hand;
+
+                btnNome.FillColor = Color.LightGray;
+                btnNome.HoverState.FillColor = Color.Empty;
+                btnNome.PressedColor = Color.Empty;
+                btnNome.Cursor = Cursors.Hand;
+
+                btnNumero.FillColor = Color.LightGray;
+                btnNumero.HoverState.FillColor = Color.Empty;
+                btnNumero.PressedColor = Color.Empty;
+                btnNumero.Cursor = Cursors.Hand;
+
+                btnStatusApm.FillColor = Color.LightGray;
+                btnStatusApm.HoverState.FillColor = Color.Empty;
+                btnStatusApm.PressedColor = Color.Empty;
+                btnStatusApm.Cursor = Cursors.Hand;
+
+                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Sobrenome)";
+
+                panel10.Visible = false;
+            }
+        }
+
+        private void btnNumero_Click(object sender, EventArgs e)
+        {
+            if (btnNumero.Cursor == Cursors.Hand)
+            {
+                controle = 3;
+
+                btnNumero.FillColor = Color.FromArgb(255, 220, 81);
+                btnNumero.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnNumero.PressedColor = Color.FromArgb(255, 220, 81);
+                btnNumero.Cursor = Cursors.No;
+
+                btnRaLocatario.FillColor = Color.LightGray;
+                btnRaLocatario.HoverState.FillColor = Color.Empty;
+                btnRaLocatario.PressedColor = Color.Empty;
+                btnRaLocatario.Cursor = Cursors.Hand;
+
+                btnNome.FillColor = Color.LightGray;
+                btnNome.HoverState.FillColor = Color.Empty;
+                btnNome.PressedColor = Color.Empty;
+                btnNome.Cursor = Cursors.Hand;
+
+                btnSobrenome.FillColor = Color.LightGray;
+                btnSobrenome.HoverState.FillColor = Color.Empty;
+                btnSobrenome.PressedColor = Color.Empty;
+                btnSobrenome.Cursor = Cursors.Hand;
+
+                btnStatusApm.FillColor = Color.LightGray;
+                btnStatusApm.HoverState.FillColor = Color.Empty;
+                btnStatusApm.PressedColor = Color.Empty;
+                btnStatusApm.Cursor = Cursors.Hand;
+
+                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
+
+                panel10.Visible = false;
+            }
+        }
+
+        private void btnStatusApm_Click(object sender, EventArgs e)
+        {
+            if (btnStatusApm.Cursor == Cursors.Hand)
+            {
+                controle = 4;
+
+                btnStatusApm.FillColor = Color.FromArgb(255, 220, 81);
+                btnStatusApm.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnStatusApm.PressedColor = Color.FromArgb(255, 220, 81);
+                btnStatusApm.Cursor = Cursors.No;
+
+                btnRaLocatario.FillColor = Color.LightGray;
+                btnRaLocatario.HoverState.FillColor = Color.Empty;
+                btnRaLocatario.PressedColor = Color.Empty;
+                btnRaLocatario.Cursor = Cursors.Hand;
+
+                btnNome.FillColor = Color.LightGray;
+                btnNome.HoverState.FillColor = Color.Empty;
+                btnNome.PressedColor = Color.Empty;
+                btnNome.Cursor = Cursors.Hand;
+
+                btnSobrenome.FillColor = Color.LightGray;
+                btnSobrenome.HoverState.FillColor = Color.Empty;
+                btnSobrenome.PressedColor = Color.Empty;
+                btnSobrenome.Cursor = Cursors.Hand;
+
+                btnNumero.FillColor = Color.LightGray;
+                btnNumero.HoverState.FillColor = Color.Empty;
+                btnNumero.PressedColor = Color.Empty;
+                btnNumero.Cursor = Cursors.Hand;
+
+                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Status APM)";
+
+                panel10.Visible = false;
+            }
+        }
+
+        private void txtPesquisarArmario_Enter(object sender, EventArgs e)
+        {
+            if (btnNumero.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Número)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            else if (btnRaLocatario.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (RA Locatário)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            else if (btnNome.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Nome)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            else if (btnSobrenome.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Sobrenome)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            else if (btnStatusApm.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Status APM)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+        }
+
+        private void txtPesquisarArmario_Leave(object sender, EventArgs e)
+        {
+            /*
+            if (btnNumero.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Número)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            else if (btnRaLocatario.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (RA Locatário)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            else if (btnNome.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Nome)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            else if (btnSobrenome.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Sobrenome)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            else if (btnStatusApm.Cursor == Cursors.No)
+            {
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Status APM)")
+                {
+                    txtPesquisarArmario.PlaceholderText = "";
+                    txtPesquisarArmario.ForeColor = Color.Black;
+                }
+                panel10.Visible = false;
+            }
+            */
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string filtro = txtPesquisarArmario.Text;
+
+            if (filtro.Trim() == "")
+            {
+                MyMessageBoxError.ShowBox("Preencha o campo de pesquisa para realizar a busca!", "Erro");
+            }
+            else
+            {
+                if (controle == 0)
+                {
+                    tblDadosAlunos.Rows.Clear();
+                    tblDadosAlunos.Refresh();
+
+                    foreach (Alunos a in alunos)
+                    {
+
+                        if (a.Ra.ToString().Equals(filtro) || a.Ra.ToString().StartsWith(filtro))
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosAlunos.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O RA informado não corresponde a um armário!", "Aviso");
+                        foreach (Alunos a in alunos)
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+
+                        }
+                    }
+
+
+                }
+                else if (controle == 1)
+                {
+
+                    tblDadosAlunos.Rows.Clear();
+                    tblDadosAlunos.Refresh();
+
+                    foreach (Alunos a in alunos)
+                    {
+
+                        if (a.First_name.ToString().Equals(filtro) || a.First_name.ToString().StartsWith(filtro))
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosAlunos.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O nome informado não corresponde a um armário!", "Aviso");
+                        foreach (Alunos a in alunos)
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+
+                        }
+                    }
+                }
+                else if (controle == 2)
+                {
+                    tblDadosAlunos.Rows.Clear();
+                    tblDadosAlunos.Refresh();
+
+                    foreach (Alunos a in alunos)
+                    {
+
+                        if (a.Last_name.ToString().Equals(filtro) || a.Last_name.ToString().StartsWith(filtro))
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosAlunos.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O sobrenome informado não corresponde a um armário!", "Aviso");
+                        foreach (Alunos a in alunos)
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+
+                        }
+                    }
+                }
+                else if (controle == 3)
+                {
+                    tblDadosAlunos.Rows.Clear();
+                    tblDadosAlunos.Refresh();
+
+                    foreach (Alunos a in alunos)
+                    {
+
+                        if (a.Locker_number.ToString().Equals(filtro) || a.Locker_number.ToString().StartsWith(filtro))
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosAlunos.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O número informado não corresponde a um armário!", "Aviso");
+                        foreach (Alunos a in alunos)
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+
+                        }
+                    }
+                }
+                else if (controle == 4)
+                {
+                    tblDadosAlunos.Rows.Clear();
+                    tblDadosAlunos.Refresh();
+
+                    foreach (Alunos a in alunos)
+                    {
+
+                        if (a.Status.ToString().Equals(filtro) || a.Status.ToString().StartsWith(filtro))
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+                        }
+                    }
+                    if (tblDadosAlunos.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O status apm informado não corresponde a um armário!", "Aviso");
+                        foreach (Alunos a in alunos)
+                        {
+                            string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                            string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                            tblDadosAlunos.Rows.Add(row);
+
+                        }
+                    }
+                }
+            }
+        }
     }
 }

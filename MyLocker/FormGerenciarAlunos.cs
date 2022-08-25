@@ -23,7 +23,7 @@ namespace MyLocker
 
         static async Task CreateAluno(Alunos aluno)
         {
-            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api.herokuapp.com/");
+            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api.herokuapp.com");
 
             await apiClient.CreateAluno(aluno);
 
@@ -31,7 +31,7 @@ namespace MyLocker
 
         static async Task<Alunos[]> ListAlunos()
         {
-            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api.herokuapp.com/");
+            var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api.herokuapp.com");
 
             Alunos[] response = await apiClient.ListAlunos();
 
@@ -294,6 +294,9 @@ namespace MyLocker
             
             lblGerenciamento.Text = "Registrar Aluno";
             btnGerenciamento.Text = "Registrar";
+            txtEmailAluno.Enabled = true;
+            txtPrimeiroNome.Enabled = true;
+            txtUltimoNome.Enabled = true;
             btnBuscar.Visible = false;
             txtRaAluno.Width =  633;
             txtRaAluno.Focus();
@@ -332,6 +335,9 @@ namespace MyLocker
                 {
                     if(txtRaAluno.Text.Equals(a.Ra.ToString()))
                     {
+                        txtEmailAluno.Text = a.Email.ToString();
+                        txtPrimeiroNome.Text = a.First_name.ToString();
+                        txtUltimoNome.Text = a.Last_name.ToString();
                         txtEmailAluno.Enabled = true;
                         txtPrimeiroNome.Enabled = true;
                         txtUltimoNome.Enabled = true;
@@ -362,14 +368,19 @@ namespace MyLocker
                 {
                     if (btnGerenciamento.Text == "Registrar")
                     {
-                        txtEmailAluno.Enabled = true;
-                        txtPrimeiroNome.Enabled = true;
-                        txtUltimoNome.Enabled = true;
                         try
                         {
                             Alunos aluno = new Alunos(txtRaAluno.Text, txtPrimeiroNome.Text, txtUltimoNome.Text, txtEmailAluno.Text);
                             await CreateAluno(aluno);
                             MyMessageBoxSucess.ShowBox("O aluno foi registrado com sucesso!", "Sucesso");
+                            txtRaAluno.Text = "";
+                            txtPrimeiroNome.Text = "";
+                            txtUltimoNome.Text = "";
+                            txtEmailAluno.Text = "";
+                            txtUltimoNome.PlaceholderText = "Último nome";
+                            txtPrimeiroNome.PlaceholderText = "Primeiro nome";
+                            txtEmailAluno.PlaceholderText = "E-mail do aluno";
+                            txtRaAluno.PlaceholderText = "RA do aluno";
                         }
                         catch (ApiException erro)
                         {

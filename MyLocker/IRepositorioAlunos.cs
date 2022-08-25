@@ -13,9 +13,9 @@ namespace MyLocker
         Task<Alunos[]> ListAlunos();
 
         [Post("/students")]
-        Task CreateAluno([Body] Alunos aluno);
+        Task CreateAluno([Body]Alunos aluno);
 
         [Post("/students/update-locker-number")]
-        Task SetStudentLockerNumber([Body] SetStudentLockerNumberRequest aluno);
+        Task SetStudentLockerNumber([Body]SetStudentLockerNumberRequest aluno);
     }
 }
