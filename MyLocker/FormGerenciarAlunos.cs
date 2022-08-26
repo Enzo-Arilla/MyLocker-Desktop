@@ -24,7 +24,6 @@ namespace MyLocker
         static async Task CreateAluno(Alunos aluno)
         {
             var apiClient = RestService.For<IRepositorioAlunos>("https://mylocker-api.herokuapp.com");
-
             await apiClient.CreateAluno(aluno);
 
         }
@@ -291,14 +290,15 @@ namespace MyLocker
 
         private void lblRegistrarAluno_Click(object sender, EventArgs e)
         {
-            
+
+            btnBuscar.Visible = false;
+            txtRaAluno.Width = 633;
             lblGerenciamento.Text = "Registrar Aluno";
             btnGerenciamento.Text = "Registrar";
             txtEmailAluno.Enabled = true;
             txtPrimeiroNome.Enabled = true;
             txtUltimoNome.Enabled = true;
-            btnBuscar.Visible = false;
-            txtRaAluno.Width =  633;
+            
             txtRaAluno.Focus();
         }
 
@@ -330,28 +330,32 @@ namespace MyLocker
         {
             if (txtRaAluno.Text.Trim() != "")
             {
+                txtEmailAluno.Enabled = true;
+                txtPrimeiroNome.Enabled = true;
+                txtUltimoNome.Enabled = true;
 
-                foreach(Alunos a in alunos)
+                foreach (Alunos a in alunos)
                 {
                     if(txtRaAluno.Text.Equals(a.Ra.ToString()))
                     {
+                        txtEmailAluno.PlaceholderText = "";
+                        txtPrimeiroNome.PlaceholderText = "";
+                        txtUltimoNome.PlaceholderText = "";
                         txtEmailAluno.Text = a.Email.ToString();
                         txtPrimeiroNome.Text = a.First_name.ToString();
                         txtUltimoNome.Text = a.Last_name.ToString();
-                        txtEmailAluno.Enabled = true;
-                        txtPrimeiroNome.Enabled = true;
-                        txtUltimoNome.Enabled = true;
-                    }
-                    else
-                    {
-                        MyMessageBoxWarning.ShowBox("O RA informado não encontrou um aluno! Tente novamente.", "Aviso");
-                        txtEmailAluno.Enabled = false;
-                        txtPrimeiroNome.Enabled = false;
-                        txtUltimoNome.Enabled = false;
-                        break;
-                    }
+                        txtEmailAluno.ForeColor = Color.Black;
+                        txtPrimeiroNome.ForeColor = Color.Black;
+                        txtUltimoNome.ForeColor = Color.Black;
+                    }  
                 }
-                
+                if(txtEmailAluno.Text.Trim() == "")
+                {
+                    MyMessageBoxWarning.ShowBox("O RA informado não encontrou um aluno! Tente novamente.", "Aviso");
+                    txtEmailAluno.Enabled = false;
+                    txtPrimeiroNome.Enabled = false;
+                    txtUltimoNome.Enabled = false;
+                }
             }
             else
             {
@@ -361,17 +365,20 @@ namespace MyLocker
 
         private async void btnGerenciamento_Click(object sender, EventArgs e)
         {
+            var Load = new Carregamento();
+            Load.Show();
 
-            if (txtRaAluno.Text.Trim() != "" && txtEmailAluno.Text.Trim() != "" && txtPrimeiroNome.Text.Trim() != "" && txtUltimoNome.Text.Trim() != "")
+            if ((txtRaAluno.Text.Trim() != "") && (txtEmailAluno.Text.Trim() != "") && (txtPrimeiroNome.Text.Trim() != "") && (txtUltimoNome.Text.Trim() != "") && (txtRaAluno.PlaceholderText == "") && (txtEmailAluno.PlaceholderText == "") && (txtPrimeiroNome.PlaceholderText == "") && (txtUltimoNome.PlaceholderText == ""))
             {
-                if (txtEmailAluno.Text.StartsWith("cl") && txtEmailAluno.Text.Contains("@g.unicamp.br"))
-                {
+               // if (txtEmailAluno.Text.StartsWith("cl") && txtEmailAluno.Text.Contains("@g.unicamp.br"))
+                //{
                     if (btnGerenciamento.Text == "Registrar")
                     {
                         try
                         {
                             Alunos aluno = new Alunos(txtRaAluno.Text, txtPrimeiroNome.Text, txtUltimoNome.Text, txtEmailAluno.Text);
                             await CreateAluno(aluno);
+                            Load.Close();
                             MyMessageBoxSucess.ShowBox("O aluno foi registrado com sucesso!", "Sucesso");
                             txtRaAluno.Text = "";
                             txtPrimeiroNome.Text = "";
@@ -384,6 +391,7 @@ namespace MyLocker
                         }
                         catch (ApiException erro)
                         {
+                            Load.Close();
                             string[] mensagemErro = erro.Content.Split('"');
                             MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
                         }
@@ -400,14 +408,16 @@ namespace MyLocker
                     {
                         
                     }
-                }  
-                else
-                {
-                    MyMessageBoxError.ShowBox("O formato do e-mail utilizado está incorreto!", "Erro");
-                }
+                //}  
+                //else
+                //{
+                  //  Load.Close();
+                   // MyMessageBoxError.ShowBox("O formato do e-mail utilizado está incorreto!", "Erro");
+                //}
             }
             else
             {
+                Load.Close();
                 MyMessageBoxError.ShowBox("Campo(s) não preenchido(s)!", "Erro");
             }
         }

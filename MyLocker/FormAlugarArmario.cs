@@ -37,7 +37,7 @@ namespace MyLocker
 
         static async Task<Armario> FindLockerByNumber(String lockerNumberString)
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("http://localhost:3333");
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
 
             Armario armario = await apiClient.FindLockerByNumber(lockerNumberString);
 
@@ -73,10 +73,15 @@ namespace MyLocker
 
         private async void btnAlugar_Click(object sender, EventArgs e)
         {
+            var Load = new Carregamento();
+            
+
             try
             {
                 if (txtNumeroArmario.Text.Trim() == "" || txtRaAluno.Text.Trim() == "")
                 {
+                    Load.Show();
+                    Load.Close();
                     MyMessageBoxError.ShowBox("Preencher todos os campos antes de efetuar a locação.", "Campos obrigatórios não preenchidos!");
                 }
                 else
@@ -84,16 +89,26 @@ namespace MyLocker
                     SetLockerIsRentedRequest setLockerIsRentedRequest = new SetLockerIsRentedRequest(int.Parse(txtNumeroArmario.Text), 1);
                     SetStudentLockerNumberRequest setStudentLockerNumberRequest = new SetStudentLockerNumberRequest(txtRaAluno.Text, int.Parse(txtNumeroArmario.Text));
                     await RentLocker(setLockerIsRentedRequest, setStudentLockerNumberRequest);
-                    MyMessageBoxSucess.ShowBox("O armário foi alugado com sucesso!");
+                    Load.Close();
+                    MyMessageBoxSucess.ShowBox("O armário foi alugado com sucesso!", "Sucesso");
                     btnAlugar.Enabled = false;
                     txtRaAluno.Enabled = false;
                     cbPossuiApm.Enabled = false;
+                    txtRaAluno.Text = "";
+                    txtNumeroArmario.Text = "";
+                    lblResultadoAndar.Text = "";
+                    lblResultadoCor.Text = "";
+                    lblResultadoSalaDireita.Text = "";
+                    lblResultadoSalaEsquerda.Text = "";
+                    lblResultadoSituacao.Text = "";
+                    lblFoco.Focus();
                 }
             }
             catch (ApiException erro)
             {
                 string[] mensagemErro = erro.Content.Split('"');
                 MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
+                Load.Close();
             }
 
         }
@@ -262,21 +277,20 @@ namespace MyLocker
 
         private async void btnProcurar_Click(object sender, EventArgs e)
         {
+            var Load = new Carregamento();
+            Load.Show();
+
             if (txtNumeroArmario.Text.Trim() == "")
             {
+                Load.Close();
                 MyMessageBoxError.ShowBox("Preencha o campo do número do armário!", "Erro");
             }
             else
             {
-
-                Armario armario = await FindLockerByNumber(txtNumeroArmario.Text);
-
-                if(armario == null)
+                try
                 {
-                    MyMessageBoxWarning.ShowBox("O armário solicitado não foi encontrado!", "Aviso");
-                }
-                else
-                {
+                    Armario armario = await FindLockerByNumber(txtNumeroArmario.Text);
+                    Load.Close();
                     if (armario.IsRented == 1)
                     {
                         //string situacao = armario.IsRented == 1 ? "Alugado" : "Disponível";
@@ -291,7 +305,7 @@ namespace MyLocker
                     else
                     {
                         btnDisponibilidade.Visible = true;
-                        btnDisponibilidade.DisabledState.FillColor = Color.GreenYellow;
+                        btnDisponibilidade.DisabledState.FillColor = Color.FromArgb(0, 176, 63);
                         lblResultadoAndar.Text = armario.Section.Id.ToString();
                         lblResultadoCor.Text = transformHexToPlainText(armario.Section.Color);
                         lblResultadoSalaEsquerda.Text = armario.Section.Left_room;
@@ -302,9 +316,24 @@ namespace MyLocker
                         btnAlugar.Enabled = true;
                     }
                 }
-                
+                catch (ApiException erro)
+                {
+                    Load.Close();
+                    string[] mensagemErro = erro.Content.Split('"');
+                    MyMessageBoxWarning.ShowBox(mensagemErro[3], "Aviso");
+                }
             }
         }
 
+        private void txtNumeroArmario__TextChanged(object sender, EventArgs e)
+        {
+            if(txtNumeroArmario.Text == "")
+            {
+                btnDisponibilidade.DisabledState.FillColor = Color.Empty;
+                txtRaAluno.Enabled = false;
+                cbPossuiApm.Enabled = false;
+                btnAlugar.Enabled = false;
+            }
+        }
     }
 }
