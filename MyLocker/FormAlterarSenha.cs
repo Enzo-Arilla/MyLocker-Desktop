@@ -17,6 +17,11 @@ namespace MyLocker
             InitializeComponent();
         }
 
+        private void FormAlterarSenha_Load(object sender, EventArgs e)
+        {
+            lblFoco.Focus();
+        }
+
         private void btnTrocarPerfil_Click(object sender, EventArgs e)
         {
             var FormLogin = new FormLogin();
@@ -137,5 +142,64 @@ namespace MyLocker
         {            
 
         }
+
+        private void txtSenhaAntiga_Enter(object sender, EventArgs e)
+        {
+            if (txtSenhaAntiga.PlaceholderText == "Senha antiga")
+            {
+                txtSenhaAntiga.PlaceholderText = "";
+                txtSenhaAntiga.ForeColor = Color.Black;
+            }
+
+            if (txtNovaSenha.Text == "")
+            {
+                txtNovaSenha.PlaceholderText = "Nova senha";
+            }
+
+            if (txtConfirmarSenha.Text == "")
+            {
+                txtConfirmarSenha.PlaceholderText = "Confirmar nova senha";
+            }
+        }
+
+        private void txtNovaSenha_Enter(object sender, EventArgs e)
+        {
+            if(txtSenhaAntiga.Text == "")
+            {
+                txtSenhaAntiga.PlaceholderText = "Senha antiga";
+            }
+
+            if(txtNovaSenha.PlaceholderText == "Nova senha")
+            {
+                txtNovaSenha.PlaceholderText = "";
+                txtNovaSenha.ForeColor = Color.Black;
+            }
+
+            if (txtConfirmarSenha.Text == "")
+            {
+                txtConfirmarSenha.PlaceholderText = "Confirmar nova senha";
+            }
+        }
+
+        private void txtConfirmarSenha_Enter(object sender, EventArgs e)
+        {
+            if (txtSenhaAntiga.Text == "")
+            {
+                txtSenhaAntiga.PlaceholderText = "Senha antiga";
+            }
+
+            if (txtNovaSenha.Text == "")
+            {
+                txtNovaSenha.PlaceholderText = "Nova senha";
+            }
+
+            if (txtConfirmarSenha.PlaceholderText == "Confirmar nova senha")
+            {
+                txtConfirmarSenha.PlaceholderText = "";
+                txtConfirmarSenha.ForeColor = Color.Black;
+            }
+        }
+
+      
     }
 }
