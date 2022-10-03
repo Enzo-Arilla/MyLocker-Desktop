@@ -18,5 +18,8 @@ namespace MyLocker
         [Post("/lockers/set-is-rented")]
         Task SetLockerIsRented([Body]SetLockerIsRentedRequest locker);
 
+        [Post("/clear-locker-demonstration")]
+        Task EmptyLocker([Body]String ra);
+
     }
 }

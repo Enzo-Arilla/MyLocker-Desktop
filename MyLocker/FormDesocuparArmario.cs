@@ -26,13 +26,19 @@ namespace MyLocker
 
         static async Task<Armario[]> ListArmarios()
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com/");
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
 
             Armario[] response = await apiClient.ListArmarios();
 
             return response;
         }
 
+        static async Task EmptyLocker(string ra)
+        {
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
+            await apiClient.EmptyLocker(ra);
+            return;
+        }
 
         private async void FormDesocuparArmario_Load(object sender, EventArgs e)
         {
@@ -46,13 +52,36 @@ namespace MyLocker
 
             foreach (Armario a in armarios)
             {
-       
-                string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
+                string ra = "-";
+                if (a.Student != null)
+                {
+                    ra = a.Student.Ra;
+                }
+
+                string[] row = new string[] { a.Number.ToString(), ra };
                 tblDesocuparArmario.Rows.Add(row);
 
             }
 
             Load.Close();
+
+        }
+
+        private async void tblDesocuparArmario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            try {
+                if (e.ColumnIndex == 2 && e.RowIndex >= 0) {
+                    int number = e.RowIndex;
+                    string ra = tblDesocuparArmario[1, number].Value.ToString();
+                    await EmptyLocker(ra);
+                    MessageBox.Show("PAGOU!!!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -249,18 +278,6 @@ namespace MyLocker
                 panel3.Visible = false;
                 panel8.Visible = false;
             }
-        }
-
-        private void tblDesocuparArmario_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.ColumnIndex==2 && e.RowIndex>=0)
-            {
-                int number = e.RowIndex;
-                string number2 = tblDesocuparArmario[0, number].Value.ToString();
-                MessageBox.Show("Teste:" + number2);
-            }
-           
         }
 
         private void tblDesocuparArmario_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)

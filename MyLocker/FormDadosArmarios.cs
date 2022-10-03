@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft;
 
 namespace MyLocker
 {
@@ -85,10 +86,16 @@ namespace MyLocker
 
                 armarios = await ListArmarios();
 
+                MessageBox.Show(Newtonsoft.Json.JsonConvert.SerializeObject(armarios[0].Student));
+
                 foreach (Armario a in armarios)
                 {
+                    string ra = "-";
+                    if (a.Student != null) {
+                        ra = a.Student.Ra;
+                    }
                     string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                    string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                    string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                     tblDadosArmarios.Rows.Add(row);
                 }
 
