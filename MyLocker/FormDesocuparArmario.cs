@@ -58,12 +58,13 @@ namespace MyLocker
                     ra = a.Student.Ra;
                 }
 
-                string[] row = new string[] { a.Number.ToString(), ra };
-                tblDesocuparArmario.Rows.Add(row);
-
+                //string[] row = new string[] { a.Number.ToString(), ra };
+                //tblDesocuparArmario.Rows.Add(row);
+                Load.Close();
+                MessageBox.Show(ra);
             }
 
-            Load.Close();
+           
 
         }
 
@@ -97,7 +98,7 @@ namespace MyLocker
             {
                 if(controle == 0)
                 {
-                   tblDesocuparArmario.Rows.Clear();
+                    tblDesocuparArmario.Rows.Clear();
                     tblDesocuparArmario.Refresh();
 
                     foreach (Armario a in armarios)

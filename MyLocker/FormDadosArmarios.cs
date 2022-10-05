@@ -91,7 +91,8 @@ namespace MyLocker
                 foreach (Armario a in armarios)
                 {
                     string ra = "-";
-                    if (a.Student != null) {
+                    if (a.Student != null) 
+                    {
                         ra = a.Student.Ra;
                     }
                     string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
@@ -560,25 +561,36 @@ namespace MyLocker
                     foreach (Armario a in armarios)
                     {
 
+                        string ra = "-";
+                        if (a.Student != null)
+                        {
+                            ra = a.Student.Ra;
+                        }
+
                         if (a.Number.ToString().Equals(filtro) || a.Number.ToString().StartsWith(filtro))
                         {
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
                         }
                     }
                     if (tblDadosArmarios.RowCount == 0)
-                    {
+                    { 
+
                         MyMessageBoxWarning.ShowBox("O número informado não corresponde a um armário!", "Aviso");
                         foreach (Armario a in armarios)
                         {
+                            string ra = "-";
+                            if (a.Student != null)
+                            {
+                                ra = a.Student.Ra;
+                            }
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
 
                         }
                     }
-
 
                 }
                 else if (controle == 1)
@@ -590,10 +602,16 @@ namespace MyLocker
                     foreach (Armario a in armarios)
                     {
 
-                        if (a.IsRented.ToString().Equals(filtro) || a.IsRented.ToString().StartsWith(filtro))
+                        string ra = "-";
+                        if (a.Student != null)
+                        {
+                            ra = a.Student.Ra;
+                        }
+
+                        if (ra.Equals(filtro) || ra.StartsWith(filtro))
                         {
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
                         }
                     }
@@ -602,8 +620,13 @@ namespace MyLocker
                         MyMessageBoxWarning.ShowBox("O RA informado não corresponde a um armário!", "Aviso");
                         foreach (Armario a in armarios)
                         {
+                            string ra = "-";
+                            if (a.Student != null)
+                            {
+                                ra = a.Student.Ra;
+                            }
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
 
                         }
@@ -616,11 +639,15 @@ namespace MyLocker
 
                     foreach (Armario a in armarios)
                     {
-
+                        string ra = "-";
+                        if (a.Student != null)
+                        {
+                            ra = a.Student.Ra;
+                        }
                         if (a.Section.Left_room.ToString().Equals(filtro) || a.Section.Left_room.ToString().Contains(filtro) || a.Section.Right_room.ToString().Equals(filtro) || a.Section.Right_room.ToString().Contains(filtro))
                         {
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
                         }
                     }
@@ -629,8 +656,13 @@ namespace MyLocker
                         MyMessageBoxWarning.ShowBox("A sala informado não corresponde a um armário!", "Aviso");
                         foreach (Armario a in armarios)
                         {
+                            string ra = "-";
+                            if (a.Student != null)
+                            {
+                                ra = a.Student.Ra;
+                            }
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
 
                         }
@@ -643,11 +675,15 @@ namespace MyLocker
 
                     foreach (Armario a in armarios)
                     {
-                        
+                        string ra = "-";
+                        if (a.Student != null)
+                        {
+                            ra = a.Student.Ra;
+                        }
                         if (transformHexToPlainText(a.Section.Color.ToString()).Equals(filtro) || transformHexToPlainText(a.Section.Color.ToString()).StartsWith(filtro))
                         {
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
                         }
                     }
@@ -656,8 +692,13 @@ namespace MyLocker
                         MyMessageBoxWarning.ShowBox("A cor informada não corresponde a um armário!", "Aviso");
                         foreach (Armario a in armarios)
                         {
+                            string ra = "-";
+                            if (a.Student != null)
+                            {
+                                ra = a.Student.Ra;
+                            }
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
 
                         }
@@ -670,11 +711,15 @@ namespace MyLocker
 
                     foreach (Armario a in armarios)
                     {
-
+                        string ra = "-";
+                        if (a.Student != null)
+                        {
+                            ra = a.Student.Ra;
+                        }
                         if (a.IsRented.ToString().Equals(filtro) || a.IsRented.ToString().StartsWith(filtro))
                         {
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
                         }
                     }
@@ -683,8 +728,13 @@ namespace MyLocker
                         MyMessageBoxWarning.ShowBox("O status apm informado não corresponde a um armário!", "Aviso");
                         foreach (Armario a in armarios)
                         {
+                            string ra = "-";
+                            if (a.Student != null)
+                            {
+                                ra = a.Student.Ra;
+                            }
                             string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
-                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), a.IsRented.ToString() };
+                            string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
                             tblDadosArmarios.Rows.Add(row);
 
                         }
