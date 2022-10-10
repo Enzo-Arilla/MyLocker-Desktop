@@ -119,5 +119,62 @@ namespace MyLocker
             FormMenu.Show();
             this.Hide();
         }
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            if (txtEmail.PlaceholderText == "E-mail")
+            {
+                txtEmail.PlaceholderText = "";
+                txtEmail.ForeColor = Color.Black;
+            }
+
+            if (txtCodigo.Text == "")
+            {
+                txtCodigo.PlaceholderText = "Código";
+            }
+
+            if (txtNovaSenha.Text == "")
+            {
+                txtNovaSenha.PlaceholderText = "Nova senha";
+            }
+        }
+
+        private void txtCodigo_Enter(object sender, EventArgs e)
+        {
+            if(txtEmail.Text == "")
+            {
+                txtEmail.PlaceholderText = "E-mail";
+            }
+
+            if(txtCodigo.PlaceholderText == "Código")
+            {
+                txtCodigo.PlaceholderText = "";
+                txtCodigo.ForeColor = Color.Black;
+            }
+
+            if (txtNovaSenha.Text == "")
+            {
+                txtNovaSenha.PlaceholderText = "Nova senha";
+            }
+        }
+
+        private void txtNovaSenha_Enter(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                txtEmail.PlaceholderText = "E-mail";
+            }
+
+            if (txtCodigo.Text == "")
+            {
+                txtCodigo.PlaceholderText = "Código";
+            }
+
+            if (txtNovaSenha.PlaceholderText == "Nova senha")
+            {
+                txtNovaSenha.PlaceholderText = "";
+                txtNovaSenha.ForeColor = Color.Black;
+            }
+        }
     }
 }

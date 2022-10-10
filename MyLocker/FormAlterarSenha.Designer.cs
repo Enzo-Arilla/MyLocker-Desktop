@@ -247,6 +247,7 @@ namespace MyLocker
             this.lblEsqueceuSenha.Size = new System.Drawing.Size(326, 45);
             this.lblEsqueceuSenha.TabIndex = 33;
             this.lblEsqueceuSenha.Text = "Esqueceu sua senha?";
+            this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
             // 
             // txtSenhaAntiga
             // 

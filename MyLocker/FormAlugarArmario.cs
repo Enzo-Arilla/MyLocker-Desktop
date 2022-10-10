@@ -333,6 +333,12 @@ namespace MyLocker
                 txtRaAluno.Enabled = false;
                 cbPossuiApm.Enabled = false;
                 btnAlugar.Enabled = false;
+                txtRaAluno.PlaceholderText = "RA do Aluno";
+                lblResultadoAndar.Text = "";
+                lblResultadoCor.Text = "";
+                lblResultadoSalaDireita.Text = "";
+                lblResultadoSalaEsquerda.Text = "";
+                lblResultadoSituacao.Text = "";
             }
         }
     }

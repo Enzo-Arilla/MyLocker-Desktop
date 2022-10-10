@@ -73,6 +73,7 @@ namespace MyLocker
             this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel2.SuspendLayout();
@@ -313,9 +314,7 @@ namespace MyLocker
             this.gpGerenciamento.Controls.Add(this.btnProcurar);
             this.gpGerenciamento.Controls.Add(this.panel10);
             this.gpGerenciamento.Controls.Add(this.lblResultadoSituacao);
-            this.gpGerenciamento.Controls.Add(this.lblResultadoSalaDireita);
             this.gpGerenciamento.Controls.Add(this.lblResultadoSalaEsquerda);
-            this.gpGerenciamento.Controls.Add(this.lblResultadoAndar);
             this.gpGerenciamento.Controls.Add(this.btnAlugar);
             this.gpGerenciamento.Controls.Add(this.lblAlugarArmario);
             this.gpGerenciamento.Controls.Add(this.lblResultadoCor);
@@ -330,6 +329,7 @@ namespace MyLocker
             this.gpGerenciamento.Controls.Add(this.cbPossuiApm);
             this.gpGerenciamento.Controls.Add(this.lblPossuiApm);
             this.gpGerenciamento.Controls.Add(this.lblDadosArmario);
+            this.gpGerenciamento.Controls.Add(this.lblInfo);
             this.gpGerenciamento.CustomBorderColor = System.Drawing.Color.White;
             this.gpGerenciamento.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gpGerenciamento.ForeColor = System.Drawing.Color.White;
@@ -373,7 +373,7 @@ namespace MyLocker
             this.lblResultadoSituacao.BackColor = System.Drawing.Color.White;
             this.lblResultadoSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultadoSituacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
-            this.lblResultadoSituacao.Location = new System.Drawing.Point(1266, 485);
+            this.lblResultadoSituacao.Location = new System.Drawing.Point(1258, 549);
             this.lblResultadoSituacao.Name = "lblResultadoSituacao";
             this.lblResultadoSituacao.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoSituacao.TabIndex = 89;
@@ -384,7 +384,7 @@ namespace MyLocker
             this.lblResultadoSalaDireita.BackColor = System.Drawing.Color.White;
             this.lblResultadoSalaDireita.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultadoSalaDireita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
-            this.lblResultadoSalaDireita.Location = new System.Drawing.Point(1324, 423);
+            this.lblResultadoSalaDireita.Location = new System.Drawing.Point(1425, 631);
             this.lblResultadoSalaDireita.Name = "lblResultadoSalaDireita";
             this.lblResultadoSalaDireita.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoSalaDireita.TabIndex = 88;
@@ -395,7 +395,7 @@ namespace MyLocker
             this.lblResultadoSalaEsquerda.BackColor = System.Drawing.Color.White;
             this.lblResultadoSalaEsquerda.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultadoSalaEsquerda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
-            this.lblResultadoSalaEsquerda.Location = new System.Drawing.Point(1376, 360);
+            this.lblResultadoSalaEsquerda.Location = new System.Drawing.Point(1372, 411);
             this.lblResultadoSalaEsquerda.Name = "lblResultadoSalaEsquerda";
             this.lblResultadoSalaEsquerda.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoSalaEsquerda.TabIndex = 87;
@@ -406,7 +406,7 @@ namespace MyLocker
             this.lblResultadoAndar.BackColor = System.Drawing.Color.White;
             this.lblResultadoAndar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultadoAndar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
-            this.lblResultadoAndar.Location = new System.Drawing.Point(1204, 222);
+            this.lblResultadoAndar.Location = new System.Drawing.Point(1309, 433);
             this.lblResultadoAndar.Name = "lblResultadoAndar";
             this.lblResultadoAndar.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoAndar.TabIndex = 86;
@@ -415,7 +415,7 @@ namespace MyLocker
             // 
             this.btnAlugar.BackColor = System.Drawing.Color.White;
             this.btnAlugar.BorderRadius = 20;
-            this.btnAlugar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlugar.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnAlugar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAlugar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAlugar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -451,7 +451,7 @@ namespace MyLocker
             this.lblResultadoCor.BackColor = System.Drawing.Color.White;
             this.lblResultadoCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultadoCor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
-            this.lblResultadoCor.Location = new System.Drawing.Point(1147, 294);
+            this.lblResultadoCor.Location = new System.Drawing.Point(1147, 351);
             this.lblResultadoCor.Name = "lblResultadoCor";
             this.lblResultadoCor.Size = new System.Drawing.Size(0, 54);
             this.lblResultadoCor.TabIndex = 84;
@@ -480,7 +480,7 @@ namespace MyLocker
             this.lblSituacao.BackColor = System.Drawing.Color.Transparent;
             this.lblSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSituacao.ForeColor = System.Drawing.Color.Black;
-            this.lblSituacao.Location = new System.Drawing.Point(1042, 488);
+            this.lblSituacao.Location = new System.Drawing.Point(1042, 546);
             this.lblSituacao.Name = "lblSituacao";
             this.lblSituacao.Size = new System.Drawing.Size(218, 54);
             this.lblSituacao.TabIndex = 82;
@@ -492,7 +492,7 @@ namespace MyLocker
             this.lblSalaDireita.BackColor = System.Drawing.Color.Transparent;
             this.lblSalaDireita.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalaDireita.ForeColor = System.Drawing.Color.Black;
-            this.lblSalaDireita.Location = new System.Drawing.Point(1042, 423);
+            this.lblSalaDireita.Location = new System.Drawing.Point(1042, 481);
             this.lblSalaDireita.Name = "lblSalaDireita";
             this.lblSalaDireita.Size = new System.Drawing.Size(276, 54);
             this.lblSalaDireita.TabIndex = 81;
@@ -504,7 +504,7 @@ namespace MyLocker
             this.lblSalaEsquerda.BackColor = System.Drawing.Color.White;
             this.lblSalaEsquerda.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalaEsquerda.ForeColor = System.Drawing.Color.Black;
-            this.lblSalaEsquerda.Location = new System.Drawing.Point(1042, 353);
+            this.lblSalaEsquerda.Location = new System.Drawing.Point(1042, 411);
             this.lblSalaEsquerda.Name = "lblSalaEsquerda";
             this.lblSalaEsquerda.Size = new System.Drawing.Size(342, 54);
             this.lblSalaEsquerda.TabIndex = 80;
@@ -516,7 +516,7 @@ namespace MyLocker
             this.lblCor.BackColor = System.Drawing.Color.White;
             this.lblCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCor.ForeColor = System.Drawing.Color.Black;
-            this.lblCor.Location = new System.Drawing.Point(1042, 292);
+            this.lblCor.Location = new System.Drawing.Point(1042, 350);
             this.lblCor.Name = "lblCor";
             this.lblCor.Size = new System.Drawing.Size(112, 54);
             this.lblCor.TabIndex = 79;
@@ -528,7 +528,7 @@ namespace MyLocker
             this.lblAndar.BackColor = System.Drawing.Color.White;
             this.lblAndar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAndar.ForeColor = System.Drawing.Color.Black;
-            this.lblAndar.Location = new System.Drawing.Point(1042, 224);
+            this.lblAndar.Location = new System.Drawing.Point(1042, 282);
             this.lblAndar.Name = "lblAndar";
             this.lblAndar.Size = new System.Drawing.Size(161, 54);
             this.lblAndar.TabIndex = 78;
@@ -541,6 +541,7 @@ namespace MyLocker
             this.txtRaAluno.BorderFocusColor = System.Drawing.Color.Transparent;
             this.txtRaAluno.BorderRadius = 50;
             this.txtRaAluno.BorderSize = 2;
+            this.txtRaAluno.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtRaAluno.Enabled = false;
             this.txtRaAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRaAluno.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -707,20 +708,36 @@ namespace MyLocker
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(0, 90);
+            this.panel3.Location = new System.Drawing.Point(0, 91);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(397, 2);
             this.panel3.TabIndex = 12;
             this.panel3.Visible = false;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AllowDrop = true;
+            this.lblInfo.AutoEllipsis = true;
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Black;
+            this.lblInfo.Location = new System.Drawing.Point(1017, 35);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(590, 61);
+            this.lblInfo.TabIndex = 92;
+            this.lblInfo.Text = "Informações do Armário";
             // 
             // FormAlugarArmario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 878);
+            this.Controls.Add(this.lblResultadoAndar);
             this.Controls.Add(this.guna2GradientPanelImgPerfil);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.lblResultadoSalaDireita);
             this.Controls.Add(this.gpGerenciamento);
             this.Controls.Add(this.lblFoco);
             this.Controls.Add(this.panel1);
@@ -789,5 +806,6 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button btnProcurar;
+        private System.Windows.Forms.Label lblInfo;
     }
 }

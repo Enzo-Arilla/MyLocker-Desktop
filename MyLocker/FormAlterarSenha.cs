@@ -200,6 +200,12 @@ namespace MyLocker
             }
         }
 
-      
+        private void lblEsqueceuSenha_Click(object sender, EventArgs e)
+        {
+            var FormRecuperarSenha = new FormRecuperarSenha();
+            FormRecuperarSenha.Closed += (s, args) => this.Close();
+            FormRecuperarSenha.Show();
+            this.Hide();
+        }
     }
 }
