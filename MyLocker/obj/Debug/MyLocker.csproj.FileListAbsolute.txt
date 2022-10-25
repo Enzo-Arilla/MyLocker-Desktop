@@ -394,4 +394,5 @@ D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Carregament
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.SuggestedBindingRedirects.cache
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Carregamento.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenha.resources
-D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenha.resources
+D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenhaPerfil.resources
+D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenhaLogin.resources

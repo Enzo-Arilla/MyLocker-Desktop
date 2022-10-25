@@ -13,36 +13,48 @@ namespace MyLocker
 {
     public partial class FormApm : Form
     {
+        string ra;
+        string nome;
+        string sobrenome;
+
         public FormApm()
         {
             InitializeComponent();
         }
 
-        async private void FormApm_Load(object sender, EventArgs e)
+        static async Task<Apm[]> ListApms()
         {
-            var Load = new Carregamento();
-            Load.Show();
-            Armario[] armarios = null;
-            armarios = await ListArmarios();
+            var apiClient = RestService.For<IRepositorioAPM>("http://localhost:3333/");
 
-            foreach (Armario a in armarios)
-            {
-                //MessageBox.Show(a.Number.ToString());
-                string[] row = new string[] { a.Number.ToString() };
-                tblApm.Rows.Add(row);
-            }
-
-            Load.Close();
-        }
-
-        static async Task<Armario[]> ListArmarios()
-        {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com/");
-
-            Armario[] response = await apiClient.ListArmarios();
+            Apm[] response = await apiClient.listApms();
 
             return response;
         }
+
+        async private void FormApm_Load(object sender, EventArgs e)
+        {
+            //var Load = new Carregamento();
+            //Load.Show();
+            Apm[] apms = null;
+            apms = await ListApms();
+
+            foreach (Apm a in apms)
+            {
+                //MessageBox.Show(a.Number.ToString());
+                if(a.Student != null)
+                {
+                    ra = a.Student.Ra.ToString();
+                    nome = a.Student.First_name;
+                    sobrenome = a.Student.Last_name;
+                    string[] row = new string[] { a.Id.ToString(), ra, nome, sobrenome, a.RequisitionPdf };
+                    tblApm.Rows.Add(row);
+                }
+            }
+
+            //Load.Close();
+        }
+
+        
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {

@@ -1,7 +1,7 @@
 ﻿
 namespace MyLocker
 {
-    partial class FormLogin
+    partial class FormRecuperarSenhaLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,18 @@ namespace MyLocker
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRecuperarSenhaLogin));
             this.gbConjunto = new MyLocker.MyGroupBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.txtNovaSenha = new MyLocker.RJTextBox();
             this.btnSair = new System.Windows.Forms.PictureBox();
             this.lblFoco = new System.Windows.Forms.Label();
-            this.txtSenha = new MyLocker.RJTextBox();
-            this.txtCpf = new MyLocker.RJTextBox();
-            this.lblCriarConta = new System.Windows.Forms.Label();
+            this.txtCodigo = new MyLocker.RJTextBox();
+            this.txtEmail = new MyLocker.RJTextBox();
             this.lblIniciarSessao = new System.Windows.Forms.Label();
             this.imgPanel = new System.Windows.Forms.PictureBox();
             this.imgLogo = new System.Windows.Forms.PictureBox();
-            this.lblEsqueceuSenha = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.gbConjunto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
@@ -53,13 +53,13 @@ namespace MyLocker
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbConjunto.BorderColor = System.Drawing.Color.Transparent;
-            this.gbConjunto.Controls.Add(this.lblEsqueceuSenha);
+            this.gbConjunto.Controls.Add(this.guna2Button1);
             this.gbConjunto.Controls.Add(this.btnLogin);
+            this.gbConjunto.Controls.Add(this.txtNovaSenha);
             this.gbConjunto.Controls.Add(this.btnSair);
             this.gbConjunto.Controls.Add(this.lblFoco);
-            this.gbConjunto.Controls.Add(this.txtSenha);
-            this.gbConjunto.Controls.Add(this.txtCpf);
-            this.gbConjunto.Controls.Add(this.lblCriarConta);
+            this.gbConjunto.Controls.Add(this.txtCodigo);
+            this.gbConjunto.Controls.Add(this.txtEmail);
             this.gbConjunto.Controls.Add(this.lblIniciarSessao);
             this.gbConjunto.Controls.Add(this.imgPanel);
             this.gbConjunto.Controls.Add(this.imgLogo);
@@ -79,14 +79,36 @@ namespace MyLocker
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F);
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(831, 875);
+            this.btnLogin.Location = new System.Drawing.Point(1135, 530);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(275, 87);
             this.btnLogin.TabIndex = 51;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Confirmar";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtNovaSenha
+            // 
+            this.txtNovaSenha.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNovaSenha.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNovaSenha.BorderColor = System.Drawing.Color.Transparent;
+            this.txtNovaSenha.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtNovaSenha.BorderRadius = 15;
+            this.txtNovaSenha.BorderSize = 2;
+            this.txtNovaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNovaSenha.ForeColor = System.Drawing.Color.LightGray;
+            this.txtNovaSenha.Location = new System.Drawing.Point(368, 829);
+            this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtNovaSenha.Multiline = false;
+            this.txtNovaSenha.Name = "txtNovaSenha";
+            this.txtNovaSenha.Padding = new System.Windows.Forms.Padding(30);
+            this.txtNovaSenha.PasswordChar = true;
+            this.txtNovaSenha.PlaceholderColor = System.Drawing.Color.Silver;
+            this.txtNovaSenha.PlaceholderText = "Nova senha";
+            this.txtNovaSenha.Size = new System.Drawing.Size(741, 119);
+            this.txtNovaSenha.TabIndex = 52;
+            this.txtNovaSenha.UnderlinedStyle = false;
             // 
             // btnSair
             // 
@@ -110,65 +132,51 @@ namespace MyLocker
             this.lblFoco.Size = new System.Drawing.Size(0, 51);
             this.lblFoco.TabIndex = 17;
             // 
-            // txtSenha
+            // txtCodigo
             // 
-            this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSenha.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSenha.BorderColor = System.Drawing.Color.Transparent;
-            this.txtSenha.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtSenha.BorderRadius = 15;
-            this.txtSenha.BorderSize = 2;
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.ForeColor = System.Drawing.Color.LightGray;
-            this.txtSenha.Location = new System.Drawing.Point(368, 720);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.txtSenha.Multiline = false;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Padding = new System.Windows.Forms.Padding(30);
-            this.txtSenha.PasswordChar = true;
-            this.txtSenha.PlaceholderColor = System.Drawing.Color.Silver;
-            this.txtSenha.PlaceholderText = "Senha";
-            this.txtSenha.Size = new System.Drawing.Size(741, 119);
-            this.txtSenha.TabIndex = 16;
-            this.txtSenha.UnderlinedStyle = false;
-            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
+            this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCodigo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCodigo.BorderColor = System.Drawing.Color.Transparent;
+            this.txtCodigo.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtCodigo.BorderRadius = 15;
+            this.txtCodigo.BorderSize = 2;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.ForeColor = System.Drawing.Color.LightGray;
+            this.txtCodigo.Location = new System.Drawing.Point(368, 679);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtCodigo.Multiline = false;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Padding = new System.Windows.Forms.Padding(30);
+            this.txtCodigo.PasswordChar = true;
+            this.txtCodigo.PlaceholderColor = System.Drawing.Color.Silver;
+            this.txtCodigo.PlaceholderText = "Código";
+            this.txtCodigo.Size = new System.Drawing.Size(741, 119);
+            this.txtCodigo.TabIndex = 16;
+            this.txtCodigo.UnderlinedStyle = false;
+            this.txtCodigo.Enter += new System.EventHandler(this.txtSenha_Enter);
             // 
-            // txtCpf
+            // txtEmail
             // 
-            this.txtCpf.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCpf.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCpf.BorderColor = System.Drawing.Color.Transparent;
-            this.txtCpf.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtCpf.BorderRadius = 15;
-            this.txtCpf.BorderSize = 2;
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.ForeColor = System.Drawing.Color.Silver;
-            this.txtCpf.Location = new System.Drawing.Point(368, 572);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.txtCpf.Multiline = false;
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Padding = new System.Windows.Forms.Padding(30);
-            this.txtCpf.PasswordChar = false;
-            this.txtCpf.PlaceholderColor = System.Drawing.Color.Silver;
-            this.txtCpf.PlaceholderText = "CPF";
-            this.txtCpf.Size = new System.Drawing.Size(741, 119);
-            this.txtCpf.TabIndex = 15;
-            this.txtCpf.UnderlinedStyle = false;
-            this.txtCpf.Enter += new System.EventHandler(this.txtCpf_Enter);
-            // 
-            // lblCriarConta
-            // 
-            this.lblCriarConta.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCriarConta.AutoSize = true;
-            this.lblCriarConta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 38.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCriarConta.ForeColor = System.Drawing.Color.White;
-            this.lblCriarConta.Location = new System.Drawing.Point(400, 891);
-            this.lblCriarConta.Name = "lblCriarConta";
-            this.lblCriarConta.Size = new System.Drawing.Size(284, 59);
-            this.lblCriarConta.TabIndex = 11;
-            this.lblCriarConta.Text = "Criar Conta";
-            this.lblCriarConta.Click += new System.EventHandler(this.lblCriarConta_Click);
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.BorderColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BorderRadius = 15;
+            this.txtEmail.BorderSize = 2;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.Silver;
+            this.txtEmail.Location = new System.Drawing.Point(368, 530);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(30);
+            this.txtEmail.PasswordChar = false;
+            this.txtEmail.PlaceholderColor = System.Drawing.Color.Silver;
+            this.txtEmail.PlaceholderText = "E-mail";
+            this.txtEmail.Size = new System.Drawing.Size(741, 119);
+            this.txtEmail.TabIndex = 15;
+            this.txtEmail.UnderlinedStyle = false;
+            this.txtEmail.Enter += new System.EventHandler(this.txtCpf_Enter);
             // 
             // lblIniciarSessao
             // 
@@ -176,17 +184,17 @@ namespace MyLocker
             this.lblIniciarSessao.AutoSize = true;
             this.lblIniciarSessao.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIniciarSessao.ForeColor = System.Drawing.Color.White;
-            this.lblIniciarSessao.Location = new System.Drawing.Point(502, 456);
+            this.lblIniciarSessao.Location = new System.Drawing.Point(458, 412);
             this.lblIniciarSessao.Name = "lblIniciarSessao";
-            this.lblIniciarSessao.Size = new System.Drawing.Size(451, 76);
+            this.lblIniciarSessao.Size = new System.Drawing.Size(554, 76);
             this.lblIniciarSessao.TabIndex = 3;
-            this.lblIniciarSessao.Text = "Iniciar Sessão";
+            this.lblIniciarSessao.Text = "Recuperar Senha";
             // 
             // imgPanel
             // 
             this.imgPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.imgPanel.Image = ((System.Drawing.Image)(resources.GetObject("imgPanel.Image")));
-            this.imgPanel.Location = new System.Drawing.Point(3, 387);
+            this.imgPanel.Location = new System.Drawing.Point(3, 326);
             this.imgPanel.Name = "imgPanel";
             this.imgPanel.Size = new System.Drawing.Size(1434, 49);
             this.imgPanel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -199,26 +207,30 @@ namespace MyLocker
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
             this.imgLogo.Location = new System.Drawing.Point(3, 16);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(1434, 371);
+            this.imgLogo.Size = new System.Drawing.Size(1434, 310);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
-            // lblEsqueceuSenha
+            // guna2Button1
             // 
-            this.lblEsqueceuSenha.AutoSize = true;
-            this.lblEsqueceuSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
-            this.lblEsqueceuSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEsqueceuSenha.ForeColor = System.Drawing.Color.White;
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(790, 1020);
-            this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(377, 39);
-            this.lblEsqueceuSenha.TabIndex = 34;
-            this.lblEsqueceuSenha.Text = "Esqueceu sua senha?";
-            this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(605, 985);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(275, 87);
+            this.guna2Button1.TabIndex = 53;
+            this.guna2Button1.Text = "Confirmar";
             // 
-            // FormLogin
+            // FormRecuperarSenhaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,7 +243,7 @@ namespace MyLocker
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormLogin";
+            this.Name = "FormRecuperarSenhaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyLocker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -251,13 +263,13 @@ namespace MyLocker
         private System.Windows.Forms.PictureBox imgLogo;
         private System.Windows.Forms.PictureBox imgPanel;
         private System.Windows.Forms.Label lblIniciarSessao;
-        private System.Windows.Forms.Label lblCriarConta;
         private MyGroupBox gbConjunto;
-        private RJTextBox txtCpf;
-        private RJTextBox txtSenha;
+        private RJTextBox txtEmail;
+        private RJTextBox txtCodigo;
         private System.Windows.Forms.Label lblFoco;
         private System.Windows.Forms.PictureBox btnSair;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private System.Windows.Forms.Label lblEsqueceuSenha;
+        private RJTextBox txtNovaSenha;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -7,11 +7,11 @@ using Refit;
 
 namespace MyLocker
 {
-    public partial class FormLogin : Form
+    public partial class FormRecuperarSenhaLogin : Form
     {
         string cpf, senha;
 
-        public FormLogin()
+        public FormRecuperarSenhaLogin()
         {
             InitializeComponent();
         }
@@ -19,7 +19,7 @@ namespace MyLocker
         private void FormLogin_Load(object sender, EventArgs e)
         {
             lblFoco.Focus();
-            txtSenha.PasswordChar = true;
+            txtCodigo.PasswordChar = true;
         }
 
         static async Task<Funcionario> GetFuncionario(string cpf)
@@ -40,13 +40,12 @@ namespace MyLocker
             {
                 Carregamento.Show();
 
-                cpf = txtCpf.Text;
-                senha = txtSenha.Text;
+                cpf = txtEmail.Text;
+                senha = txtCodigo.Text;
 
                 Funcionario funcionario = await GetFuncionario(cpf);
 
                 Usuario usuario = new Usuario(funcionario.First_name, funcionario.Last_name, funcionario.Email, funcionario.Cpf, funcionario.Status);
-
 
                 if (BC.Verify(senha, funcionario.Password))
                 {
@@ -73,29 +72,29 @@ namespace MyLocker
 
         private void txtCpf_Enter(object sender, EventArgs e)
         {
-            if (txtCpf.PlaceholderText == "CPF")
+            if (txtEmail.PlaceholderText == "CPF")
             {
-                txtCpf.PlaceholderText = "";
-                txtCpf.ForeColor = Color.Black;
+                txtEmail.PlaceholderText = "";
+                txtEmail.ForeColor = Color.Black;
             }
 
-            if (txtSenha.Text == "")
+            if (txtCodigo.Text == "")
             {
-                txtSenha.PlaceholderText = "Senha";
+                txtCodigo.PlaceholderText = "Senha";
             }
         }
 
         private void txtSenha_Enter(object sender, EventArgs e)
         {
-            if (txtSenha.PlaceholderText == "Senha")
+            if (txtCodigo.PlaceholderText == "Senha")
             {
-                txtSenha.PlaceholderText = "";
-                txtSenha.ForeColor = Color.Black;
+                txtCodigo.PlaceholderText = "";
+                txtCodigo.ForeColor = Color.Black;
             }
 
-            if (txtCpf.Text == "")
+            if (txtEmail.Text == "")
             {
-                txtCpf.PlaceholderText = "CPF";
+                txtEmail.PlaceholderText = "CPF";
             }
         }
 
@@ -125,7 +124,10 @@ namespace MyLocker
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var FormLogin = new FormLogin();
+            FormLogin.Closed += (s, args) => this.Close();
+            FormLogin.Show();
+            this.Close();
         }
 
     }

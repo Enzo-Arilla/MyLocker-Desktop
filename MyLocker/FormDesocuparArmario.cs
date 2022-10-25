@@ -35,8 +35,10 @@ namespace MyLocker
 
         static async Task EmptyLocker(string ra)
         {
-            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
-            await apiClient.EmptyLocker(ra);
+            //var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioArmarios>("http://localhost:3333");
+            EmptyLockerRequest emptyLockerRequest = new EmptyLockerRequest(ra);
+            await apiClient.EmptyLocker(emptyLockerRequest);
             return;
         }
 
@@ -58,10 +60,10 @@ namespace MyLocker
                     ra = a.Student.Ra;
                 }
 
-                //string[] row = new string[] { a.Number.ToString(), ra };
-                //tblDesocuparArmario.Rows.Add(row);
+                string[] row = new string[] { a.Number.ToString(), ra };
+                tblDesocuparArmario.Rows.Add(row);
                 Load.Close();
-                MessageBox.Show(ra);
+                //MessageBox.Show(ra);
             }
 
            
@@ -78,10 +80,12 @@ namespace MyLocker
                     await EmptyLocker(ra);
                     MessageBox.Show("PAGOU!!!");
                 }
+
             }
-            catch (Exception ex)
+            catch (ApiException erro)
             {
-                MessageBox.Show(ex.Message);
+                string[] mensagemErro = erro.Content.Split('"');
+                MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
             }
 
         }

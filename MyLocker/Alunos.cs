@@ -11,7 +11,7 @@ namespace MyLocker
     public class Alunos
     {
         [JsonConstructor]
-        public Alunos(string ra, string first_name, string last_name, string email, string? code, int? locker_number, int? status)
+        public Alunos(string ra, string first_name, string last_name, string email, string? code, int? locker_number, int? status, int? FK_apm_id)
         {
             Ra = ra;
             First_name = first_name;
@@ -20,6 +20,7 @@ namespace MyLocker
             Code = code;
             Locker_number = locker_number;
             Status = status;
+            this.FK_apm_id = FK_apm_id;
         }
 
         public Alunos(string ra, string first_name, string last_name, string email)
@@ -61,6 +62,9 @@ namespace MyLocker
 
         [JsonProperty("status")]
         public int? Status { get; set; }
+
+        [JsonProperty("FK_apm_id")]
+        public int? FK_apm_id { get; set; }
 
     }
 

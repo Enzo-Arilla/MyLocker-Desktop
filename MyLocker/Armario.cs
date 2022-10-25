@@ -27,16 +27,22 @@ namespace MyLocker
 
         [JsonProperty("number")]
         public int Number { get; set; }
+
         [JsonProperty("isRented")]
         public int IsRented { get; set; }
+
         [JsonProperty("rentedAt")]
         public string RentedAt { get; set; }
+
         [JsonProperty("FK_section_id")]
         public int FK_section_id { get; set; }
+
         [JsonProperty("status")]
         public int Status { get; set; }
+
         [JsonProperty("section")]
         public SectionType Section { get; set; }
+
         [JsonProperty("student")]
         public Alunos? Student { get; set; }
 

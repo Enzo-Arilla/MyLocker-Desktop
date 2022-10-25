@@ -86,8 +86,6 @@ namespace MyLocker
 
                 armarios = await ListArmarios();
 
-                MessageBox.Show(Newtonsoft.Json.JsonConvert.SerializeObject(armarios[0].Student));
-
                 foreach (Armario a in armarios)
                 {
                     string ra = "-";
