@@ -36,7 +36,7 @@ namespace MyLocker
         static async Task EmptyLocker(string ra)
         {
             //var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
-            var apiClient = RestService.For<IRepositorioArmarios>("http://localhost:3333");
+            var apiClient = RestService.For<IRepositorioArmarios>("https://mylocker-api.herokuapp.com");
             EmptyLockerRequest emptyLockerRequest = new EmptyLockerRequest(ra);
             await apiClient.EmptyLocker(emptyLockerRequest);
             return;

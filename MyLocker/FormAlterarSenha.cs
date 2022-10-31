@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Refit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace MyLocker
 {
     public partial class FormAlterarSenha : Form
     {
+
+        string senha, novaSenha,
+
         public FormAlterarSenha()
         {
             InitializeComponent();
@@ -20,6 +24,28 @@ namespace MyLocker
         private void FormAlterarSenha_Load(object sender, EventArgs e)
         {
             lblFoco.Focus();
+        }
+
+        static async Task<Funcionario> GetFuncionario(string cpf)
+        {
+
+            var apiClient = RestService.For<IRepositorioFuncionarios>("https://mylocker-api.herokuapp.com");
+
+            Funcionario response = await apiClient.ReturnFuncionario(cpf);
+
+            return response;
+        }
+
+        static async Task PutPassword(UpdateFunctionaryPasswordRequest updateFunctionaryPasswordRequest)
+        {
+            var apiCliente = RestService.For<IRepositorioFuncionarios>("http://mylocker-backend.herokuapp.com");
+            await apiCliente.UpdatePassword(updateFunctionaryPasswordRequest);
+            
+        }
+
+        private void btnGerenciar_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnTrocarPerfil_Click(object sender, EventArgs e)
@@ -207,5 +233,7 @@ namespace MyLocker
             FormRecuperarSenha.Show();
             this.Hide();
         }
+
+        
     }
 }

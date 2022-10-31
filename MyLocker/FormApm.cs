@@ -24,7 +24,7 @@ namespace MyLocker
 
         static async Task<Apm[]> ListApms()
         {
-            var apiClient = RestService.For<IRepositorioAPM>("http://localhost:3333/");
+            var apiClient = RestService.For<IRepositorioAPM>("https://mylocker-api.herokuapp.com");
 
             Apm[] response = await apiClient.listApms();
 

@@ -29,7 +29,7 @@ namespace MyLocker
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRecuperarSenhaLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRecuperarSenhaPerfil));
             this.gbConjunto = new MyLocker.MyGroupBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtNovaSenha = new MyLocker.RJTextBox();
@@ -84,7 +84,6 @@ namespace MyLocker
             this.btnLogin.Size = new System.Drawing.Size(275, 87);
             this.btnLogin.TabIndex = 51;
             this.btnLogin.Text = "Confirmar";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtNovaSenha
             // 
@@ -107,6 +106,7 @@ namespace MyLocker
             this.txtNovaSenha.Size = new System.Drawing.Size(741, 119);
             this.txtNovaSenha.TabIndex = 52;
             this.txtNovaSenha.UnderlinedStyle = false;
+            this.txtNovaSenha.Enter += new System.EventHandler(this.txtNovaSenha_Enter);
             // 
             // btnSair
             // 
@@ -119,7 +119,6 @@ namespace MyLocker
             this.btnSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSair.TabIndex = 34;
             this.btnSair.TabStop = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // lblFoco
             // 
@@ -151,7 +150,7 @@ namespace MyLocker
             this.txtCodigo.Size = new System.Drawing.Size(741, 119);
             this.txtCodigo.TabIndex = 16;
             this.txtCodigo.UnderlinedStyle = false;
-            this.txtCodigo.Enter += new System.EventHandler(this.txtSenha_Enter);
+            this.txtCodigo.Enter += new System.EventHandler(this.txtCodigo_Enter);
             // 
             // txtEmail
             // 
@@ -174,7 +173,7 @@ namespace MyLocker
             this.txtEmail.Size = new System.Drawing.Size(741, 119);
             this.txtEmail.TabIndex = 15;
             this.txtEmail.UnderlinedStyle = false;
-            this.txtEmail.Enter += new System.EventHandler(this.txtCpf_Enter);
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
             // 
             // lblIniciarSessao
             // 
@@ -184,7 +183,7 @@ namespace MyLocker
             this.lblIniciarSessao.ForeColor = System.Drawing.Color.White;
             this.lblIniciarSessao.Location = new System.Drawing.Point(458, 412);
             this.lblIniciarSessao.Name = "lblIniciarSessao";
-            this.lblIniciarSessao.Size = new System.Drawing.Size(554, 76);
+            this.lblIniciarSessao.Size = new System.Drawing.Size(555, 76);
             this.lblIniciarSessao.TabIndex = 3;
             this.lblIniciarSessao.Text = "Recuperar Senha";
             // 
@@ -210,7 +209,7 @@ namespace MyLocker
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
-            // FormRecuperarSenha
+            // FormRecuperarSenhaPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,12 +222,11 @@ namespace MyLocker
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormRecuperarSenha";
+            this.Name = "FormRecuperarSenhaPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyLocker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormLogin_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyUp);
             this.gbConjunto.ResumeLayout(false);
             this.gbConjunto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();

@@ -190,6 +190,7 @@ namespace MyLocker
             this.btnGerenciar.Size = new System.Drawing.Size(683, 87);
             this.btnGerenciar.TabIndex = 52;
             this.btnGerenciar.Text = "Confirmar";
+            this.btnGerenciar.Click += new System.EventHandler(this.btnGerenciar_Click);
             // 
             // txtConfirmarSenha
             // 

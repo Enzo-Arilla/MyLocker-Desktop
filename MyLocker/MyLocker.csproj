@@ -90,6 +90,7 @@
     <Compile Include="FormRecuperarSenhaLogin.Designer.cs">
       <DependentUpon>FormRecuperarSenhaLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerateFunctionaryVerificationCodeResponse.cs" />
     <Compile Include="IRepositorioAlunos.cs" />
     <Compile Include="IRepositorioAPM.cs" />
     <Compile Include="SectionType.cs" />
@@ -212,6 +213,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result.cs" />
     <Compile Include="Suporte.cs" />
+    <Compile Include="UpdateFunctionaryPasswordRequest.cs" />
+    <Compile Include="GenerateFunctionaryVerificationCodeRequest.cs" />
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="Carregamento.resx">
       <DependentUpon>Carregamento.cs</DependentUpon>
