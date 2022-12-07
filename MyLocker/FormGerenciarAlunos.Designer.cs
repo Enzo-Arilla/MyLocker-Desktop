@@ -53,6 +53,7 @@ namespace MyLocker
             this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gbGerenciar = new MyLocker.MyGroupBox();
+            this.txtRa2Aluno = new MyLocker.RJTextBox();
             this.btnBuscar = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnGerenciamento = new Guna.UI2.WinForms.Guna2Button();
             this.txtUltimoNome = new MyLocker.RJTextBox();
@@ -143,7 +144,7 @@ namespace MyLocker
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel4.Location = new System.Drawing.Point(0, 83);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(397, 2);
+            this.panel4.Size = new System.Drawing.Size(397, 1);
             this.panel4.TabIndex = 12;
             this.panel4.Visible = false;
             // 
@@ -204,7 +205,7 @@ namespace MyLocker
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(0, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 2);
+            this.panel5.Size = new System.Drawing.Size(397, 1);
             this.panel5.TabIndex = 9;
             this.panel5.Visible = false;
             // 
@@ -234,7 +235,7 @@ namespace MyLocker
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(0, 83);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 2);
+            this.panel3.Size = new System.Drawing.Size(397, 1);
             this.panel3.TabIndex = 8;
             this.panel3.Visible = false;
             // 
@@ -317,10 +318,9 @@ namespace MyLocker
             this.panel8.BackColor = System.Drawing.Color.Black;
             this.panel8.Location = new System.Drawing.Point(0, 180);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(399, 2);
+            this.panel8.Size = new System.Drawing.Size(399, 1);
             this.panel8.TabIndex = 67;
             this.panel8.Visible = false;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // btnAlterarSenha
             // 
@@ -332,9 +332,9 @@ namespace MyLocker
             this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
             this.btnAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(0, 0);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(0, 1);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
-            this.btnAlterarSenha.Size = new System.Drawing.Size(396, 89);
+            this.btnAlterarSenha.Size = new System.Drawing.Size(397, 89);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
             this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
@@ -349,9 +349,9 @@ namespace MyLocker
             this.btnTrocarPerfil.FillColor = System.Drawing.Color.White;
             this.btnTrocarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
-            this.btnTrocarPerfil.Location = new System.Drawing.Point(0, 93);
+            this.btnTrocarPerfil.Location = new System.Drawing.Point(0, 92);
             this.btnTrocarPerfil.Name = "btnTrocarPerfil";
-            this.btnTrocarPerfil.Size = new System.Drawing.Size(396, 87);
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(397, 88);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
             this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
@@ -370,9 +370,9 @@ namespace MyLocker
             this.btnFecharAplicativo.FillColor = System.Drawing.Color.White;
             this.btnFecharAplicativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnFecharAplicativo.ForeColor = System.Drawing.Color.Black;
-            this.btnFecharAplicativo.Location = new System.Drawing.Point(0, 181);
+            this.btnFecharAplicativo.Location = new System.Drawing.Point(0, 180);
             this.btnFecharAplicativo.Name = "btnFecharAplicativo";
-            this.btnFecharAplicativo.Size = new System.Drawing.Size(396, 86);
+            this.btnFecharAplicativo.Size = new System.Drawing.Size(397, 86);
             this.btnFecharAplicativo.TabIndex = 66;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
             this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
@@ -382,7 +382,7 @@ namespace MyLocker
             this.panel9.BackColor = System.Drawing.Color.Black;
             this.panel9.Location = new System.Drawing.Point(0, 90);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(397, 2);
+            this.panel9.Size = new System.Drawing.Size(397, 1);
             this.panel9.TabIndex = 12;
             this.panel9.Visible = false;
             // 
@@ -390,6 +390,7 @@ namespace MyLocker
             // 
             this.gbGerenciar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbGerenciar.BorderColor = System.Drawing.Color.Transparent;
+            this.gbGerenciar.Controls.Add(this.txtRa2Aluno);
             this.gbGerenciar.Controls.Add(this.btnBuscar);
             this.gbGerenciar.Controls.Add(this.btnGerenciamento);
             this.gbGerenciar.Controls.Add(this.txtUltimoNome);
@@ -408,6 +409,30 @@ namespace MyLocker
             this.gbGerenciar.TabIndex = 17;
             this.gbGerenciar.TabStop = false;
             // 
+            // txtRa2Aluno
+            // 
+            this.txtRa2Aluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtRa2Aluno.BorderColor = System.Drawing.Color.Transparent;
+            this.txtRa2Aluno.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtRa2Aluno.BorderRadius = 50;
+            this.txtRa2Aluno.BorderSize = 2;
+            this.txtRa2Aluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRa2Aluno.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtRa2Aluno.Location = new System.Drawing.Point(414, 249);
+            this.txtRa2Aluno.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtRa2Aluno.Multiline = false;
+            this.txtRa2Aluno.Name = "txtRa2Aluno";
+            this.txtRa2Aluno.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtRa2Aluno.PasswordChar = false;
+            this.txtRa2Aluno.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtRa2Aluno.PlaceholderText = "RA do aluno";
+            this.txtRa2Aluno.Size = new System.Drawing.Size(450, 106);
+            this.txtRa2Aluno.TabIndex = 55;
+            this.txtRa2Aluno.UnderlinedStyle = false;
+            this.txtRa2Aluno.Visible = false;
+            this.txtRa2Aluno.Enter += new System.EventHandler(this.txtRa2Aluno_Enter);
+            this.txtRa2Aluno.Leave += new System.EventHandler(this.txtRa2Aluno_Leave);
+            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
@@ -421,7 +446,7 @@ namespace MyLocker
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnBuscar.Location = new System.Drawing.Point(910, 260);
+            this.btnBuscar.Location = new System.Drawing.Point(1062, 260);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnBuscar.Size = new System.Drawing.Size(85, 85);
@@ -555,7 +580,7 @@ namespace MyLocker
             this.lblGerenciamento.BackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(206)))), ((int)(((byte)(157)))));
             this.lblGerenciamento.BackColorStart = System.Drawing.Color.Orange;
             this.lblGerenciamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
-            this.lblGerenciamento.Location = new System.Drawing.Point(566, 164);
+            this.lblGerenciamento.Location = new System.Drawing.Point(584, 164);
             this.lblGerenciamento.Name = "lblGerenciamento";
             this.lblGerenciamento.Size = new System.Drawing.Size(290, 44);
             this.lblGerenciamento.TabIndex = 18;
@@ -619,11 +644,13 @@ namespace MyLocker
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "FormGerenciarAlunos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyLocker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormGerenciarAlunos_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormGerenciarAlunos_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -674,5 +701,6 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label lblAtivarAluno;
+        private RJTextBox txtRa2Aluno;
     }
 }

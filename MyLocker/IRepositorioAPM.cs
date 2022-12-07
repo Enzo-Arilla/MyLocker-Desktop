@@ -14,5 +14,8 @@ namespace MyLocker
 
         [Get("/apms")]
         Task<Apm[]> listApms();
+
+        [Put("/apms/change-status")]
+        Task changeApmStatus([Body] ChangeApmStatusRequest changeApmStatusRequest);
     }
 }

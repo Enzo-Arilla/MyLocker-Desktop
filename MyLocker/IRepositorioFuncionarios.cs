@@ -12,14 +12,16 @@ namespace MyLocker
         [Get("/functionaries/{cpf}")]
         Task<Funcionario> ReturnFuncionario(string cpf);
 
+        [Get("/functionaries/{cpf}/verify-code/{typedCode}")]
+        Task VerifyFunctionaryCode(string cpf, string typedCode);
+
         [Post("/functionaries")]
-        Task<Funcionario> CreateFuncionario([Body]Funcionario funcionario);
+        Task CreateFuncionario([Body]Funcionario funcionario);
 
         [Put("/functionaries/update-password")]
         Task UpdatePassword([Body]UpdateFunctionaryPasswordRequest senhaFuncionario);
 
         [Put("/functionaries/generate-code")]
-        Task<GenerateFunctionaryVerificationCodeResponse> GenerateFunctionaryVerificationCode([Body]GenerateFunctionaryVerificationCodeRequest generateFunctionaryVerificationCodeRequest);
-
+        Task GenerateFunctionaryVerificationCode([Body]GenerateFunctionaryVerificationCodeRequest generateFunctionaryVerificationCodeRequest);   
     }
 }

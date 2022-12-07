@@ -24,7 +24,7 @@ namespace MyLocker
         {
             try
             {
-                lblNome.Text = Usuario.getName();
+                lblNome.Text = Usuario.Name + " " + Usuario.LastName;
             }
             catch (Exception erro)
             {
@@ -39,7 +39,7 @@ namespace MyLocker
         private void timer1_Tick(object sender, EventArgs e)
         {
             time = DateTime.Now;
-            lblData.Text = DateTime.Now.ToString("dd/MM/yyyy") + " - " + time.ToLongTimeString();
+           
         }
 
         private void btnAlugarArmario_Click(object sender, EventArgs e)
@@ -92,14 +92,6 @@ namespace MyLocker
             var FormDadosAlunos = new FormDadosAlunos();
             FormDadosAlunos.Closed += (s, args) => this.Close();
             FormDadosAlunos.Show();
-            this.Hide();
-        }
-
-        private void btnAlterarFoto_Click(object sender, EventArgs e)
-        {
-            var FormAlterarFoto = new FormAlterarFoto();
-            FormAlterarFoto.FormClosed += (s, args) => this.Close();
-            FormAlterarFoto.Show();
             this.Hide();
         }
 

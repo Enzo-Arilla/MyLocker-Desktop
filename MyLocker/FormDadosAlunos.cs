@@ -82,14 +82,6 @@ namespace MyLocker
             this.Hide();
         }
 
-        private void btnAlterarFoto_Click(object sender, EventArgs e)
-        {
-            var FormAlterarFoto = new FormAlterarFoto();
-            FormAlterarFoto.FormClosed += (s, args) => this.Close();
-            FormAlterarFoto.Show();
-            this.Hide();
-        }
-
         private void btnTrocarPerfil_Click(object sender, EventArgs e)
         {
             var FormLogin = new FormLogin();
@@ -485,12 +477,18 @@ namespace MyLocker
         {
             string filtro = txtPesquisarArmario.Text;
 
-            if (filtro.Trim() == "")
+            if (filtro.Trim() == "" || filtro.Trim() == "Pesquisar Armário (RA Locatário)" || filtro.Trim() == "Pesquisar Armário (Nome)" || filtro.Trim() == "Pesquisar Armário (Sobrenome)" || filtro.Trim() == "Pesquisar Armário (Número)" || filtro.Trim() == "Pesquisar Armário (Status APM)")
             {
-                MyMessageBoxError.ShowBox("Preencha o campo de pesquisa para realizar a busca!", "Erro");
+                foreach (Alunos a in alunos)
+                {
+                    string numero = a.Locker_number != null ? a.Locker_number.ToString() : " - ";
+                    string[] row = new string[] { a.Ra.ToString(), a.First_name.ToString(), a.Last_name.ToString(), numero, a.Status.ToString() };
+                    tblDadosAlunos.Rows.Add(row);
+                }
             }
             else
             {
+                //tblDadosAlunos.Location = new Point(40, 24);
                 if (controle == 0)
                 {
                     tblDadosAlunos.Rows.Clear();

@@ -249,6 +249,7 @@ namespace MyLocker
             this.txtCpf.TabIndex = 26;
             this.txtCpf.UnderlinedStyle = false;
             this.txtCpf.Enter += new System.EventHandler(this.txtCpf_Enter);
+            this.txtCpf.Leave += new System.EventHandler(this.txtCpf_Leave);
             // 
             // txtEmail
             // 

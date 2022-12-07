@@ -132,14 +132,6 @@ namespace MyLocker
             this.Hide();
         }
 
-        private void btnAlterarFoto_Click(object sender, EventArgs e)
-        {
-            var FormAlterarFoto = new FormAlterarFoto();
-            FormAlterarFoto.FormClosed += (s, args) => this.Close();
-            FormAlterarFoto.Show();
-            this.Hide();
-        }
-
         private void btnTrocarPerfil_Click(object sender, EventArgs e)
         {
             var FormLogin = new FormLogin();
@@ -279,10 +271,10 @@ namespace MyLocker
                 btnRaLocatario.PressedColor = Color.Empty;
                 btnRaLocatario.Cursor = Cursors.Hand;
 
-                btnNome.FillColor = Color.LightGray;
-                btnNome.HoverState.FillColor = Color.Empty;
-                btnNome.PressedColor = Color.Empty;
-                btnNome.Cursor = Cursors.Hand;
+                btnSala.FillColor = Color.LightGray;
+                btnSala.HoverState.FillColor = Color.Empty;
+                btnSala.PressedColor = Color.Empty;
+                btnSala.Cursor = Cursors.Hand;
 
                 btnCor.FillColor = Color.LightGray;
                 btnCor.HoverState.FillColor = Color.Empty;
@@ -295,6 +287,7 @@ namespace MyLocker
                 btnStatusApm.Cursor = Cursors.Hand;
 
                 txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
+
                 panel10.Visible = false;
             }
         }
@@ -315,10 +308,10 @@ namespace MyLocker
                 btnNumero.PressedColor = Color.Empty;
                 btnNumero.Cursor = Cursors.Hand;
 
-                btnNome.FillColor = Color.LightGray;
-                btnNome.HoverState.FillColor = Color.Empty;
-                btnNome.PressedColor = Color.Empty;
-                btnNome.Cursor = Cursors.Hand;
+                btnSala.FillColor = Color.LightGray;
+                btnSala.HoverState.FillColor = Color.Empty;
+                btnSala.PressedColor = Color.Empty;
+                btnSala.Cursor = Cursors.Hand;
 
                 btnCor.FillColor = Color.LightGray;
                 btnCor.HoverState.FillColor = Color.Empty;
@@ -335,16 +328,16 @@ namespace MyLocker
             }
         }
 
-        private void btnNome_Click(object sender, EventArgs e)
+        private void btnSala_Click(object sender, EventArgs e)
         {
-            if(btnNome.Cursor == Cursors.Hand)
+            if(btnSala.Cursor == Cursors.Hand)
             {
                 controle = 2;
 
-                btnNome.Cursor = Cursors.No;
-                btnNome.FillColor = Color.FromArgb(255, 220, 81);
-                btnNome.HoverState.FillColor = Color.FromArgb(255, 220, 81);
-                btnNome.PressedColor = Color.FromArgb(255, 220, 81);
+                btnSala.Cursor = Cursors.No;
+                btnSala.FillColor = Color.FromArgb(255, 220, 81);
+                btnSala.HoverState.FillColor = Color.FromArgb(255, 220, 81);
+                btnSala.PressedColor = Color.FromArgb(255, 220, 81);
 
                 btnNumero.FillColor = Color.LightGray;
                 btnNumero.HoverState.FillColor = Color.Empty;
@@ -366,7 +359,7 @@ namespace MyLocker
                 btnStatusApm.PressedColor = Color.Empty;
                 btnStatusApm.Cursor = Cursors.Hand;
 
-                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Nome)";
+                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Sala)";
                 panel10.Visible = false;
             }
         }
@@ -387,10 +380,10 @@ namespace MyLocker
                 btnNumero.PressedColor = Color.Empty;
                 btnNumero.Cursor = Cursors.Hand;
 
-                btnNome.FillColor = Color.LightGray;
-                btnNome.HoverState.FillColor = Color.Empty;
-                btnNome.PressedColor = Color.Empty;
-                btnNome.Cursor = Cursors.Hand;
+                btnSala.FillColor = Color.LightGray;
+                btnSala.HoverState.FillColor = Color.Empty;
+                btnSala.PressedColor = Color.Empty;
+                btnSala.Cursor = Cursors.Hand;
 
                 btnRaLocatario.FillColor = Color.LightGray;
                 btnRaLocatario.HoverState.FillColor = Color.Empty;
@@ -402,7 +395,7 @@ namespace MyLocker
                 btnStatusApm.PressedColor = Color.Empty;
                 btnStatusApm.Cursor = Cursors.Hand;
 
-                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Armário)";
+                txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Cor)";
                 panel10.Visible = false;
             }
         }
@@ -423,10 +416,10 @@ namespace MyLocker
                 btnNumero.PressedColor = Color.Empty;
                 btnNumero.Cursor = Cursors.Hand;
 
-                btnNome.FillColor = Color.LightGray;
-                btnNome.HoverState.FillColor = Color.Empty;
-                btnNome.PressedColor = Color.Empty;
-                btnNome.Cursor = Cursors.Hand;
+                btnSala.FillColor = Color.LightGray;
+                btnSala.HoverState.FillColor = Color.Empty;
+                btnSala.PressedColor = Color.Empty;
+                btnSala.Cursor = Cursors.Hand;
 
                 btnCor.FillColor = Color.LightGray;
                 btnCor.HoverState.FillColor = Color.Empty;
@@ -463,9 +456,9 @@ namespace MyLocker
                 }
                 panel10.Visible = false;
             }
-            else if (btnNome.Cursor == Cursors.No)
+            else if (btnSala.Cursor == Cursors.No)
             {
-                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Nome)")
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Sala)")
                 {
                     txtPesquisarArmario.PlaceholderText = "";
                     txtPesquisarArmario.ForeColor = Color.Black;
@@ -474,7 +467,7 @@ namespace MyLocker
             }
             else if (btnCor.Cursor == Cursors.No)
             {
-                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Armário)")
+                if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Cor)")
                 {
                     txtPesquisarArmario.PlaceholderText = "";
                     txtPesquisarArmario.ForeColor = Color.Black;
@@ -512,7 +505,7 @@ namespace MyLocker
                 }
                 panel10.Visible = false;
             }
-            else if (btnNome.Cursor == Cursors.No)
+            else if (btnSala.Cursor == Cursors.No)
             {
                 if (txtPesquisarArmario.PlaceholderText == "Pesquisar Armário (Nome)")
                 {
@@ -545,9 +538,21 @@ namespace MyLocker
         {
             string filtro = txtPesquisarArmario.Text;
 
-            if (filtro.Trim() == "")
+            if (filtro.Trim() == "" || filtro.Trim() == "Pesquisar Armário (Número)" || filtro.Trim() == "Pesquisar Armário (RA Locatário)" || filtro.Trim() == "Pesquisar Armário (Sala)" || filtro.Trim() == "Pesquisar Armário (Cor)" || filtro.Trim() == "Pesquisar Armário (Status APM)")
             {
-                MyMessageBoxError.ShowBox("Preencha o campo de pesquisa para realizar a busca!", "Erro");
+                tblDadosArmarios.Rows.Clear();
+
+                foreach (Armario a in armarios)
+                {
+                    string ra = "-";
+                    if (a.Student != null)
+                    {
+                        ra = a.Student.Ra;
+                    }
+                    string andar = a.FK_section_id > 4 ? "Primeiro" : "Segundo";
+                    string[] row = new string[] { a.Number.ToString(), andar, transformHexToPlainText(a.Section.Color.ToString()), a.Section.Left_room.ToString(), a.Section.Right_room.ToString(), ra };
+                    tblDadosArmarios.Rows.Add(row);
+                }
             }
             else
             {

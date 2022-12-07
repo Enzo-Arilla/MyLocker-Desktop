@@ -12,14 +12,20 @@ namespace MyLocker
         [Get("/students")]
         Task<Alunos[]> ListAlunos();
 
+        [Get("/students/ra/{ra}")]
+        Task<Alunos> FindStudentByRa(string ra);
+
         [Post("/students")]
         Task CreateAluno([Body]Alunos aluno);
 
-        [Post("/students/inactivate")]
-        Task InactivateAluno([Body]String ra);
+        [Post("/students/update-status")]
+        Task ChangeStudentStatus([Body]ChangeStudentStatusRequest changeStudentStatusRequest);
 
         [Post("/students/update-locker-number")]
         Task SetStudentLockerNumber([Body]SetStudentLockerNumberRequest aluno);
+
+        [Put("/students/update-informations")]
+        Task UpdateStudentInformation([Body]Alunos aluno);
 
     }
 }

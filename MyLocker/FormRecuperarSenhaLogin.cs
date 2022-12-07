@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BC = BCrypt.Net.BCrypt;
 using Refit;
+using System.Text.RegularExpressions;
 
 namespace MyLocker
 {
     public partial class FormRecuperarSenhaLogin : Form
     {
-        string cpf, senha;
 
         public FormRecuperarSenhaLogin()
         {
@@ -22,104 +22,185 @@ namespace MyLocker
             txtCodigo.PasswordChar = true;
         }
 
-        static async Task<Funcionario> GetFuncionario(string cpf)
+        public string FormatCPF(string sender)
+        {
+            string response = sender.Trim();
+            if (response.Length == 11)
+            {
+                response = response.Insert(9, "-");
+                response = response.Insert(6, ".");
+                response = response.Insert(3, ".");
+            }
+            return response;
+        }
+
+        public string cleanCPF(string sender)
+        {
+            Regex apenasDigitos = new Regex(@"[^\d]");
+            return apenasDigitos.Replace(sender, "");
+        }
+
+        static async Task GenerateVerificationCode(GenerateFunctionaryVerificationCodeRequest generateFunctionaryVerificationCodeRequest)
         {
         
             var apiClient = RestService.For<IRepositorioFuncionarios>("https://mylocker-api.herokuapp.com");
 
-            Funcionario response = await apiClient.ReturnFuncionario(cpf);
-
-            return response;
+            await apiClient.GenerateFunctionaryVerificationCode(generateFunctionaryVerificationCodeRequest);
         }
 
-        private async void btnLogin_Click(object sender, EventArgs e)
+        static async Task VerifyFunctionaryCode(string cpf, string typedCode)
         {
-            var Carregamento = new Carregamento();
 
-            try
-            {
-                Carregamento.Show();
+            var apiClient = RestService.For<IRepositorioFuncionarios>("https://mylocker-api.herokuapp.com");
 
-                cpf = txtEmail.Text;
-                senha = txtCodigo.Text;
+            await apiClient.VerifyFunctionaryCode(cpf, typedCode);
+        }
 
-                Funcionario funcionario = await GetFuncionario(cpf);
+        static async Task PutPassword(UpdateFunctionaryPasswordRequest updateFunctionaryPasswordRequest)
+        {
+            var apiCliente = RestService.For<IRepositorioFuncionarios>("https://mylocker-api.herokuapp.com");
 
-                Usuario usuario = new Usuario(funcionario.First_name, funcionario.Last_name, funcionario.Email, funcionario.Cpf, funcionario.Status);
+            await apiCliente.UpdatePassword(updateFunctionaryPasswordRequest);
 
-                if (BC.Verify(senha, funcionario.Password))
-                {
-                    var FormMenu = new FormMenu();
-                    FormMenu.Closed += (s, args) => this.Close();
-                    FormMenu.Show();
-                    this.Close();   
-                    Carregamento.Close();   
-                }
-                else
-                {
-                    Carregamento.Close();
-                    MyMessageBoxError.ShowBox("Você inseriu dados incorretos!", "Erro - Credênciais Incorretas");     
-                }
-
-            }
-            catch (ApiException erro)
-            {
-                Carregamento.Close();
-                string[] mensagemErro = erro.Content.Split('"');
-                MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
-            }
+            return;
         }
 
         private void txtCpf_Enter(object sender, EventArgs e)
         {
-            if (txtEmail.PlaceholderText == "CPF")
+            if (txtCpf.PlaceholderText == "CPF")
             {
-                txtEmail.PlaceholderText = "";
-                txtEmail.ForeColor = Color.Black;
+                txtCpf.PlaceholderText = "";
+                txtCpf.ForeColor = Color.Black;
             }
 
             if (txtCodigo.Text == "")
             {
-                txtCodigo.PlaceholderText = "Senha";
+                txtCodigo.PlaceholderText = "Código";
             }
+
+            if(txtNovaSenha.Text == "")
+            {
+                txtNovaSenha.PlaceholderText = "Nova senha";
+            }
+
         }
 
-        private void txtSenha_Enter(object sender, EventArgs e)
+        private void txtCodigo_Enter(object sender, EventArgs e)
         {
-            if (txtCodigo.PlaceholderText == "Senha")
+            if (txtCodigo.PlaceholderText == "Código")
             {
                 txtCodigo.PlaceholderText = "";
                 txtCodigo.ForeColor = Color.Black;
             }
 
-            if (txtEmail.Text == "")
+            if (txtCpf.Text == "")
             {
-                txtEmail.PlaceholderText = "CPF";
+                txtCpf.PlaceholderText = "CPF";
+            }
+
+            if (txtNovaSenha.Text == "")
+            {
+                txtNovaSenha.PlaceholderText = "Nova senha";
             }
         }
 
-        private void lblCriarConta_Click(object sender, EventArgs e)
+        private void txtNovaSenha_Enter(object sender, EventArgs e)
         {
-            FormCadastro FormCadastro = new FormCadastro();
-            FormCadastro.Show();
-            this.Hide();
-        }
-
-        private void FormLogin_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            if (txtNovaSenha.PlaceholderText == "Nova senha")
             {
-                btnLogin_Click(sender, e);
+                txtNovaSenha.PlaceholderText = "";
+                txtNovaSenha.ForeColor = Color.Black;
+            }
+
+            if (txtCpf.Text == "")
+            {
+                txtCpf.PlaceholderText = "CPF";
+            }
+
+            if (txtCodigo.Text == "")
+            {
+                txtCodigo.PlaceholderText = "Código";
             }
         }
 
-        private void lblEsqueceuSenha_Click(object sender, EventArgs e)
-        {
-            var FormRecuperarSenha = new FormRecuperarSenhaLogin();
-            FormRecuperarSenha.Closed += (s, args) => this.Close();
-            FormRecuperarSenha.Show();
-            this.Close();
 
+        private async void btnEnviar_Click(object sender, EventArgs e)
+        {
+            string cpf = txtCpf.Text;
+            var Load = new Carregamento();
+
+            Load.Show();
+
+            GenerateFunctionaryVerificationCodeRequest generateFunctionaryVerificationCodeRequest = new GenerateFunctionaryVerificationCodeRequest(cleanCPF(cpf));
+
+            Regex rg = new Regex(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$");
+
+            if (!rg.IsMatch(cpf))
+            {
+                Load.Close();
+                MyMessageBoxWarning.ShowBox("O campo do CPF não foi preenchido no formato correto!", "Aviso");
+            }
+            else
+            {
+                try
+                {
+                    await GenerateVerificationCode(generateFunctionaryVerificationCodeRequest);
+                    Load.Close();
+                    btnEnviar.Visible = false;
+                    btnEnviar.Location = new Point(1380, 545);
+                    btnEnviar.Visible = true;
+                    MyMessageBoxSucess.ShowBox("Código gerado e enviado para o e-mail cadastrado!", "Sucesso");
+                    txtCodigo.Visible = true;
+                    txtNovaSenha.Visible = true;
+                    btnConfirmar.Visible = true;
+
+                }
+                catch (ApiException erro)
+                {
+                    Load.Close();
+                    string[] mensagemErro = erro.Content.Split('"');
+                    MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
+                }
+            }
+
+        }
+
+        private async void btnConfirmar_Click(object sender, EventArgs e)
+        {
+
+            string cpf = cleanCPF(txtCpf.Text);
+            string codigo = txtCodigo.Text;
+            string novaSenha = txtNovaSenha.Text;
+            var Load = new Carregamento();
+            Load.Show();
+
+            try
+            {
+                await VerifyFunctionaryCode(cpf, codigo);
+
+                UpdateFunctionaryPasswordRequest update = new UpdateFunctionaryPasswordRequest(novaSenha, null, cpf, true);
+                await PutPassword(update);
+
+                Load.Close();
+
+                MyMessageBoxSucess.ShowBox("Senha alterada com sucesso!", "Sucesso");
+
+                var FormLogin = new FormLogin();
+                FormLogin.Closed += (s, args) => this.Close();
+                FormLogin.Show();
+                this.Close();
+
+            }
+            catch(ApiException erro)
+            {
+                string[] mensagemErro = erro.Content.Split('"');
+                //txtCodigo.Visible = false;
+                //txtNovaSenha.Visible = false;
+               // btnConfirmar.Visible = false;
+                Load.Close();
+                MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
+                
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -130,5 +211,11 @@ namespace MyLocker
             this.Close();
         }
 
+        private void txtCpf_Leave(object sender, EventArgs e)
+        {
+            string CPF = txtCpf.Text;
+            string CPFFormatado = FormatCPF(CPF);
+            txtCpf.Text = CPFFormatado;
+        }
     }
 }

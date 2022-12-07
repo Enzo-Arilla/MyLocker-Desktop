@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BC = BCrypt.Net.BCrypt;
 using Refit;
+using static System.Net.Mime.MediaTypeNames;
+using Application = System.Windows.Forms.Application;
+using System.Text.RegularExpressions;
 
 namespace MyLocker
 {
@@ -19,7 +22,24 @@ namespace MyLocker
         private void FormLogin_Load(object sender, EventArgs e)
         {
             lblFoco.Focus();
-            txtSenha.PasswordChar = true;
+        }
+
+        public string FormatCPF(string sender)
+        {
+            string response = sender.Trim();
+            if (response.Length == 11)
+            {
+                response = response.Insert(9, "-");
+                response = response.Insert(6, ".");
+                response = response.Insert(3, ".");
+            }
+            return response;
+        }
+
+        public string cleanCPF(string sender)
+        {
+            Regex apenasDigitos = new Regex(@"[^\d]");
+            return apenasDigitos.Replace(sender, "");
         }
 
         static async Task<Funcionario> GetFuncionario(string cpf)
@@ -34,38 +54,49 @@ namespace MyLocker
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            var Carregamento = new Carregamento();
+            var Load = new Carregamento();
+            Regex rg = new Regex(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$");
 
             try
             {
-                Carregamento.Show();
+                Load.Show();
 
                 cpf = txtCpf.Text;
                 senha = txtSenha.Text;
 
-                Funcionario funcionario = await GetFuncionario(cpf);
-
-                Usuario usuario = new Usuario(funcionario.First_name, funcionario.Last_name, funcionario.Email, funcionario.Cpf, funcionario.Status);
-
-
-                if (BC.Verify(senha, funcionario.Password))
+                if(cpf.Trim() == "" || senha.Trim() == "" || cpf.Trim() == "CPF" || senha.Trim() == "Senha")
                 {
-                    var FormMenu = new FormMenu();
-                    FormMenu.Closed += (s, args) => this.Close();
-                    FormMenu.Show();
-                    this.Close();   
-                    Carregamento.Close();   
+                    Load.Close();
+                    MyMessageBoxWarning.ShowBox("Preencha o(s) campo(s)!", "Aviso");
+                }
+                else if (!rg.IsMatch(txtCpf.Text))
+                {
+                    Load.Close();
+                    MyMessageBoxWarning.ShowBox("O campo do CPF não foi preenchido no formato correto!", "Aviso");
                 }
                 else
                 {
-                    Carregamento.Close();
-                    MyMessageBoxError.ShowBox("Você inseriu dados incorretos!", "Erro - Credênciais Incorretas");     
-                }
+                    Funcionario funcionario = await GetFuncionario(cleanCPF(cpf));
+                    Usuario usuario = new Usuario(funcionario.First_name, funcionario.Last_name, funcionario.Cpf, funcionario.Email, funcionario.Status);
 
+                    if (BC.Verify(senha, funcionario.Password))
+                    {
+                        var FormMenu = new FormMenu();
+                        FormMenu.Closed += (s, args) => this.Close();
+                        FormMenu.Show();
+                        this.Close();
+                        Load.Close();
+                    }
+                    else
+                    {
+                        Load.Close();
+                        MyMessageBoxError.ShowBox("Você inseriu dados de login incorretos!", "Erro");
+                    }
+                }
             }
             catch (ApiException erro)
             {
-                Carregamento.Close();
+                Load.Close();
                 string[] mensagemErro = erro.Content.Split('"');
                 MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
             }
@@ -82,11 +113,13 @@ namespace MyLocker
             if (txtSenha.Text == "")
             {
                 txtSenha.PlaceholderText = "Senha";
+                txtSenha.TextOffset = new Point(12, 0);
             }
         }
 
         private void txtSenha_Enter(object sender, EventArgs e)
         {
+            txtSenha.TextOffset = new Point(23, 0);
             if (txtSenha.PlaceholderText == "Senha")
             {
                 txtSenha.PlaceholderText = "";
@@ -121,6 +154,27 @@ namespace MyLocker
             FormRecuperarSenha.Show();
             this.Close();
 
+        }
+
+        private void txtCpf_Leave(object sender, EventArgs e)
+        {
+            string CPF = txtCpf.Text;
+            string CPFFormatado = FormatCPF(CPF);
+            txtCpf.Text = CPFFormatado;
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            txtSenha.PasswordChar = default;
+            btnVer.Visible = false;
+            btnEsconder.Visible = true;
+        }
+
+        private void btnEsconder_Click(object sender, EventArgs e)
+        {
+            txtSenha.PasswordChar = '●';
+            btnVer.Visible = true;
+            btnEsconder.Visible = false;
         }
 
         private void btnSair_Click(object sender, EventArgs e)

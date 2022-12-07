@@ -78,29 +78,18 @@
     <Compile Include="Carregamento.Designer.cs">
       <DependentUpon>Carregamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRecuperarSenhaPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRecuperarSenhaPerfil.Designer.cs">
-      <DependentUpon>FormRecuperarSenhaPerfil.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ChangeApmStatusRequest.cs" />
     <Compile Include="FormRecuperarSenhaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRecuperarSenhaLogin.Designer.cs">
       <DependentUpon>FormRecuperarSenhaLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenerateFunctionaryVerificationCodeResponse.cs" />
+    <Compile Include="ChangeStudentStatusRequest.cs" />
     <Compile Include="IRepositorioAlunos.cs" />
     <Compile Include="IRepositorioAPM.cs" />
     <Compile Include="SectionType.cs" />
     <Compile Include="Armario.cs" />
-    <Compile Include="FormAlterarFoto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAlterarFoto.Designer.cs">
-      <DependentUpon>FormAlterarFoto.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormAlterarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,9 +211,6 @@
     <EmbeddedResource Include="FormDadosAlunos.resx">
       <DependentUpon>FormDadosAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRecuperarSenhaPerfil.resx">
-      <DependentUpon>FormRecuperarSenhaPerfil.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormRecuperarSenhaLogin.resx">
       <DependentUpon>FormRecuperarSenhaLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,9 +222,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAlterarFoto.resx">
-      <DependentUpon>FormAlterarFoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlterarSenha.resx">
       <DependentUpon>FormAlterarSenha.cs</DependentUpon>
@@ -281,6 +264,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -301,7 +285,7 @@
       <Version>4.0.3</Version>
     </PackageReference>
     <PackageReference Include="Guna.UI2.WinForms">
-      <Version>2.0.3.4</Version>
+      <Version>2.0.3.5</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation">
       <Version>6.0.8</Version>
@@ -315,6 +299,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erro %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erro %281%29_Easy-Resize.com.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

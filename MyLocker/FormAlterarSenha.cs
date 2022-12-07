@@ -14,8 +14,6 @@ namespace MyLocker
     public partial class FormAlterarSenha : Form
     {
 
-        string senha, novaSenha,
-
         public FormAlterarSenha()
         {
             InitializeComponent();
@@ -23,7 +21,7 @@ namespace MyLocker
 
         private void FormAlterarSenha_Load(object sender, EventArgs e)
         {
-            lblFoco.Focus();
+            label1.Focus();
         }
 
         static async Task<Funcionario> GetFuncionario(string cpf)
@@ -38,14 +36,55 @@ namespace MyLocker
 
         static async Task PutPassword(UpdateFunctionaryPasswordRequest updateFunctionaryPasswordRequest)
         {
-            var apiCliente = RestService.For<IRepositorioFuncionarios>("http://mylocker-backend.herokuapp.com");
+            var apiCliente = RestService.For<IRepositorioFuncionarios>("https://mylocker-api.herokuapp.com");
+
             await apiCliente.UpdatePassword(updateFunctionaryPasswordRequest);
+
+            return;
             
         }
 
-        private void btnGerenciar_Click(object sender, EventArgs e)
+        private async void btnAlterar_Click(object sender, EventArgs e)
         {
+            var Load = new Carregamento();
 
+            string novaSenha = txtNovaSenha.Text;
+            string cNovaSenha = txtConfirmarSenha.Text;
+            string senhaAntiga = txtSenhaAntiga.Text;
+
+            if (novaSenha.Trim() == "" || senhaAntiga.Trim() == "" || cNovaSenha == "" || novaSenha.Trim() == "Senha antiga" || senhaAntiga.Trim() == "Nova senha" || cNovaSenha == "Confirmar nova senha")
+            {
+                Load.Close();
+                MyMessageBoxWarning.ShowBox("Preencha o(s) campo(s)!", "Aviso");
+            }
+            else if (novaSenha != cNovaSenha)
+            {
+                Load.Close();
+                MyMessageBoxWarning.ShowBox("Você inseriu senhas diferentes!", "Aviso");
+            }
+            else
+            {
+                try
+                {
+                    Load.Show();
+
+                    UpdateFunctionaryPasswordRequest update = new UpdateFunctionaryPasswordRequest(novaSenha, senhaAntiga, Usuario.Cpf, false);
+
+                    await PutPassword(update);
+
+                    Load.Close();
+
+                    MyMessageBoxSucess.ShowBox("Senha alterada com sucesso!", "Sucesso");
+
+                }
+                catch (ApiException erro)
+                {
+                    Load.Close();
+                    string[] mensagemErro = erro.Content.Split('"');
+                    MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
+                }
+            }
+  
         }
 
         private void btnTrocarPerfil_Click(object sender, EventArgs e)
@@ -65,6 +104,8 @@ namespace MyLocker
         {
             if (panel2.Visible == false)
             {
+                lblAlunos.ForeColor = Color.White;
+                lblArmarios.ForeColor = Color.FromArgb(253, 200, 0);
                 panel4.Visible = true;
                 panel5.Visible = true;
                 panel5.BringToFront();
@@ -74,6 +115,7 @@ namespace MyLocker
             }
             else if (panel2.Visible == true)
             {
+                lblArmarios.ForeColor = Color.White;
                 label1.Visible = true;
                 panel5.Visible = false;
                 panel2.Visible = false;
@@ -86,12 +128,15 @@ namespace MyLocker
 
             if (guna2GradientPanel1.Visible == false)
             {
+                lblAlunos.ForeColor = Color.FromArgb(253, 200, 0);
+                lblArmarios.ForeColor = Color.White;
                 panel4.Visible = true;
                 guna2GradientPanel1.Visible = true;
                 panel2.Visible = false;
             }
             else if (guna2GradientPanel1.Visible == true)
             {
+                lblAlunos.ForeColor = Color.White;
                 guna2GradientPanel1.Visible = false;
                 panel4.Visible = false;
                 panel2.Visible = false;
@@ -112,14 +157,12 @@ namespace MyLocker
             {
                 panel3.Visible = true;
                 panel3.BringToFront();
-                panel8.Visible = true;
                 panel9.Visible = true;
                 panel11.Visible = true;
             }
             else if (panel3.Visible == true)
             {
                 panel3.Visible = false;
-                panel8.Visible = false;
                 panel9.Visible = false;
                 panel11.Visible = false;
             }
@@ -147,26 +190,6 @@ namespace MyLocker
             FormDesocuparArmario.Closed += (s, args) => this.Close();
             FormDesocuparArmario.Show();
             this.Hide();
-        }
-
-        private void btnDadosAlunos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGerenciarAlunos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAlterarFoto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void myCustomDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {            
-
         }
 
         private void txtSenhaAntiga_Enter(object sender, EventArgs e)
@@ -228,12 +251,23 @@ namespace MyLocker
 
         private void lblEsqueceuSenha_Click(object sender, EventArgs e)
         {
-            var FormRecuperarSenha = new FormRecuperarSenhaPerfil();
-            FormRecuperarSenha.Closed += (s, args) => this.Close();
-            FormRecuperarSenha.Show();
+            
+        }
+
+        private void btnDadosAlunos_Click(object sender, EventArgs e)
+        {
+            var FormDadosAlunos = new FormDadosAlunos();
+            FormDadosAlunos.Closed += (s, args) => this.Close();
+            FormDadosAlunos.Show();
             this.Hide();
         }
 
-        
+        private void btnGerenciarAlunos_Click(object sender, EventArgs e)
+        {
+            var FormGerenciarAlunos = new FormGerenciarAlunos();
+            FormGerenciarAlunos.Closed += (s, args) => this.Close();
+            FormGerenciarAlunos.Show();
+            this.Hide();
+        }
     }
 }

@@ -155,7 +155,7 @@ namespace MyLocker
             this.panel2.Controls.Add(this.btnDesocuparArmario);
             this.panel2.Controls.Add(this.btnDadosArmarios);
             this.panel2.Controls.Add(this.btnAlugarArmario);
-            this.panel2.Location = new System.Drawing.Point(-1, 112);
+            this.panel2.Location = new System.Drawing.Point(-1, 113);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(397, 254);
             this.panel2.TabIndex = 54;
@@ -166,7 +166,7 @@ namespace MyLocker
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(0, 83);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(397, 2);
+            this.panel6.Size = new System.Drawing.Size(397, 1);
             this.panel6.TabIndex = 9;
             // 
             // panel5
@@ -174,7 +174,7 @@ namespace MyLocker
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(0, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 2);
+            this.panel5.Size = new System.Drawing.Size(397, 1);
             this.panel5.TabIndex = 9;
             this.panel5.Visible = false;
             // 
@@ -239,9 +239,9 @@ namespace MyLocker
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(0, 86);
+            this.panel4.Location = new System.Drawing.Point(0, 85);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(397, 2);
+            this.panel4.Size = new System.Drawing.Size(397, 1);
             this.panel4.TabIndex = 12;
             this.panel4.Visible = false;
             // 
@@ -296,7 +296,7 @@ namespace MyLocker
             this.btnTipoPesquisa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
             this.btnTipoPesquisa.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoPesquisa.ForeColor = System.Drawing.Color.White;
-            this.btnTipoPesquisa.Location = new System.Drawing.Point(122, 211);
+            this.btnTipoPesquisa.Location = new System.Drawing.Point(244, 222);
             this.btnTipoPesquisa.Name = "btnTipoPesquisa";
             this.btnTipoPesquisa.Size = new System.Drawing.Size(354, 75);
             this.btnTipoPesquisa.TabIndex = 56;
@@ -309,7 +309,7 @@ namespace MyLocker
             this.panel10.Controls.Add(this.panel14);
             this.panel10.Controls.Add(this.btnRaLocatario);
             this.panel10.Controls.Add(this.btnNumero);
-            this.panel10.Location = new System.Drawing.Point(124, 337);
+            this.panel10.Location = new System.Drawing.Point(234, 331);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(397, 171);
             this.panel10.TabIndex = 58;
@@ -318,7 +318,7 @@ namespace MyLocker
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.Black;
-            this.panel14.Location = new System.Drawing.Point(0, 83);
+            this.panel14.Location = new System.Drawing.Point(2, 83);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(397, 2);
             this.panel14.TabIndex = 8;
@@ -359,7 +359,7 @@ namespace MyLocker
             this.btnNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnNumero.ForeColor = System.Drawing.Color.Black;
             this.btnNumero.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
-            this.btnNumero.Location = new System.Drawing.Point(0, 0);
+            this.btnNumero.Location = new System.Drawing.Point(1, 0);
             this.btnNumero.Name = "btnNumero";
             this.btnNumero.PressedDepth = 0;
             this.btnNumero.Size = new System.Drawing.Size(397, 86);
@@ -381,7 +381,7 @@ namespace MyLocker
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1445, 215);
+            this.pictureBox1.Location = new System.Drawing.Point(1300, 215);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -397,7 +397,7 @@ namespace MyLocker
             this.guna2GradientPanel1.Controls.Add(this.tblDesocuparArmario);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(1008, 346);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(865, 342);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(483, 730);
             this.guna2GradientPanel1.TabIndex = 61;
@@ -494,6 +494,7 @@ namespace MyLocker
             this.tblDesocuparArmario.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White;
             this.tblDesocuparArmario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tblDesocuparArmario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblDesocuparArmario_CellClick);
+            this.tblDesocuparArmario.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tblDesocuparArmario_CellMouseMove);
             // 
             // Numero
             // 
@@ -547,7 +548,7 @@ namespace MyLocker
             this.guna2GradientPanelImgPerfil.Controls.Add(this.btnTrocarPerfil);
             this.guna2GradientPanelImgPerfil.Controls.Add(this.btnFecharAplicativo);
             this.guna2GradientPanelImgPerfil.Controls.Add(this.panel3);
-            this.guna2GradientPanelImgPerfil.Location = new System.Drawing.Point(1043, 113);
+            this.guna2GradientPanelImgPerfil.Location = new System.Drawing.Point(1043, 112);
             this.guna2GradientPanelImgPerfil.Name = "guna2GradientPanelImgPerfil";
             this.guna2GradientPanelImgPerfil.Size = new System.Drawing.Size(397, 271);
             this.guna2GradientPanelImgPerfil.TabIndex = 66;
@@ -559,7 +560,7 @@ namespace MyLocker
             this.panel8.BackColor = System.Drawing.Color.Black;
             this.panel8.Location = new System.Drawing.Point(3, 181);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(397, 2);
+            this.panel8.Size = new System.Drawing.Size(397, 1);
             this.panel8.TabIndex = 67;
             this.panel8.Visible = false;
             // 
@@ -573,9 +574,9 @@ namespace MyLocker
             this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
             this.btnAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(3, 3);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(2, 2);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
-            this.btnAlterarSenha.Size = new System.Drawing.Size(393, 86);
+            this.btnAlterarSenha.Size = new System.Drawing.Size(397, 86);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
             this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
@@ -590,9 +591,9 @@ namespace MyLocker
             this.btnTrocarPerfil.FillColor = System.Drawing.Color.White;
             this.btnTrocarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
-            this.btnTrocarPerfil.Location = new System.Drawing.Point(2, 93);
+            this.btnTrocarPerfil.Location = new System.Drawing.Point(2, 92);
             this.btnTrocarPerfil.Name = "btnTrocarPerfil";
-            this.btnTrocarPerfil.Size = new System.Drawing.Size(394, 87);
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(395, 88);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
             this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
@@ -613,7 +614,7 @@ namespace MyLocker
             this.btnFecharAplicativo.ForeColor = System.Drawing.Color.Black;
             this.btnFecharAplicativo.Location = new System.Drawing.Point(2, 182);
             this.btnFecharAplicativo.Name = "btnFecharAplicativo";
-            this.btnFecharAplicativo.Size = new System.Drawing.Size(394, 86);
+            this.btnFecharAplicativo.Size = new System.Drawing.Size(397, 86);
             this.btnFecharAplicativo.TabIndex = 66;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
             this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
@@ -621,9 +622,9 @@ namespace MyLocker
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(0, 90);
+            this.panel3.Location = new System.Drawing.Point(2, 90);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 2);
+            this.panel3.Size = new System.Drawing.Size(397, 1);
             this.panel3.TabIndex = 12;
             this.panel3.Visible = false;
             // 
@@ -636,7 +637,7 @@ namespace MyLocker
             this.txtPesquisarArmario.BorderSize = 2;
             this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPesquisarArmario.Location = new System.Drawing.Point(630, 197);
+            this.txtPesquisarArmario.Location = new System.Drawing.Point(717, 203);
             this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
             this.txtPesquisarArmario.Multiline = false;
             this.txtPesquisarArmario.Name = "txtPesquisarArmario";
@@ -644,7 +645,7 @@ namespace MyLocker
             this.txtPesquisarArmario.PasswordChar = false;
             this.txtPesquisarArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             this.txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
-            this.txtPesquisarArmario.Size = new System.Drawing.Size(1000, 106);
+            this.txtPesquisarArmario.Size = new System.Drawing.Size(770, 106);
             this.txtPesquisarArmario.TabIndex = 57;
             this.txtPesquisarArmario.UnderlinedStyle = false;
             this.txtPesquisarArmario.Enter += new System.EventHandler(this.txtPesquisarArmario_Enter);

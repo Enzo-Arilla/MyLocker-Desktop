@@ -24,12 +24,31 @@ namespace MyLocker
             status = rstatus;
         }
 
-        public static string getName()
+        public static string Name
         {
-            return name + " " + lastName;
+            get 
+            { 
+                return name; 
+            }
+            set 
+            {
+                name = value; 
+            }
         }
 
-        public string CPF
+        public static string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+            set
+            {
+                lastName = value;
+            }
+        }
+
+        public static string Cpf
         {
             get
             {

@@ -58,6 +58,8 @@ namespace MyLocker
         public MyPlaceholderTextBox()
         {
             this.AutoSize = false;
+            this.UseSystemPasswordChar = true;
+            this.PasswordChar = '*';
             GotFocus += removePlaceHolder;
             LostFocus += setPlaceholder;
         }

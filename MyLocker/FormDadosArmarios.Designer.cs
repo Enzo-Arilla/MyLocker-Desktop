@@ -32,8 +32,14 @@ namespace MyLocker
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDadosArmarios));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.imgPerfil = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblApm = new System.Windows.Forms.Label();
@@ -55,7 +61,7 @@ namespace MyLocker
             this.btnCor = new Guna.UI2.WinForms.Guna2Button();
             this.btnStatusApm = new Guna.UI2.WinForms.Guna2Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.btnNome = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSala = new Guna.UI2.WinForms.Guna2Button();
             this.btnRaLocatario = new Guna.UI2.WinForms.Guna2Button();
             this.lblFoco = new System.Windows.Forms.Label();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
@@ -176,7 +182,7 @@ namespace MyLocker
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(0, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 2);
+            this.panel5.Size = new System.Drawing.Size(397, 1);
             this.panel5.TabIndex = 9;
             this.panel5.Visible = false;
             // 
@@ -207,7 +213,7 @@ namespace MyLocker
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(0, 83);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 2);
+            this.panel3.Size = new System.Drawing.Size(397, 1);
             this.panel3.TabIndex = 8;
             this.panel3.Visible = false;
             // 
@@ -257,7 +263,7 @@ namespace MyLocker
             this.btnTipoPesquisa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
             this.btnTipoPesquisa.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoPesquisa.ForeColor = System.Drawing.Color.White;
-            this.btnTipoPesquisa.Location = new System.Drawing.Point(33, 209);
+            this.btnTipoPesquisa.Location = new System.Drawing.Point(112, 206);
             this.btnTipoPesquisa.Name = "btnTipoPesquisa";
             this.btnTipoPesquisa.Size = new System.Drawing.Size(354, 75);
             this.btnTipoPesquisa.TabIndex = 12;
@@ -268,7 +274,7 @@ namespace MyLocker
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1386, 211);
+            this.pictureBox1.Location = new System.Drawing.Point(1437, 203);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,9 +291,9 @@ namespace MyLocker
             this.panel10.Controls.Add(this.btnCor);
             this.panel10.Controls.Add(this.btnStatusApm);
             this.panel10.Controls.Add(this.panel14);
-            this.panel10.Controls.Add(this.btnNome);
+            this.panel10.Controls.Add(this.btnSala);
             this.panel10.Controls.Add(this.btnRaLocatario);
-            this.panel10.Location = new System.Drawing.Point(18, 325);
+            this.panel10.Location = new System.Drawing.Point(89, 322);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(397, 430);
             this.panel10.TabIndex = 55;
@@ -388,22 +394,22 @@ namespace MyLocker
             this.panel14.TabIndex = 8;
             this.panel14.Visible = false;
             // 
-            // btnNome
+            // btnSala
             // 
-            this.btnNome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNome.FillColor = System.Drawing.Color.LightGray;
-            this.btnNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
-            this.btnNome.ForeColor = System.Drawing.Color.Black;
-            this.btnNome.Location = new System.Drawing.Point(0, 171);
-            this.btnNome.Name = "btnNome";
-            this.btnNome.Size = new System.Drawing.Size(397, 86);
-            this.btnNome.TabIndex = 6;
-            this.btnNome.Text = "Sala";
-            this.btnNome.Click += new System.EventHandler(this.btnNome_Click);
+            this.btnSala.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSala.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSala.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSala.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSala.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSala.FillColor = System.Drawing.Color.LightGray;
+            this.btnSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.btnSala.ForeColor = System.Drawing.Color.Black;
+            this.btnSala.Location = new System.Drawing.Point(0, 171);
+            this.btnSala.Name = "btnSala";
+            this.btnSala.Size = new System.Drawing.Size(397, 86);
+            this.btnSala.TabIndex = 6;
+            this.btnSala.Text = "Sala";
+            this.btnSala.Click += new System.EventHandler(this.btnSala_Click);
             // 
             // btnRaLocatario
             // 
@@ -437,7 +443,7 @@ namespace MyLocker
             this.guna2VScrollBar1.BorderRadius = 3;
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1341, 41);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1165, 28);
             this.guna2VScrollBar1.Minimum = 1;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
@@ -450,6 +456,7 @@ namespace MyLocker
             this.tblDadosArmarios.AllowUserToAddRows = false;
             this.tblDadosArmarios.AllowUserToDeleteRows = false;
             this.tblDadosArmarios.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -476,34 +483,34 @@ namespace MyLocker
             this.SalaDireita,
             this.raLocatario});
             this.tblDadosArmarios.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblDadosArmarios.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblDadosArmarios.DefaultCellStyle = dataGridViewCellStyle9;
             this.tblDadosArmarios.GridColor = System.Drawing.Color.Black;
-            this.tblDadosArmarios.Location = new System.Drawing.Point(23, 41);
+            this.tblDadosArmarios.Location = new System.Drawing.Point(30, 28);
             this.tblDadosArmarios.MultiSelect = false;
             this.tblDadosArmarios.Name = "tblDadosArmarios";
             this.tblDadosArmarios.ReadOnly = true;
             this.tblDadosArmarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblDadosArmarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblDadosArmarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.tblDadosArmarios.RowHeadersVisible = false;
-            this.tblDadosArmarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.tblDadosArmarios.RowHeadersWidth = 60;
             this.tblDadosArmarios.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.tblDadosArmarios.RowTemplate.ReadOnly = true;
             this.tblDadosArmarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tblDadosArmarios.Size = new System.Drawing.Size(1342, 620);
+            this.tblDadosArmarios.Size = new System.Drawing.Size(1153, 620);
             this.tblDadosArmarios.TabIndex = 55;
             this.tblDadosArmarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tblDadosArmarios.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -529,43 +536,77 @@ namespace MyLocker
             // 
             // Nome
             // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Nome.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Nome.FillWeight = 50F;
             this.Nome.HeaderText = "Número";
+            this.Nome.MinimumWidth = 150;
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
             this.Nome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Nome.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nome.Width = 123;
+            this.Nome.Width = 150;
             // 
             // Andar
             // 
+            this.Andar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Andar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Andar.FillWeight = 50F;
             this.Andar.HeaderText = "Andar";
+            this.Andar.MinimumWidth = 150;
             this.Andar.Name = "Andar";
             this.Andar.ReadOnly = true;
+            this.Andar.Width = 150;
             // 
             // Cor
             // 
+            this.Cor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Cor.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Cor.FillWeight = 50F;
             this.Cor.HeaderText = "Cor";
+            this.Cor.MinimumWidth = 150;
             this.Cor.Name = "Cor";
             this.Cor.ReadOnly = true;
+            this.Cor.Width = 150;
             // 
             // SalaEsquerda
             // 
+            this.SalaEsquerda.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SalaEsquerda.DefaultCellStyle = dataGridViewCellStyle6;
+            this.SalaEsquerda.FillWeight = 50F;
             this.SalaEsquerda.HeaderText = "Sala na Esquerda";
+            this.SalaEsquerda.MinimumWidth = 150;
             this.SalaEsquerda.Name = "SalaEsquerda";
             this.SalaEsquerda.ReadOnly = true;
+            this.SalaEsquerda.Width = 243;
             // 
             // SalaDireita
             // 
+            this.SalaDireita.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SalaDireita.DefaultCellStyle = dataGridViewCellStyle7;
+            this.SalaDireita.FillWeight = 50F;
             this.SalaDireita.HeaderText = "Sala na Direita";
+            this.SalaDireita.MinimumWidth = 150;
             this.SalaDireita.Name = "SalaDireita";
             this.SalaDireita.ReadOnly = true;
+            this.SalaDireita.Width = 208;
             // 
             // raLocatario
             // 
+            this.raLocatario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.raLocatario.DefaultCellStyle = dataGridViewCellStyle8;
+            this.raLocatario.FillWeight = 50F;
             this.raLocatario.HeaderText = "RA Locatário";
+            this.raLocatario.MinimumWidth = 150;
             this.raLocatario.Name = "raLocatario";
             this.raLocatario.ReadOnly = true;
+            this.raLocatario.Width = 187;
             // 
             // guna2GradientPanel1
             // 
@@ -576,9 +617,9 @@ namespace MyLocker
             this.guna2GradientPanel1.Controls.Add(this.tblDadosArmarios);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(218, 340);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(376, 327);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1420, 690);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1200, 690);
             this.guna2GradientPanel1.TabIndex = 62;
             // 
             // guna2GradientPanel2
@@ -662,9 +703,9 @@ namespace MyLocker
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(3, 181);
+            this.panel8.Location = new System.Drawing.Point(2, 181);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(397, 2);
+            this.panel8.Size = new System.Drawing.Size(397, 1);
             this.panel8.TabIndex = 67;
             this.panel8.Visible = false;
             // 
@@ -678,9 +719,9 @@ namespace MyLocker
             this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
             this.btnAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(3, 3);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(2, 1);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
-            this.btnAlterarSenha.Size = new System.Drawing.Size(393, 86);
+            this.btnAlterarSenha.Size = new System.Drawing.Size(397, 89);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
             this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
@@ -695,9 +736,9 @@ namespace MyLocker
             this.btnTrocarPerfil.FillColor = System.Drawing.Color.White;
             this.btnTrocarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
-            this.btnTrocarPerfil.Location = new System.Drawing.Point(2, 93);
+            this.btnTrocarPerfil.Location = new System.Drawing.Point(2, 92);
             this.btnTrocarPerfil.Name = "btnTrocarPerfil";
-            this.btnTrocarPerfil.Size = new System.Drawing.Size(394, 87);
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(397, 90);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
             this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
@@ -718,7 +759,7 @@ namespace MyLocker
             this.btnFecharAplicativo.ForeColor = System.Drawing.Color.Black;
             this.btnFecharAplicativo.Location = new System.Drawing.Point(2, 182);
             this.btnFecharAplicativo.Name = "btnFecharAplicativo";
-            this.btnFecharAplicativo.Size = new System.Drawing.Size(394, 86);
+            this.btnFecharAplicativo.Size = new System.Drawing.Size(397, 86);
             this.btnFecharAplicativo.TabIndex = 66;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
             this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
@@ -726,9 +767,9 @@ namespace MyLocker
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(0, 90);
+            this.panel6.Location = new System.Drawing.Point(2, 91);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(397, 2);
+            this.panel6.Size = new System.Drawing.Size(397, 1);
             this.panel6.TabIndex = 12;
             this.panel6.Visible = false;
             // 
@@ -741,7 +782,7 @@ namespace MyLocker
             this.txtPesquisarArmario.BorderSize = 2;
             this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPesquisarArmario.Location = new System.Drawing.Point(598, 202);
+            this.txtPesquisarArmario.Location = new System.Drawing.Point(648, 189);
             this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
             this.txtPesquisarArmario.Multiline = false;
             this.txtPesquisarArmario.Name = "txtPesquisarArmario";
@@ -815,19 +856,13 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnCor;
         private Guna.UI2.WinForms.Guna2Button btnStatusApm;
         private System.Windows.Forms.Panel panel14;
-        private Guna.UI2.WinForms.Guna2Button btnNome;
+        private Guna.UI2.WinForms.Guna2Button btnSala;
         private Guna.UI2.WinForms.Guna2Button btnRaLocatario;
         private System.Windows.Forms.Panel panel15;
         private Guna.UI2.WinForms.Guna2Button btnNumero;
         private System.Windows.Forms.Label lblFoco;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2DataGridView tblDadosArmarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Andar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SalaEsquerda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SalaDireita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn raLocatario;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2Button btnDadosAlunos;
@@ -839,5 +874,11 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnTrocarPerfil;
         private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Andar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalaEsquerda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalaDireita;
+        private System.Windows.Forms.DataGridViewTextBoxColumn raLocatario;
     }
 }

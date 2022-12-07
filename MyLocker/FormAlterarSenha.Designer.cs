@@ -37,10 +37,9 @@ namespace MyLocker
             this.lblArmarios = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gpGerenciamento = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnGerenciar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAlterar = new Guna.UI2.WinForms.Guna2Button();
             this.txtConfirmarSenha = new MyLocker.RJTextBox();
             this.txtNovaSenha = new MyLocker.RJTextBox();
-            this.lblEsqueceuSenha = new System.Windows.Forms.Label();
             this.txtSenhaAntiga = new MyLocker.RJTextBox();
             this.lblAlterarSenha = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,10 +53,8 @@ namespace MyLocker
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnGerenciarAlunos = new Guna.UI2.WinForms.Guna2Button();
             this.btnSenha = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAlterarFoto = new Guna.UI2.WinForms.Guna2Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -155,10 +152,9 @@ namespace MyLocker
             // 
             this.gpGerenciamento.BorderColor = System.Drawing.Color.White;
             this.gpGerenciamento.BorderRadius = 10;
-            this.gpGerenciamento.Controls.Add(this.btnGerenciar);
+            this.gpGerenciamento.Controls.Add(this.btnAlterar);
             this.gpGerenciamento.Controls.Add(this.txtConfirmarSenha);
             this.gpGerenciamento.Controls.Add(this.txtNovaSenha);
-            this.gpGerenciamento.Controls.Add(this.lblEsqueceuSenha);
             this.gpGerenciamento.Controls.Add(this.txtSenhaAntiga);
             this.gpGerenciamento.Controls.Add(this.lblAlterarSenha);
             this.gpGerenciamento.CustomBorderColor = System.Drawing.Color.White;
@@ -170,27 +166,27 @@ namespace MyLocker
             this.gpGerenciamento.TabIndex = 15;
             this.gpGerenciamento.Text = "guna2GroupBox1";
             // 
-            // btnGerenciar
+            // btnAlterar
             // 
-            this.btnGerenciar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnGerenciar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGerenciar.BorderRadius = 20;
-            this.btnGerenciar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGerenciar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGerenciar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGerenciar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGerenciar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGerenciar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
-            this.btnGerenciar.ForeColor = System.Drawing.Color.Black;
-            this.btnGerenciar.Location = new System.Drawing.Point(334, 632);
-            this.btnGerenciar.Name = "btnGerenciar";
-            this.btnGerenciar.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.btnGerenciar.ShadowDecoration.Enabled = true;
-            this.btnGerenciar.Size = new System.Drawing.Size(683, 87);
-            this.btnGerenciar.TabIndex = 52;
-            this.btnGerenciar.Text = "Confirmar";
-            this.btnGerenciar.Click += new System.EventHandler(this.btnGerenciar_Click);
+            this.btnAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlterar.BorderRadius = 20;
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlterar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAlterar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAlterar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAlterar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
+            this.btnAlterar.Location = new System.Drawing.Point(334, 632);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.btnAlterar.ShadowDecoration.Enabled = true;
+            this.btnAlterar.Size = new System.Drawing.Size(683, 87);
+            this.btnAlterar.TabIndex = 52;
+            this.btnAlterar.Text = "Confirmar";
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // txtConfirmarSenha
             // 
@@ -201,7 +197,7 @@ namespace MyLocker
             this.txtConfirmarSenha.BorderSize = 2;
             this.txtConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarSenha.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtConfirmarSenha.Location = new System.Drawing.Point(307, 496);
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(307, 465);
             this.txtConfirmarSenha.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
             this.txtConfirmarSenha.Multiline = false;
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
@@ -223,7 +219,7 @@ namespace MyLocker
             this.txtNovaSenha.BorderSize = 2;
             this.txtNovaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNovaSenha.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNovaSenha.Location = new System.Drawing.Point(307, 372);
+            this.txtNovaSenha.Location = new System.Drawing.Point(307, 327);
             this.txtNovaSenha.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
             this.txtNovaSenha.Multiline = false;
             this.txtNovaSenha.Name = "txtNovaSenha";
@@ -235,20 +231,6 @@ namespace MyLocker
             this.txtNovaSenha.TabIndex = 34;
             this.txtNovaSenha.UnderlinedStyle = false;
             this.txtNovaSenha.Enter += new System.EventHandler(this.txtNovaSenha_Enter);
-            // 
-            // lblEsqueceuSenha
-            // 
-            this.lblEsqueceuSenha.AutoSize = true;
-            this.lblEsqueceuSenha.BackColor = System.Drawing.Color.White;
-            this.lblEsqueceuSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblEsqueceuSenha.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEsqueceuSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
-            this.lblEsqueceuSenha.Location = new System.Drawing.Point(326, 305);
-            this.lblEsqueceuSenha.Name = "lblEsqueceuSenha";
-            this.lblEsqueceuSenha.Size = new System.Drawing.Size(326, 45);
-            this.lblEsqueceuSenha.TabIndex = 33;
-            this.lblEsqueceuSenha.Text = "Esqueceu sua senha?";
-            this.lblEsqueceuSenha.Click += new System.EventHandler(this.lblEsqueceuSenha_Click);
             // 
             // txtSenhaAntiga
             // 
@@ -280,7 +262,7 @@ namespace MyLocker
             this.lblAlterarSenha.BackColor = System.Drawing.Color.Transparent;
             this.lblAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlterarSenha.ForeColor = System.Drawing.Color.Black;
-            this.lblAlterarSenha.Location = new System.Drawing.Point(519, 86);
+            this.lblAlterarSenha.Location = new System.Drawing.Point(508, 86);
             this.lblAlterarSenha.Name = "lblAlterarSenha";
             this.lblAlterarSenha.Size = new System.Drawing.Size(349, 61);
             this.lblAlterarSenha.TabIndex = 16;
@@ -305,7 +287,7 @@ namespace MyLocker
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(0, 83);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(397, 2);
+            this.panel6.Size = new System.Drawing.Size(397, 1);
             this.panel6.TabIndex = 9;
             // 
             // panel5
@@ -313,7 +295,7 @@ namespace MyLocker
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(0, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 2);
+            this.panel5.Size = new System.Drawing.Size(397, 1);
             this.panel5.TabIndex = 9;
             this.panel5.Visible = false;
             // 
@@ -392,6 +374,7 @@ namespace MyLocker
             this.guna2GradientPanel1.Size = new System.Drawing.Size(397, 167);
             this.guna2GradientPanel1.TabIndex = 55;
             this.guna2GradientPanel1.UseTransparentBackground = true;
+            this.guna2GradientPanel1.Visible = false;
             // 
             // btnDadosAlunos
             // 
@@ -408,6 +391,7 @@ namespace MyLocker
             this.btnDadosAlunos.Size = new System.Drawing.Size(397, 86);
             this.btnDadosAlunos.TabIndex = 56;
             this.btnDadosAlunos.Text = "Dados dos Alunos";
+            this.btnDadosAlunos.Click += new System.EventHandler(this.btnDadosAlunos_Click);
             // 
             // panel4
             // 
@@ -439,6 +423,7 @@ namespace MyLocker
             this.btnGerenciarAlunos.TabIndex = 57;
             this.btnGerenciarAlunos.Text = "Gerenciar Alunos";
             this.btnGerenciarAlunos.UseTransparentBackground = true;
+            this.btnGerenciarAlunos.Click += new System.EventHandler(this.btnGerenciarAlunos_Click);
             // 
             // btnSenha
             // 
@@ -453,33 +438,16 @@ namespace MyLocker
             this.btnSenha.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
             this.btnSenha.Location = new System.Drawing.Point(0, 0);
             this.btnSenha.Name = "btnSenha";
-            this.btnSenha.Size = new System.Drawing.Size(397, 86);
+            this.btnSenha.Size = new System.Drawing.Size(397, 85);
             this.btnSenha.TabIndex = 5;
             this.btnSenha.Text = "Alterar Senha";
-            // 
-            // btnAlterarFoto
-            // 
-            this.btnAlterarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarFoto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAlterarFoto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAlterarFoto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAlterarFoto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAlterarFoto.FillColor = System.Drawing.Color.White;
-            this.btnAlterarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
-            this.btnAlterarFoto.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarFoto.Location = new System.Drawing.Point(0, 83);
-            this.btnAlterarFoto.Name = "btnAlterarFoto";
-            this.btnAlterarFoto.Size = new System.Drawing.Size(397, 86);
-            this.btnAlterarFoto.TabIndex = 6;
-            this.btnAlterarFoto.Text = "Alterar Foto";
-            this.btnAlterarFoto.Click += new System.EventHandler(this.btnAlterarFoto_Click);
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(0, 83);
+            this.panel9.Location = new System.Drawing.Point(0, 84);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(397, 2);
+            this.panel9.Size = new System.Drawing.Size(397, 1);
             this.panel9.TabIndex = 8;
             this.panel9.Visible = false;
             // 
@@ -493,28 +461,19 @@ namespace MyLocker
             this.btnTrocarPerfil.FillColor = System.Drawing.Color.White;
             this.btnTrocarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
-            this.btnTrocarPerfil.Location = new System.Drawing.Point(0, 166);
+            this.btnTrocarPerfil.Location = new System.Drawing.Point(0, 86);
             this.btnTrocarPerfil.Name = "btnTrocarPerfil";
-            this.btnTrocarPerfil.Size = new System.Drawing.Size(397, 86);
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(397, 87);
             this.btnTrocarPerfil.TabIndex = 7;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
             this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(0, 166);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(397, 2);
-            this.panel8.TabIndex = 9;
-            this.panel8.Visible = false;
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Black;
-            this.panel11.Location = new System.Drawing.Point(0, 252);
+            this.panel11.Location = new System.Drawing.Point(0, 173);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(397, 2);
+            this.panel11.Size = new System.Drawing.Size(397, 1);
             this.panel11.TabIndex = 11;
             this.panel11.Visible = false;
             // 
@@ -534,7 +493,7 @@ namespace MyLocker
             this.btnFecharAplicativo.FillColor = System.Drawing.Color.White;
             this.btnFecharAplicativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.btnFecharAplicativo.ForeColor = System.Drawing.Color.Black;
-            this.btnFecharAplicativo.Location = new System.Drawing.Point(-1, 253);
+            this.btnFecharAplicativo.Location = new System.Drawing.Point(-1, 174);
             this.btnFecharAplicativo.Name = "btnFecharAplicativo";
             this.btnFecharAplicativo.ShadowDecoration.BorderRadius = 20;
             this.btnFecharAplicativo.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
@@ -543,7 +502,7 @@ namespace MyLocker
             this.btnFecharAplicativo.ShadowDecoration.Depth = 100;
             this.btnFecharAplicativo.ShadowDecoration.Enabled = true;
             this.btnFecharAplicativo.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 20, 2);
-            this.btnFecharAplicativo.Size = new System.Drawing.Size(398, 86);
+            this.btnFecharAplicativo.Size = new System.Drawing.Size(398, 87);
             this.btnFecharAplicativo.TabIndex = 7;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
             this.btnFecharAplicativo.UseTransparentBackground = true;
@@ -556,22 +515,20 @@ namespace MyLocker
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel3.Controls.Add(this.btnFecharAplicativo);
             this.panel3.Controls.Add(this.panel11);
-            this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.btnTrocarPerfil);
             this.panel3.Controls.Add(this.panel9);
-            this.panel3.Controls.Add(this.btnAlterarFoto);
             this.panel3.Controls.Add(this.btnSenha);
             this.panel3.ForeColor = System.Drawing.Color.Transparent;
             this.panel3.Location = new System.Drawing.Point(1043, 113);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 339);
+            this.panel3.Size = new System.Drawing.Size(397, 260);
             this.panel3.TabIndex = 54;
             this.panel3.Visible = false;
             // 
             // lblFoco
             // 
             this.lblFoco.AutoSize = true;
-            this.lblFoco.Location = new System.Drawing.Point(63, 437);
+            this.lblFoco.Location = new System.Drawing.Point(788, 149);
             this.lblFoco.Name = "lblFoco";
             this.lblFoco.Size = new System.Drawing.Size(0, 13);
             this.lblFoco.TabIndex = 53;
@@ -618,11 +575,10 @@ namespace MyLocker
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GroupBox gpGerenciamento;
         private System.Windows.Forms.Label lblAlterarSenha;
-        private System.Windows.Forms.Label lblEsqueceuSenha;
         private RJTextBox txtSenhaAntiga;
         private RJTextBox txtConfirmarSenha;
         private RJTextBox txtNovaSenha;
-        private Guna.UI2.WinForms.Guna2Button btnGerenciar;
+        private Guna.UI2.WinForms.Guna2Button btnAlterar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
@@ -634,10 +590,8 @@ namespace MyLocker
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btnGerenciarAlunos;
         private Guna.UI2.WinForms.Guna2Button btnSenha;
-        private Guna.UI2.WinForms.Guna2Button btnAlterarFoto;
         private System.Windows.Forms.Panel panel9;
         private Guna.UI2.WinForms.Guna2Button btnTrocarPerfil;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel11;
         private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
         private System.Windows.Forms.Panel panel3;

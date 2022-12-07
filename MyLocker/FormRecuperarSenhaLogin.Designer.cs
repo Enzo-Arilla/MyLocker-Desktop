@@ -31,16 +31,17 @@ namespace MyLocker
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRecuperarSenhaLogin));
             this.gbConjunto = new MyLocker.MyGroupBox();
-            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSenha1 = new MyLocker.RJTextBox();
+            this.btnConfirmar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEnviar = new Guna.UI2.WinForms.Guna2Button();
             this.txtNovaSenha = new MyLocker.RJTextBox();
             this.btnSair = new System.Windows.Forms.PictureBox();
             this.lblFoco = new System.Windows.Forms.Label();
             this.txtCodigo = new MyLocker.RJTextBox();
-            this.txtEmail = new MyLocker.RJTextBox();
+            this.txtCpf = new MyLocker.RJTextBox();
             this.lblIniciarSessao = new System.Windows.Forms.Label();
             this.imgPanel = new System.Windows.Forms.PictureBox();
             this.imgLogo = new System.Windows.Forms.PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.gbConjunto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
@@ -53,13 +54,14 @@ namespace MyLocker
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbConjunto.BorderColor = System.Drawing.Color.Transparent;
-            this.gbConjunto.Controls.Add(this.guna2Button1);
-            this.gbConjunto.Controls.Add(this.btnLogin);
+            this.gbConjunto.Controls.Add(this.txtSenha1);
+            this.gbConjunto.Controls.Add(this.btnConfirmar);
+            this.gbConjunto.Controls.Add(this.btnEnviar);
             this.gbConjunto.Controls.Add(this.txtNovaSenha);
             this.gbConjunto.Controls.Add(this.btnSair);
             this.gbConjunto.Controls.Add(this.lblFoco);
             this.gbConjunto.Controls.Add(this.txtCodigo);
-            this.gbConjunto.Controls.Add(this.txtEmail);
+            this.gbConjunto.Controls.Add(this.txtCpf);
             this.gbConjunto.Controls.Add(this.lblIniciarSessao);
             this.gbConjunto.Controls.Add(this.imgPanel);
             this.gbConjunto.Controls.Add(this.imgLogo);
@@ -69,24 +71,67 @@ namespace MyLocker
             this.gbConjunto.TabIndex = 0;
             this.gbConjunto.TabStop = false;
             // 
-            // btnLogin
+            // txtSenha1
             // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLogin.BorderRadius = 20;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F);
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(1135, 530);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(275, 87);
-            this.btnLogin.TabIndex = 51;
-            this.btnLogin.Text = "Confirmar";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.txtSenha1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSenha1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSenha1.BorderColor = System.Drawing.Color.Transparent;
+            this.txtSenha1.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtSenha1.BorderRadius = 15;
+            this.txtSenha1.BorderSize = 2;
+            this.txtSenha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha1.ForeColor = System.Drawing.Color.LightGray;
+            this.txtSenha1.Location = new System.Drawing.Point(320, 378);
+            this.txtSenha1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtSenha1.Multiline = false;
+            this.txtSenha1.Name = "txtSenha1";
+            this.txtSenha1.Padding = new System.Windows.Forms.Padding(30);
+            this.txtSenha1.PasswordChar = true;
+            this.txtSenha1.PlaceholderColor = System.Drawing.Color.Silver;
+            this.txtSenha1.PlaceholderText = "Senha";
+            this.txtSenha1.Size = new System.Drawing.Size(741, 119);
+            this.txtSenha1.TabIndex = 17;
+            this.txtSenha1.UnderlinedStyle = false;
+            this.txtSenha1.Visible = false;
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnConfirmar.BorderRadius = 20;
+            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirmar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirmar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirmar.Location = new System.Drawing.Point(605, 980);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(275, 87);
+            this.btnConfirmar.TabIndex = 53;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.Visible = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEnviar.BorderRadius = 20;
+            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEnviar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEnviar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEnviar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEnviar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F);
+            this.btnEnviar.ForeColor = System.Drawing.Color.Black;
+            this.btnEnviar.Location = new System.Drawing.Point(602, 690);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(275, 87);
+            this.btnEnviar.TabIndex = 51;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // txtNovaSenha
             // 
@@ -103,12 +148,14 @@ namespace MyLocker
             this.txtNovaSenha.Multiline = false;
             this.txtNovaSenha.Name = "txtNovaSenha";
             this.txtNovaSenha.Padding = new System.Windows.Forms.Padding(30);
-            this.txtNovaSenha.PasswordChar = true;
+            this.txtNovaSenha.PasswordChar = false;
             this.txtNovaSenha.PlaceholderColor = System.Drawing.Color.Silver;
             this.txtNovaSenha.PlaceholderText = "Nova senha";
             this.txtNovaSenha.Size = new System.Drawing.Size(741, 119);
             this.txtNovaSenha.TabIndex = 52;
             this.txtNovaSenha.UnderlinedStyle = false;
+            this.txtNovaSenha.Visible = false;
+            this.txtNovaSenha.Enter += new System.EventHandler(this.txtNovaSenha_Enter);
             // 
             // btnSair
             // 
@@ -147,36 +194,38 @@ namespace MyLocker
             this.txtCodigo.Multiline = false;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Padding = new System.Windows.Forms.Padding(30);
-            this.txtCodigo.PasswordChar = true;
+            this.txtCodigo.PasswordChar = false;
             this.txtCodigo.PlaceholderColor = System.Drawing.Color.Silver;
             this.txtCodigo.PlaceholderText = "Código";
             this.txtCodigo.Size = new System.Drawing.Size(741, 119);
             this.txtCodigo.TabIndex = 16;
             this.txtCodigo.UnderlinedStyle = false;
-            this.txtCodigo.Enter += new System.EventHandler(this.txtSenha_Enter);
+            this.txtCodigo.Visible = false;
+            this.txtCodigo.Enter += new System.EventHandler(this.txtCodigo_Enter);
             // 
-            // txtEmail
+            // txtCpf
             // 
-            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.BorderColor = System.Drawing.Color.Transparent;
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtEmail.BorderRadius = 15;
-            this.txtEmail.BorderSize = 2;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Silver;
-            this.txtEmail.Location = new System.Drawing.Point(368, 530);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(30);
-            this.txtEmail.PasswordChar = false;
-            this.txtEmail.PlaceholderColor = System.Drawing.Color.Silver;
-            this.txtEmail.PlaceholderText = "E-mail";
-            this.txtEmail.Size = new System.Drawing.Size(741, 119);
-            this.txtEmail.TabIndex = 15;
-            this.txtEmail.UnderlinedStyle = false;
-            this.txtEmail.Enter += new System.EventHandler(this.txtCpf_Enter);
+            this.txtCpf.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCpf.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCpf.BorderColor = System.Drawing.Color.Transparent;
+            this.txtCpf.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtCpf.BorderRadius = 15;
+            this.txtCpf.BorderSize = 2;
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.ForeColor = System.Drawing.Color.Silver;
+            this.txtCpf.Location = new System.Drawing.Point(368, 530);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtCpf.Multiline = false;
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Padding = new System.Windows.Forms.Padding(30);
+            this.txtCpf.PasswordChar = false;
+            this.txtCpf.PlaceholderColor = System.Drawing.Color.Silver;
+            this.txtCpf.PlaceholderText = "CPF";
+            this.txtCpf.Size = new System.Drawing.Size(741, 119);
+            this.txtCpf.TabIndex = 15;
+            this.txtCpf.UnderlinedStyle = false;
+            this.txtCpf.Enter += new System.EventHandler(this.txtCpf_Enter);
+            this.txtCpf.Leave += new System.EventHandler(this.txtCpf_Leave);
             // 
             // lblIniciarSessao
             // 
@@ -212,24 +261,6 @@ namespace MyLocker
             this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(605, 985);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(275, 87);
-            this.guna2Button1.TabIndex = 53;
-            this.guna2Button1.Text = "Confirmar";
-            // 
             // FormRecuperarSenhaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,7 +279,6 @@ namespace MyLocker
             this.Text = "MyLocker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormLogin_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyUp);
             this.gbConjunto.ResumeLayout(false);
             this.gbConjunto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
@@ -264,12 +294,13 @@ namespace MyLocker
         private System.Windows.Forms.PictureBox imgPanel;
         private System.Windows.Forms.Label lblIniciarSessao;
         private MyGroupBox gbConjunto;
-        private RJTextBox txtEmail;
+        private RJTextBox txtCpf;
         private RJTextBox txtCodigo;
         private System.Windows.Forms.Label lblFoco;
         private System.Windows.Forms.PictureBox btnSair;
-        private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private Guna.UI2.WinForms.Guna2Button btnEnviar;
         private RJTextBox txtNovaSenha;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnConfirmar;
+        private RJTextBox txtSenha1;
     }
 }

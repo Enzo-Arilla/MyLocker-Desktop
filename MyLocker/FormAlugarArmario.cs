@@ -75,10 +75,9 @@ namespace MyLocker
         {
             var Load = new Carregamento();
             
-
             try
             {
-                if (txtNumeroArmario.Text.Trim() == "" || txtRaAluno.Text.Trim() == "")
+                if (txtNumeroArmario.Text.Trim() == "" || txtRaAluno.Text.Trim() == "" || txtNumeroArmario.Text.Trim() == "Número do Armário" || txtRaAluno.Text.Trim() == "RA do aluno")
                 {
                     Load.Show();
                     Load.Close();
@@ -86,12 +85,14 @@ namespace MyLocker
                 }
                 else
                 {
+                    Load.Show();
                     SetLockerIsRentedRequest setLockerIsRentedRequest = new SetLockerIsRentedRequest(int.Parse(txtNumeroArmario.Text), 1);
                     SetStudentLockerNumberRequest setStudentLockerNumberRequest = new SetStudentLockerNumberRequest(txtRaAluno.Text, int.Parse(txtNumeroArmario.Text));
                     await RentLocker(setLockerIsRentedRequest, setStudentLockerNumberRequest);
                     Load.Close();
                     MyMessageBoxSucess.ShowBox("O armário foi alugado com sucesso!", "Sucesso");
                     btnAlugar.Enabled = false;
+                    btnAlugar.Cursor = Cursors.Arrow;
                     txtRaAluno.Enabled = false;
                     cbPossuiApm.Enabled = false;
                     txtRaAluno.Text = "";
@@ -106,9 +107,9 @@ namespace MyLocker
             }
             catch (ApiException erro)
             {
+                Load.Close();
                 string[] mensagemErro = erro.Content.Split('"');
                 MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
-                Load.Close();
             }
 
         }
@@ -165,14 +166,6 @@ namespace MyLocker
             var FormAlterarSenha = new FormAlterarSenha();
             FormAlterarSenha.Closed += (s, args) => this.Close();
             FormAlterarSenha.Show();
-            this.Hide();
-        }
-
-        private void btnAlterarFoto_Click(object sender, EventArgs e)
-        {
-            var FormAlterarFoto = new FormAlterarFoto();
-            FormAlterarFoto.Closed += (s, args) => this.Close();
-            FormAlterarFoto.Show();
             this.Hide();
         }
 
@@ -280,10 +273,10 @@ namespace MyLocker
             var Load = new Carregamento();
             Load.Show();
 
-            if (txtNumeroArmario.Text.Trim() == "")
+            if (txtNumeroArmario.Text.Trim() == "" || txtNumeroArmario.Text.Trim() == "Número do Armário")
             {
                 Load.Close();
-                MyMessageBoxError.ShowBox("Preencha o campo do número do armário!", "Erro");
+                MyMessageBoxWarning.ShowBox("Preencha o campo do número do armário!", "Aviso");
             }
             else
             {
@@ -314,6 +307,7 @@ namespace MyLocker
                         txtRaAluno.Enabled = true;
                         cbPossuiApm.Enabled = true;
                         btnAlugar.Enabled = true;
+                        btnAlugar.Cursor = Cursors.Hand;
                     }
                 }
                 catch (ApiException erro)

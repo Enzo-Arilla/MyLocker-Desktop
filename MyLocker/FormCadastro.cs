@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Refit;
@@ -26,17 +27,41 @@ namespace MyLocker
             lblFoco.Focus();
         }
 
+        public string FormatCPF(string sender)
+        {
+            string response = sender.Trim();
+            if (response.Length == 11)
+            {
+                response = response.Insert(9, "-");
+                response = response.Insert(6, ".");
+                response = response.Insert(3, ".");
+            }
+            return response;
+        }
+
+        public string cleanCPF(string sender)
+        {
+            Regex apenasDigitos = new Regex(@"[^\d]");
+            return apenasDigitos.Replace(sender, "");
+        }
+
         static async Task PostFuncionario(Funcionario funcionario)
         {
-            var apiClient = RestService.For<IRepositorioFuncionarios>("http://mylocker-backend.herokuapp.com");
+            var apiClient = RestService.For<IRepositorioFuncionarios>("http://mylocker-api.herokuapp.com");
 
-            Funcionario response = await apiClient.CreateFuncionario(funcionario);
+            await apiClient.CreateFuncionario(funcionario);
 
             return;
         }
 
         private async void btnCadastrar_Click(object sender, EventArgs e)
         {
+            var Load = new Carregamento();
+
+            Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+            Regex rg2 = new Regex(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$");
+            //Regex rg3 = new Regex(@"^[a-z][A-Z]\d$");
+
             try
             {
                 primeiroNome = txtNome.Text;
@@ -46,16 +71,33 @@ namespace MyLocker
                 senha = txtSenha.Text;
                 cSenha = txtConfirmarSenha.Text;
 
-                if (senha != cSenha)
+                if(primeiroNome.Trim() == "" || ultimoNome.Trim() == "" || email.Trim() == "" || cpf.Trim() == "" || senha.Trim() == "" || cSenha.Trim() == "" || primeiroNome.Trim() == "Nome" || ultimoNome.Trim() == "Último nome" || email.Trim() == "E-mail" || cpf.Trim() == "CPF" || senha.Trim() == "Senha" || cSenha.Trim() == "Confirmar senha")
                 {
-                    MyMessageBoxError.ShowBox("Você inseriu senhas diferentes!", "Erro - As senhas não estão iguais");
+                    MyMessageBoxWarning.ShowBox("Preencha o(s) campo(s)!", "Aviso");
+                }
+                else if(!rg.IsMatch(txtEmail.Text))
+                {
+                    MyMessageBoxWarning.ShowBox("O campo do e-mail não foi preenchido no formato correto!", "Aviso");
+                }
+                else if(!rg2.IsMatch(cpf))
+                {
+                    MyMessageBoxWarning.ShowBox("O campo do CPF não foi preenchido corretamente!", "Aviso");
+                }
+              //  else if(!rg3.IsMatch(senha))
+                //{
+                  //  MyMessageBoxWarning.ShowBox("A senha deve conter números, minúsculas e maiúsculas");
+                //}
+                else if(senha != cSenha)
+                {
+                    MyMessageBoxWarning.ShowBox("Você inseriu senhas diferentes!", "Aviso");
                 }
                 else
                 {
-                    var Load = new Carregamento();
                     Load.Show();
 
-                    Funcionario funcionario = new Funcionario(cpf, primeiroNome, ultimoNome, email, senha, status);
+                    string cpf2 = cleanCPF(cpf);
+
+                    Funcionario funcionario = new Funcionario(cpf2, primeiroNome, ultimoNome, email, senha, status);
 
                     await PostFuncionario(funcionario);
 
@@ -67,11 +109,11 @@ namespace MyLocker
                     FormLogin.Closed += (s, args) => this.Close();
                     FormLogin.Show();
                     this.Hide();
-
                 }
             }
             catch (ApiException erro)
             {
+                Load.Close();
                 string[] mensagemErro = erro.Content.Split('"');
                 MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
             }
@@ -182,6 +224,13 @@ namespace MyLocker
 
         }
 
+        private void txtCpf_Leave(object sender, EventArgs e)
+        {
+            string CPF = txtCpf.Text;
+            string CPFFormatado = FormatCPF(CPF);
+            txtCpf.Text = CPFFormatado;
+        }
+
         private void txtConfirmarSenha_Enter(object sender, EventArgs e)
         {
             if (txtEmail.Text == "")
@@ -238,7 +287,7 @@ namespace MyLocker
 
             if (txtCpf.Text == "")
             {
-                txtSenha.PlaceholderText = "CPF";
+                txtCpf.PlaceholderText = "CPF";
             }
 
             if (txtSenha.Text == "")

@@ -268,8 +268,6 @@ namespace MyLocker
                 isPlaceholder = true;
                 myTextBox1.Text = placeholderText;
                 myTextBox1.ForeColor = placeholderColor;
-                if (isPasswordChar)
-                    myTextBox1.UseSystemPasswordChar = false;
             }
         }
         private void RemovePlaceholder()
@@ -278,9 +276,8 @@ namespace MyLocker
             {
                 isPlaceholder = false;
                 myTextBox1.Text = "";
+                //myTextBox1.UseSystemPasswordChar = true;
                 myTextBox1.ForeColor = this.ForeColor;
-                if (isPasswordChar)
-                    myTextBox1.UseSystemPasswordChar = true;
             }
         }
         private GraphicsPath GetFigurePath(Rectangle rect, int radius)

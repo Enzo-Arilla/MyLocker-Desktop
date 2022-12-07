@@ -63,102 +63,7 @@ namespace MyLocker
                 string[] row = new string[] { a.Number.ToString(), ra };
                 tblDesocuparArmario.Rows.Add(row);
                 Load.Close();
-                //MessageBox.Show(ra);
             }
-
-           
-
-        }
-
-        private async void tblDesocuparArmario_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            try {
-                if (e.ColumnIndex == 2 && e.RowIndex >= 0) {
-                    int number = e.RowIndex;
-                    string ra = tblDesocuparArmario[1, number].Value.ToString();
-                    await EmptyLocker(ra);
-                    MessageBox.Show("PAGOU!!!");
-                }
-
-            }
-            catch (ApiException erro)
-            {
-                string[] mensagemErro = erro.Content.Split('"');
-                MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
-            }
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            string filtro = txtPesquisarArmario.Text;
-
-            if(filtro.Trim() == "")
-            {
-                MyMessageBoxError.ShowBox("Preencha o campo de pesquisa para realizar a busca!", "Erro");
-            }
-            else
-            {
-                if(controle == 0)
-                {
-                    tblDesocuparArmario.Rows.Clear();
-                    tblDesocuparArmario.Refresh();
-
-                    foreach (Armario a in armarios)
-                    {
-                        if (a.Number.ToString().Equals(filtro) || a.Number.ToString().StartsWith(filtro))
-                        {
-                            string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
-                            tblDesocuparArmario.Rows.Add(row);
-                        }
-
-                    }
-                    if (tblDesocuparArmario.RowCount == 0)
-                    {
-                        MyMessageBoxWarning.ShowBox("O número informado não corresponde a um armário!", "Aviso");
-                        foreach (Armario a in armarios)
-                        {
-
-                            string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
-                            tblDesocuparArmario.Rows.Add(row);
-
-                        }
-                    }
-
-                }
-                else if(controle == 1)
-                {
-
-                    tblDesocuparArmario.Rows.Clear();
-                    tblDesocuparArmario.Refresh();
-
-                    foreach (Armario a in armarios)
-                    {
-
-                        if (a.Status.ToString().Equals(filtro) || a.Status.ToString().StartsWith(filtro))
-                        {
-                            string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
-                            tblDesocuparArmario.Rows.Add(row);
- 
-                        }
-                    }
-                    if(tblDesocuparArmario.RowCount == 0)
-                    {
-                        MyMessageBoxWarning.ShowBox("O RA informado não corresponde a um armário!", "Aviso");
-                        foreach (Armario a in armarios)
-                        {
-
-                            string[] row = new string[] { a.Number.ToString(), a.Section.Status.ToString() };
-                            tblDesocuparArmario.Rows.Add(row);
-
-                        }
-
-                    }
-                }
-            }
-            
-
         }
 
         private void btnAlugarArmario_Click(object sender, EventArgs e)
@@ -201,15 +106,6 @@ namespace MyLocker
             this.Hide();
         }
 
-        private void btnAlterarFoto_Click(object sender, EventArgs e)
-        {
-            var FormAlterarFoto = new FormAlterarFoto();
-            FormAlterarFoto.FormClosed += (s, args) => this.Close();
-            FormAlterarFoto.Show();
-            this.Hide();
-        }
-
-
         private void btnTrocarPerfil_Click(object sender, EventArgs e)
         {
             var FormLogin = new FormLogin();
@@ -221,6 +117,158 @@ namespace MyLocker
         private void btnFecharAplicativo_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private async void tblDesocuparArmario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var Load = new Carregamento();
+
+            try 
+            {
+                if (e.ColumnIndex == 2 && e.RowIndex >= 0) 
+                {
+                    Load.Show();
+                    int number = e.RowIndex;
+                    string ra = tblDesocuparArmario[1, number].Value.ToString();
+                    await EmptyLocker(ra);
+                    Load.Close();
+                    MyMessageBoxSucess.ShowBox("O armário foi desocupado com sucesso!", "Sucesso!");
+                    
+                }
+
+            }
+            catch (ApiException erro)
+            {
+                Load.Close();
+                string[] mensagemErro = erro.Content.Split('"');
+                MyMessageBoxError.ShowBox(mensagemErro[3], "Erro");
+            }
+            finally
+            {
+                tblDesocuparArmario.Rows.Clear();
+
+                armarios = await ListArmarios();
+
+                foreach (Armario a in armarios)
+                {
+                    string ratbl = "-";
+                    if (a.Student != null)
+                    {
+                        ratbl = a.Student.Ra;
+                    }
+
+                    string[] row = new string[] { a.Number.ToString(), ratbl };
+                    tblDesocuparArmario.Rows.Add(row);
+                }
+            }
+
+        }
+
+        private async void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string filtro = txtPesquisarArmario.Text;
+
+            if(filtro.Trim() == "" || filtro.Trim() == "Pesquisar Armário (Número)" || filtro.Trim() == "Pesquisar Armário (RA Locatário)")
+            {
+                tblDesocuparArmario.Rows.Clear();
+                armarios = await ListArmarios();
+                foreach (Armario a in armarios)
+                {
+                    string ra = "-";
+                    if (a.Student != null)
+                    {
+                        ra = a.Student.Ra;
+                    }
+
+                    string[] row = new string[] { a.Number.ToString(), ra };
+                    tblDesocuparArmario.Rows.Add(row);
+
+                }
+            }
+            else
+            {
+                if(controle == 0)
+                {
+                    tblDesocuparArmario.Rows.Clear();
+                    tblDesocuparArmario.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+                        string ra = "-";
+                        if (a.Student != null)
+                        {
+                            ra = a.Student.Ra;
+                        }
+
+                        if (a.Number.ToString().Equals(filtro))
+                        {
+                            string[] row = new string[] { a.Number.ToString(), ra };
+                            tblDesocuparArmario.Rows.Add(row);
+                        }
+
+                    }
+                    if (tblDesocuparArmario.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O número informado não corresponde a um armário!", "Aviso");
+                        foreach (Armario a in armarios)
+                        {
+
+                            string ra = "-";
+                            if (a.Student != null)
+                            {
+                                ra = a.Student.Ra;
+                            }
+
+                            string[] row = new string[] { a.Number.ToString(), ra };
+                            tblDesocuparArmario.Rows.Add(row);
+
+                        }
+                    }
+
+                }
+                else if(controle == 1)
+                {
+
+                    tblDesocuparArmario.Rows.Clear();
+                    tblDesocuparArmario.Refresh();
+
+                    foreach (Armario a in armarios)
+                    {
+                        string ra = "-";
+                        if (a.Student != null)
+                        {
+                            ra = a.Student.Ra;
+                        }
+
+                        if (ra.Equals(filtro))
+                        {
+                            string[] row = new string[] { a.Number.ToString(), ra };
+                            tblDesocuparArmario.Rows.Add(row);
+ 
+                        }
+                    }
+                    if(tblDesocuparArmario.RowCount == 0)
+                    {
+                        MyMessageBoxWarning.ShowBox("O RA informado não corresponde a um armário!", "Aviso");
+                        armarios = await ListArmarios();
+                        foreach (Armario a in armarios)
+                        {
+                            string ra = "-";
+                            if (a.Student != null)
+                            {
+                                ra = a.Student.Ra;
+                            }
+
+                            string[] row = new string[] { a.Number.ToString(), ra };
+                            tblDesocuparArmario.Rows.Add(row);
+
+                        }
+
+                    }
+                }
+            }
+            
+
         }
 
         private void lblArmarios_Click(object sender, EventArgs e)
@@ -287,7 +335,7 @@ namespace MyLocker
 
         private void tblDesocuparArmario_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 2 && e.RowIndex>=0)
+            if (e.ColumnIndex == 2 && e.RowIndex >= 0)
             {
                 tblDesocuparArmario.Cursor = Cursors.Hand;
             }

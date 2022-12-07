@@ -30,10 +30,15 @@ namespace MyLocker
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.imgPerfil = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblApm = new System.Windows.Forms.Label();
@@ -46,11 +51,16 @@ namespace MyLocker
             this.btnDesocuparArmario = new Guna.UI2.WinForms.Guna2Button();
             this.btnDadosArmarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnAlugarArmario = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPesquisarArmario = new MyLocker.RJTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.tblApm = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RaAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SobrenomeAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ComprovantePagamento = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Aprovar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Reprovar = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnDadosAlunos = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -61,20 +71,27 @@ namespace MyLocker
             this.btnTrocarPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.btnFecharAplicativo = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ComprovantePagamento = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Aprovar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnRa = new Guna.UI2.WinForms.Guna2Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.btnId = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSobrenome = new Guna.UI2.WinForms.Guna2Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnNome = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.txtPesquisarApm = new MyLocker.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblApm)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanelImgPerfil.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -147,6 +164,7 @@ namespace MyLocker
             // btnTipoPesquisa
             // 
             this.btnTipoPesquisa.BorderRadius = 35;
+            this.btnTipoPesquisa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTipoPesquisa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTipoPesquisa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTipoPesquisa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -154,15 +172,16 @@ namespace MyLocker
             this.btnTipoPesquisa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(71)))));
             this.btnTipoPesquisa.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoPesquisa.ForeColor = System.Drawing.Color.White;
-            this.btnTipoPesquisa.Location = new System.Drawing.Point(169, 211);
+            this.btnTipoPesquisa.Location = new System.Drawing.Point(61, 211);
             this.btnTipoPesquisa.Name = "btnTipoPesquisa";
             this.btnTipoPesquisa.Size = new System.Drawing.Size(354, 75);
             this.btnTipoPesquisa.TabIndex = 52;
             this.btnTipoPesquisa.Text = "Tipo de Pesquisa";
+            this.btnTipoPesquisa.Click += new System.EventHandler(this.btnTipoPesquisa_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.btnDesocuparArmario);
@@ -179,7 +198,7 @@ namespace MyLocker
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(0, 83);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(397, 2);
+            this.panel6.Size = new System.Drawing.Size(397, 1);
             this.panel6.TabIndex = 9;
             // 
             // panel5
@@ -187,7 +206,7 @@ namespace MyLocker
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(0, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 2);
+            this.panel5.Size = new System.Drawing.Size(397, 1);
             this.panel5.TabIndex = 9;
             this.panel5.Visible = false;
             // 
@@ -247,38 +266,6 @@ namespace MyLocker
             this.btnAlugarArmario.Text = "Alugar um Armário";
             this.btnAlugarArmario.Click += new System.EventHandler(this.btnAlugarArmario_Click);
             // 
-            // txtPesquisarArmario
-            // 
-            this.txtPesquisarArmario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.txtPesquisarArmario.BorderColor = System.Drawing.Color.Transparent;
-            this.txtPesquisarArmario.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.txtPesquisarArmario.BorderRadius = 50;
-            this.txtPesquisarArmario.BorderSize = 2;
-            this.txtPesquisarArmario.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarArmario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPesquisarArmario.Location = new System.Drawing.Point(555, 194);
-            this.txtPesquisarArmario.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.txtPesquisarArmario.Multiline = false;
-            this.txtPesquisarArmario.Name = "txtPesquisarArmario";
-            this.txtPesquisarArmario.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
-            this.txtPesquisarArmario.PasswordChar = false;
-            this.txtPesquisarArmario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.txtPesquisarArmario.PlaceholderText = "Pesquisar Armário (Número)";
-            this.txtPesquisarArmario.Size = new System.Drawing.Size(1000, 106);
-            this.txtPesquisarArmario.TabIndex = 53;
-            this.txtPesquisarArmario.UnderlinedStyle = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1355, 207);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 61;
-            this.pictureBox1.TabStop = false;
-            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -288,9 +275,9 @@ namespace MyLocker
             this.guna2GradientPanel1.Controls.Add(this.tblApm);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(-58, 354);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(258, 353);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1600, 690);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1352, 687);
             this.guna2GradientPanel1.TabIndex = 63;
             // 
             // guna2VScrollBar1
@@ -299,7 +286,7 @@ namespace MyLocker
             this.guna2VScrollBar1.BorderRadius = 3;
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1560, 38);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1304, 33);
             this.guna2VScrollBar1.Minimum = 1;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
@@ -312,58 +299,62 @@ namespace MyLocker
             this.tblApm.AllowUserToAddRows = false;
             this.tblApm.AllowUserToDeleteRows = false;
             this.tblApm.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tblApm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tblApm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
             this.tblApm.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tblApm.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblApm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblApm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.tblApm.ColumnHeadersHeight = 50;
             this.tblApm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tblApm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.RA,
-            this.Nome,
-            this.Sobrenome,
+            this.RaAluno,
+            this.NomeAluno,
+            this.SobrenomeAluno,
             this.ComprovantePagamento,
-            this.Aprovar});
+            this.Aprovar,
+            this.Reprovar});
             this.tblApm.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblApm.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle53.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle53.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblApm.DefaultCellStyle = dataGridViewCellStyle53;
             this.tblApm.GridColor = System.Drawing.Color.Black;
-            this.tblApm.Location = new System.Drawing.Point(23, 38);
+            this.tblApm.Location = new System.Drawing.Point(20, 33);
             this.tblApm.MultiSelect = false;
             this.tblApm.Name = "tblApm";
+            this.tblApm.ReadOnly = true;
             this.tblApm.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblApm.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle54.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblApm.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
             this.tblApm.RowHeadersVisible = false;
             this.tblApm.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.tblApm.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.tblApm.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tblApm.Size = new System.Drawing.Size(1555, 615);
+            this.tblApm.Size = new System.Drawing.Size(1302, 615);
             this.tblApm.TabIndex = 56;
             this.tblApm.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tblApm.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -378,7 +369,7 @@ namespace MyLocker
             this.tblApm.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.tblApm.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tblApm.ThemeStyle.HeaderStyle.Height = 50;
-            this.tblApm.ThemeStyle.ReadOnly = false;
+            this.tblApm.ThemeStyle.ReadOnly = true;
             this.tblApm.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.Black;
             this.tblApm.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.tblApm.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -386,6 +377,89 @@ namespace MyLocker
             this.tblApm.ThemeStyle.RowsStyle.Height = 22;
             this.tblApm.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.White;
             this.tblApm.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.tblApm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblApm_CellContentClick);
+            this.tblApm.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tblApm_CellMouseMove);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle48;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 135;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ID.Width = 135;
+            // 
+            // RaAluno
+            // 
+            this.RaAluno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RaAluno.DefaultCellStyle = dataGridViewCellStyle49;
+            this.RaAluno.HeaderText = "RA";
+            this.RaAluno.MinimumWidth = 135;
+            this.RaAluno.Name = "RaAluno";
+            this.RaAluno.ReadOnly = true;
+            this.RaAluno.Width = 135;
+            // 
+            // NomeAluno
+            // 
+            this.NomeAluno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.NomeAluno.DefaultCellStyle = dataGridViewCellStyle50;
+            this.NomeAluno.HeaderText = "Nome";
+            this.NomeAluno.MinimumWidth = 135;
+            this.NomeAluno.Name = "NomeAluno";
+            this.NomeAluno.ReadOnly = true;
+            this.NomeAluno.Width = 135;
+            // 
+            // SobrenomeAluno
+            // 
+            this.SobrenomeAluno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SobrenomeAluno.DefaultCellStyle = dataGridViewCellStyle51;
+            this.SobrenomeAluno.HeaderText = "Sobrenome";
+            this.SobrenomeAluno.MinimumWidth = 135;
+            this.SobrenomeAluno.Name = "SobrenomeAluno";
+            this.SobrenomeAluno.ReadOnly = true;
+            this.SobrenomeAluno.Width = 186;
+            // 
+            // ComprovantePagamento
+            // 
+            this.ComprovantePagamento.ActiveLinkColor = System.Drawing.Color.Black;
+            this.ComprovantePagamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ComprovantePagamento.DefaultCellStyle = dataGridViewCellStyle52;
+            this.ComprovantePagamento.HeaderText = "Comprovante de Pagamento";
+            this.ComprovantePagamento.MinimumWidth = 90;
+            this.ComprovantePagamento.Name = "ComprovantePagamento";
+            this.ComprovantePagamento.ReadOnly = true;
+            this.ComprovantePagamento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ComprovantePagamento.Width = 386;
+            // 
+            // Aprovar
+            // 
+            this.Aprovar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Aprovar.HeaderText = "Aprovar";
+            this.Aprovar.Image = ((System.Drawing.Image)(resources.GetObject("Aprovar.Image")));
+            this.Aprovar.MinimumWidth = 140;
+            this.Aprovar.Name = "Aprovar";
+            this.Aprovar.ReadOnly = true;
+            this.Aprovar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Aprovar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Aprovar.Width = 140;
+            // 
+            // Reprovar
+            // 
+            this.Reprovar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Reprovar.HeaderText = "Reprovar";
+            this.Reprovar.Image = ((System.Drawing.Image)(resources.GetObject("Reprovar.Image")));
+            this.Reprovar.MinimumWidth = 140;
+            this.Reprovar.Name = "Reprovar";
+            this.Reprovar.ReadOnly = true;
+            this.Reprovar.Width = 140;
             // 
             // guna2GradientPanel2
             // 
@@ -410,7 +484,7 @@ namespace MyLocker
             this.btnDadosAlunos.FillColor = System.Drawing.Color.White;
             this.btnDadosAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnDadosAlunos.ForeColor = System.Drawing.Color.Black;
-            this.btnDadosAlunos.Location = new System.Drawing.Point(0, -1);
+            this.btnDadosAlunos.Location = new System.Drawing.Point(0, 0);
             this.btnDadosAlunos.Name = "btnDadosAlunos";
             this.btnDadosAlunos.Size = new System.Drawing.Size(397, 86);
             this.btnDadosAlunos.TabIndex = 5;
@@ -422,7 +496,7 @@ namespace MyLocker
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(0, 86);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(397, 2);
+            this.panel4.Size = new System.Drawing.Size(397, 1);
             this.panel4.TabIndex = 12;
             this.panel4.Visible = false;
             // 
@@ -470,7 +544,7 @@ namespace MyLocker
             this.panel8.BackColor = System.Drawing.Color.Black;
             this.panel8.Location = new System.Drawing.Point(3, 181);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(397, 2);
+            this.panel8.Size = new System.Drawing.Size(397, 1);
             this.panel8.TabIndex = 67;
             this.panel8.Visible = false;
             // 
@@ -484,9 +558,9 @@ namespace MyLocker
             this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
             this.btnAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(3, 3);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(2, 2);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
-            this.btnAlterarSenha.Size = new System.Drawing.Size(393, 86);
+            this.btnAlterarSenha.Size = new System.Drawing.Size(397, 88);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
             this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
@@ -501,9 +575,9 @@ namespace MyLocker
             this.btnTrocarPerfil.FillColor = System.Drawing.Color.White;
             this.btnTrocarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
             this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
-            this.btnTrocarPerfil.Location = new System.Drawing.Point(2, 93);
+            this.btnTrocarPerfil.Location = new System.Drawing.Point(2, 92);
             this.btnTrocarPerfil.Name = "btnTrocarPerfil";
-            this.btnTrocarPerfil.Size = new System.Drawing.Size(394, 87);
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(397, 89);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
             this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
@@ -524,7 +598,7 @@ namespace MyLocker
             this.btnFecharAplicativo.ForeColor = System.Drawing.Color.Black;
             this.btnFecharAplicativo.Location = new System.Drawing.Point(2, 182);
             this.btnFecharAplicativo.Name = "btnFecharAplicativo";
-            this.btnFecharAplicativo.Size = new System.Drawing.Size(394, 86);
+            this.btnFecharAplicativo.Size = new System.Drawing.Size(397, 86);
             this.btnFecharAplicativo.TabIndex = 66;
             this.btnFecharAplicativo.Text = "Fechar Aplicativo";
             this.btnFecharAplicativo.Click += new System.EventHandler(this.btnFecharAplicativo_Click);
@@ -534,65 +608,193 @@ namespace MyLocker
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(0, 90);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 2);
+            this.panel3.Size = new System.Drawing.Size(397, 1);
             this.panel3.TabIndex = 12;
             this.panel3.Visible = false;
             // 
-            // ID
+            // panel10
             // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ID.Width = 123;
+            this.panel10.BackColor = System.Drawing.SystemColors.Control;
+            this.panel10.Controls.Add(this.panel7);
+            this.panel10.Controls.Add(this.btnRa);
+            this.panel10.Controls.Add(this.panel15);
+            this.panel10.Controls.Add(this.btnId);
+            this.panel10.Controls.Add(this.btnSobrenome);
+            this.panel10.Controls.Add(this.panel14);
+            this.panel10.Controls.Add(this.btnNome);
+            this.panel10.Location = new System.Drawing.Point(40, 329);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(397, 346);
+            this.panel10.TabIndex = 67;
+            this.panel10.Visible = false;
             // 
-            // RA
+            // panel7
             // 
-            this.RA.HeaderText = "RA";
-            this.RA.Name = "RA";
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(0, 171);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(397, 2);
+            this.panel7.TabIndex = 59;
+            this.panel7.Visible = false;
             // 
-            // Nome
+            // btnRa
             // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
+            this.btnRa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRa.FillColor = System.Drawing.Color.LightGray;
+            this.btnRa.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.btnRa.ForeColor = System.Drawing.Color.Black;
+            this.btnRa.Location = new System.Drawing.Point(0, 87);
+            this.btnRa.Name = "btnRa";
+            this.btnRa.Size = new System.Drawing.Size(397, 86);
+            this.btnRa.TabIndex = 58;
+            this.btnRa.Text = "RA Locatário";
+            this.btnRa.Click += new System.EventHandler(this.btnRa_Click);
             // 
-            // Sobrenome
+            // panel15
             // 
-            this.Sobrenome.HeaderText = "Sobrenome";
-            this.Sobrenome.Name = "Sobrenome";
+            this.panel15.BackColor = System.Drawing.Color.Black;
+            this.panel15.Location = new System.Drawing.Point(-1, 85);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(397, 2);
+            this.panel15.TabIndex = 57;
+            this.panel15.Visible = false;
             // 
-            // ComprovantePagamento
+            // btnId
             // 
-            this.ComprovantePagamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ComprovantePagamento.HeaderText = "Comprovante de Pagamento";
-            this.ComprovantePagamento.Name = "ComprovantePagamento";
-            this.ComprovantePagamento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ComprovantePagamento.Width = 386;
+            this.btnId.BorderRadius = 20;
+            this.btnId.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnId.CustomizableEdges.BottomLeft = false;
+            this.btnId.CustomizableEdges.BottomRight = false;
+            this.btnId.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnId.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
+            this.btnId.DisabledState.ForeColor = System.Drawing.Color.Black;
+            this.btnId.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
+            this.btnId.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.btnId.ForeColor = System.Drawing.Color.Black;
+            this.btnId.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
+            this.btnId.Location = new System.Drawing.Point(0, 1);
+            this.btnId.Name = "btnId";
+            this.btnId.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(220)))), ((int)(((byte)(81)))));
+            this.btnId.Size = new System.Drawing.Size(397, 86);
+            this.btnId.TabIndex = 56;
+            this.btnId.Text = "ID";
+            this.btnId.Click += new System.EventHandler(this.btnId_Click);
             // 
-            // Aprovar
+            // btnSobrenome
             // 
-            this.Aprovar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Aprovar.HeaderText = "Aprovar";
-            this.Aprovar.Image = ((System.Drawing.Image)(resources.GetObject("Aprovar.Image")));
-            this.Aprovar.Name = "Aprovar";
-            this.Aprovar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Aprovar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Aprovar.Width = 140;
+            this.btnSobrenome.BorderRadius = 20;
+            this.btnSobrenome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSobrenome.CustomizableEdges.TopLeft = false;
+            this.btnSobrenome.CustomizableEdges.TopRight = false;
+            this.btnSobrenome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSobrenome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSobrenome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSobrenome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSobrenome.FillColor = System.Drawing.Color.LightGray;
+            this.btnSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.5F);
+            this.btnSobrenome.ForeColor = System.Drawing.Color.Black;
+            this.btnSobrenome.Location = new System.Drawing.Point(0, 260);
+            this.btnSobrenome.Name = "btnSobrenome";
+            this.btnSobrenome.Size = new System.Drawing.Size(397, 86);
+            this.btnSobrenome.TabIndex = 10;
+            this.btnSobrenome.Text = "Sobrenome";
+            this.btnSobrenome.Click += new System.EventHandler(this.btnSobrenome_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Black;
+            this.panel14.Location = new System.Drawing.Point(0, 258);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(397, 2);
+            this.panel14.TabIndex = 8;
+            this.panel14.Visible = false;
+            // 
+            // btnNome
+            // 
+            this.btnNome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNome.FillColor = System.Drawing.Color.LightGray;
+            this.btnNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
+            this.btnNome.ForeColor = System.Drawing.Color.Black;
+            this.btnNome.Location = new System.Drawing.Point(0, 171);
+            this.btnNome.Name = "btnNome";
+            this.btnNome.Size = new System.Drawing.Size(397, 89);
+            this.btnNome.TabIndex = 5;
+            this.btnNome.Text = "Nome";
+            this.btnNome.Click += new System.EventHandler(this.btnNome_Click);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "Aprovar";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "Reprovar";
+            this.dataGridViewImageColumn2.Image = global::MyLocker.Properties.Resources.erro__1__Easy_Resize_com;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(1394, 207);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(91, 85);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscar.TabIndex = 61;
+            this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtPesquisarApm
+            // 
+            this.txtPesquisarApm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.txtPesquisarApm.BorderColor = System.Drawing.Color.Transparent;
+            this.txtPesquisarApm.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtPesquisarApm.BorderRadius = 50;
+            this.txtPesquisarApm.BorderSize = 2;
+            this.txtPesquisarApm.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisarApm.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPesquisarApm.Location = new System.Drawing.Point(605, 194);
+            this.txtPesquisarApm.Margin = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.txtPesquisarApm.Multiline = false;
+            this.txtPesquisarApm.Name = "txtPesquisarApm";
+            this.txtPesquisarApm.Padding = new System.Windows.Forms.Padding(24, 25, 24, 25);
+            this.txtPesquisarApm.PasswordChar = false;
+            this.txtPesquisarApm.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.txtPesquisarApm.PlaceholderText = "Pesquisar APM (ID)";
+            this.txtPesquisarApm.Size = new System.Drawing.Size(1000, 106);
+            this.txtPesquisarApm.TabIndex = 53;
+            this.txtPesquisarApm.UnderlinedStyle = false;
+            this.txtPesquisarApm.Enter += new System.EventHandler(this.txtPesquisarApm_Enter);
             // 
             // FormApm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 878);
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.guna2GradientPanelImgPerfil);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtPesquisarArmario);
+            this.Controls.Add(this.txtPesquisarApm);
             this.Controls.Add(this.btnTipoPesquisa);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -605,11 +807,12 @@ namespace MyLocker
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblApm)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanelImgPerfil.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -621,7 +824,7 @@ namespace MyLocker
         private System.Windows.Forms.Label lblAlunos;
         private System.Windows.Forms.Label lblArmarios;
         private Guna.UI2.WinForms.Guna2Button btnTipoPesquisa;
-        private RJTextBox txtPesquisarArmario;
+        private RJTextBox txtPesquisarApm;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
@@ -629,7 +832,7 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnDadosArmarios;
         private Guna.UI2.WinForms.Guna2Button btnAlugarArmario;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgPerfil;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnBuscar;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2DataGridView tblApm;
@@ -643,11 +846,22 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnTrocarPerfil;
         private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel15;
+        private Guna.UI2.WinForms.Guna2Button btnId;
+        private Guna.UI2.WinForms.Guna2Button btnSobrenome;
+        private System.Windows.Forms.Panel panel14;
+        private Guna.UI2.WinForms.Guna2Button btnNome;
+        private System.Windows.Forms.Panel panel7;
+        private Guna.UI2.WinForms.Guna2Button btnRa;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sobrenome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RaAluno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeAluno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SobrenomeAluno;
         private System.Windows.Forms.DataGridViewLinkColumn ComprovantePagamento;
         private System.Windows.Forms.DataGridViewImageColumn Aprovar;
+        private System.Windows.Forms.DataGridViewImageColumn Reprovar;
     }
 }

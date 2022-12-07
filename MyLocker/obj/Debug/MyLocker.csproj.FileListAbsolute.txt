@@ -359,7 +359,6 @@ D:\Users\Acer\Documents\ped\MyLocker-Desktop\MyLocker\bin\Debug\MySql.Data.xml
 D:\Users\Acer\Documents\ped\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.CopyComplete
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
-D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormAlterarFoto.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormAlterarSenha.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormLogin.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormCadastro.resources
@@ -393,7 +392,6 @@ C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.MyMessageB
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Carregamento.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.csproj.SuggestedBindingRedirects.cache
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.Carregamento.resources
-D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenhaPerfil.resources
 D:\Users\Acer\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenhaLogin.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenhaPerfil.resources
 C:\Users\aluno\Documents\MyLocker-Desktop\MyLocker\obj\Debug\MyLocker.FormRecuperarSenhaLogin.resources

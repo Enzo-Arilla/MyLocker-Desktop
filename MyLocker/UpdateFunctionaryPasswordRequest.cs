@@ -22,12 +22,12 @@ namespace MyLocker
         public string Password { get; set; }
 
         [JsonProperty("oldPassword")]
-        public string OldPassword { get; set; }
+        public string? OldPassword { get; set; }
 
-        [JsonProperty ("cpf")]
+        [JsonProperty("cpf")]
         public string Cpf { get; set; }
 
-        [JsonProperty ("forgotPassword")]
+        [JsonProperty("forgotPassword")]
         public bool ForgotPassword { get; set; }
 
     }

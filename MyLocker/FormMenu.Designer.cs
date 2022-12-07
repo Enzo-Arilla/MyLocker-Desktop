@@ -49,7 +49,6 @@ namespace MyLocker
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDadosArmarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnAlugarArmario = new Guna.UI2.WinForms.Guna2Button();
-            this.lblData = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2GradientPanelImgPerfil = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -67,12 +66,13 @@ namespace MyLocker
             // 
             // lblInicio
             // 
-            this.lblInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInicio.AutoEllipsis = true;
             this.lblInicio.AutoSize = true;
             this.lblInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 69.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInicio.ForeColor = System.Drawing.Color.Black;
-            this.lblInicio.Location = new System.Drawing.Point(66, 648);
+            this.lblInicio.Location = new System.Drawing.Point(304, 729);
             this.lblInicio.Name = "lblInicio";
             this.lblInicio.Size = new System.Drawing.Size(605, 105);
             this.lblInicio.TabIndex = 0;
@@ -90,12 +90,13 @@ namespace MyLocker
             // 
             // lblNome
             // 
-            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNome.AutoEllipsis = true;
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 69.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.Black;
-            this.lblNome.Location = new System.Drawing.Point(679, 650);
+            this.lblNome.Location = new System.Drawing.Point(916, 731);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(297, 105);
             this.lblNome.TabIndex = 1;
@@ -183,11 +184,10 @@ namespace MyLocker
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(0, 83);
+            this.panel4.Location = new System.Drawing.Point(0, 86);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(397, 2);
-            this.panel4.TabIndex = 12;
+            this.panel4.Size = new System.Drawing.Size(397, 1);
+            this.panel4.TabIndex = 68;
             this.panel4.Visible = false;
             // 
             // btnGerenciarAlunos
@@ -203,7 +203,7 @@ namespace MyLocker
             this.btnGerenciarAlunos.FillColor = System.Drawing.Color.White;
             this.btnGerenciarAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnGerenciarAlunos.ForeColor = System.Drawing.Color.Black;
-            this.btnGerenciarAlunos.Location = new System.Drawing.Point(0, 83);
+            this.btnGerenciarAlunos.Location = new System.Drawing.Point(0, 86);
             this.btnGerenciarAlunos.Name = "btnGerenciarAlunos";
             this.btnGerenciarAlunos.Size = new System.Drawing.Size(397, 86);
             this.btnGerenciarAlunos.TabIndex = 6;
@@ -246,7 +246,7 @@ namespace MyLocker
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(0, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 2);
+            this.panel5.Size = new System.Drawing.Size(397, 1);
             this.panel5.TabIndex = 9;
             this.panel5.Visible = false;
             // 
@@ -277,7 +277,7 @@ namespace MyLocker
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(0, 83);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(397, 2);
+            this.panel3.Size = new System.Drawing.Size(397, 1);
             this.panel3.TabIndex = 8;
             this.panel3.Visible = false;
             // 
@@ -315,17 +315,6 @@ namespace MyLocker
             this.btnAlugarArmario.Text = "Alugar um Armário";
             this.btnAlugarArmario.Click += new System.EventHandler(this.btnAlugarArmario_Click);
             // 
-            // lblData
-            // 
-            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 69.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.ForeColor = System.Drawing.Color.Black;
-            this.lblData.Location = new System.Drawing.Point(487, 755);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(0, 105);
-            this.lblData.TabIndex = 11;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -351,9 +340,9 @@ namespace MyLocker
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(1, 178);
+            this.panel8.Location = new System.Drawing.Point(0, 178);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(395, 2);
+            this.panel8.Size = new System.Drawing.Size(397, 1);
             this.panel8.TabIndex = 67;
             this.panel8.Visible = false;
             // 
@@ -367,9 +356,9 @@ namespace MyLocker
             this.btnAlterarSenha.FillColor = System.Drawing.Color.White;
             this.btnAlterarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F);
             this.btnAlterarSenha.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterarSenha.Location = new System.Drawing.Point(0, 3);
+            this.btnAlterarSenha.Location = new System.Drawing.Point(0, 4);
             this.btnAlterarSenha.Name = "btnAlterarSenha";
-            this.btnAlterarSenha.Size = new System.Drawing.Size(396, 86);
+            this.btnAlterarSenha.Size = new System.Drawing.Size(397, 86);
             this.btnAlterarSenha.TabIndex = 66;
             this.btnAlterarSenha.Text = "Alterar Senha";
             this.btnAlterarSenha.Click += new System.EventHandler(this.btnAlterarSenha_Click);
@@ -386,7 +375,7 @@ namespace MyLocker
             this.btnTrocarPerfil.ForeColor = System.Drawing.Color.Black;
             this.btnTrocarPerfil.Location = new System.Drawing.Point(0, 93);
             this.btnTrocarPerfil.Name = "btnTrocarPerfil";
-            this.btnTrocarPerfil.Size = new System.Drawing.Size(395, 87);
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(397, 86);
             this.btnTrocarPerfil.TabIndex = 66;
             this.btnTrocarPerfil.Text = "Trocar Perfil";
             this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
@@ -415,9 +404,9 @@ namespace MyLocker
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(0, 90);
+            this.panel6.Location = new System.Drawing.Point(0, 91);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(394, 2);
+            this.panel6.Size = new System.Drawing.Size(397, 1);
             this.panel6.TabIndex = 12;
             this.panel6.Visible = false;
             // 
@@ -428,7 +417,6 @@ namespace MyLocker
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(1440, 878);
             this.Controls.Add(this.guna2GradientPanelImgPerfil);
-            this.Controls.Add(this.lblData);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -470,11 +458,9 @@ namespace MyLocker
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2Button btnGerenciarAlunos;
-        private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btnDadosAlunos;
         private System.Windows.Forms.Label lblArmarios;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgPerfil;
-        private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanelImgPerfil;
         private System.Windows.Forms.Panel panel8;
@@ -482,5 +468,6 @@ namespace MyLocker
         private Guna.UI2.WinForms.Guna2Button btnTrocarPerfil;
         private Guna.UI2.WinForms.Guna2Button btnFecharAplicativo;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel4;
     }
 }
