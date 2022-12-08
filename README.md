@@ -45,6 +45,13 @@ O layout da aplicação está disponível no Figma:
   <img alt="MyLocker" title="#MyLocker" src="MyLocker\Resources\telaInicial.png" width="600px">
 </p>
 
+---
+
+## 🚀 Como executar o projeto
+
+1. Clone este repositório;
+2. Abra a pasta do projeto e execute o arquivo 'MyLocker.sln';
+3. Após aberto, caso seja exibido algum erro de exibição no formulário da solução, execute o projeto até que o erro suma.
 
 ## 🛠 Tecnologias
 
